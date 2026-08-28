@@ -1,56 +1,66 @@
-# Pipeline longitudinal KRT/NLS — panel fixe de 2 000 communes
+# Longitudinal Ecological Inference — Fixed Panel of 2,000 Municipalities
 
-Ce dépôt de travail produit des estimations d’inférence écologique sur 26 scrutins français, avec un même panel longitudinal de 2 000 communes. Il contient une production en cours : les résultats intermédiaires ne constituent pas une release validée.
+This research repository estimates ecological-inference models across 26
+French elections using a fixed longitudinal panel of 2,000 municipalities. It
+contains work in progress: intermediate results are not a validated release.
 
-## Contrat courant
+## Current analysis contract
 
-- panel : `panel/longitudinal_2000_v1.parquet` ;
-- identifiant : `longitudinal_2000_v1__strict_nested_3000__seed_20260803` ;
-- SHA-256 : `bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a` ;
-- NLS : 292 couples préparés et estimés, dont 270 dans le périmètre public v1.0.2 et 22 RxC conservés comme extension auditée ;
-- KRT Python : 240 couples 2×2 attendus pour H0A–H7, avec H6/H7 admissibles sur 16 élections chacun ;
-- KRT R : réplication exacte NIMBLE prévue après la fin des tentatives initiales et relances Python ;
-- NetCDF : artefacts temporaires de post-traitement, exclus des archives de livraison.
+- panel: `panel/longitudinal_2000_v1.parquet`;
+- identifier: `longitudinal_2000_v1__strict_nested_3000__seed_20260803`;
+- SHA-256: `bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a`;
+- NLS: 292 prepared and estimated specifications, including 270 in the public
+  v1.0.2 scope and 22 RxC specifications retained as an audited extension;
+- Python KRT: 240 expected 2×2 specifications for H0A–H7, with H6/H7 eligible
+  for 16 elections each;
+- R KRT: exact NIMBLE replication planned after the initial Python runs and
+  targeted retries are complete;
+- NetCDF: temporary post-processing artifacts excluded from delivery archives.
 
-Le statut machine-lisible le plus récent est :
+The latest machine-readable coverage status is written to:
 
 ```text
 outputs/longitudinal_2000_v1/production/current_estimation_coverage.json
 ```
 
-La sélection et les tables KRT partielles sont :
+Partial KRT selections and tables are written to:
 
 ```text
 outputs/longitudinal_2000_v1/production/all_2x2_candidate/
 ```
 
-## Carte de la chaîne
+## Pipeline overview
 
 ```text
-archives sources
-  -> audit et harmonisation politique/sociale
-  -> panel longitudinal fixe et matrices model_ready
-  -> NLS Python/R
-  -> KRT Python (tentative initiale)
-  -> diagnostic MCMC | identification écologique | alerte KRT–NLS
-  -> relance ciblée unique si MCMC sévère/fail
-  -> sélection canonique
-  -> KRT R/NIMBLE exact
-  -> comparaison Python/R
-  -> Parquet, figures, rapport et archives vérifiées
+source archives
+  -> political and social data auditing and harmonization
+  -> fixed longitudinal panel and model-ready matrices
+  -> Python/R NLS
+  -> Python KRT initial run
+  -> MCMC diagnostics | ecological identification | KRT–NLS warning
+  -> one targeted retry for severe/failed MCMC
+  -> canonical selection
+  -> exact R/NIMBLE KRT replication
+  -> Python/R comparison
+  -> verified Parquet files, figures, report, and archives
 ```
 
-Ces trois diagnostics restent distincts :
+The following diagnostics remain separate:
 
-1. `mcmc_status` mesure la qualité numérique des chaînes ;
-2. `identification_status` décrit la largeur des contraintes écologiques ;
-3. `method_sensitivity_status` signale un écart KRT–NLS et ne modifie jamais les priors ou `king_lambda` de façon opportuniste.
+1. `mcmc_status` measures numerical sampling quality;
+2. `identification_status` describes the width of the ecological constraints;
+3. `method_sensitivity_status` flags a KRT–NLS discrepancy and never changes
+   priors or `king_lambda` opportunistically.
 
-## Configuration faisant autorité
+## Authoritative configuration
 
-Chaque production KRT est définie par un fichier dans `config/releases/`. Le scope de release porte le panel, les scénarios, les pilotes, la paramétrisation KRT versionnée, `king_lambda`, les réglages MCMC et les graines. `config/run_settings.json` reste nécessaire pour la préparation des données et la compatibilité avec les anciens scripts, mais ne doit pas remplacer le contrat KRT de la release.
+Each KRT production run is defined by a file in `config/releases/`. The release
+scope specifies the panel, scenarios, pilots, versioned KRT parameterization,
+`king_lambda`, MCMC settings, and random seeds. `config/run_settings.json`
+remains necessary for data preparation and compatibility with older scripts,
+but it does not replace the release-level KRT contract.
 
-Exemples :
+Examples:
 
 ```text
 config/releases/v1.1_pymc_fallback.json   H2/H3
@@ -59,44 +69,50 @@ config/releases/v1.3_pymc_h0b_h0c.json    H0B/H0C
 config/releases/v1.4_pymc_h4_h5.json      H4/H5
 ```
 
-Les runs utilisent quatre chaînes, 1 000 itérations de chauffe, 1 000 tirages conservés, `target_accept=0.99`, `max_treedepth=14` et une graine déterministe par couple. Une relance admissible utilise 2 000 + 2 000 et la graine de base dédiée.
+Production runs use four chains, 1,000 warmup iterations, 1,000 retained draws,
+`target_accept=0.99`, `max_treedepth=14`, and a deterministic seed for each
+specification. An eligible retry uses 2,000 warmup iterations, 2,000 retained
+draws, and its dedicated base seed.
 
-## Entrées et sorties importantes
+## Important inputs and outputs
 
-| Élément | Emplacement | Grain |
+| Item | Location | Grain |
 |---|---|---|
-| Panel | `panel/longitudinal_2000_v1.parquet` | commune |
-| Matrices | `outputs/model_ready/` | commune × élection × scénario |
-| Runs | `outputs/runs/<run_id>/` | un ajustement |
-| Couverture | `outputs/longitudinal_2000_v1/production/current_estimation_coverage.csv` | scénario |
-| KRT communes partiel | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_commune_240_candidate.parquet` | commune × run |
-| KRT agrégé partiel | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_aggregate_240_candidate.parquet` | run × estimand |
-| Sélection partielle | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/krt_240_candidate_selection.csv` | élection × scénario |
-| NLS complet candidat | `outputs/longitudinal_2000_v1/production/rxc_nls_panel_extension_v11/longitudinal_nls_292_candidate.parquet` | couple × estimand |
-| Réplication R exacte | `outputs/longitudinal_2000_v1/r_replication/` | couple × estimand |
+| Panel | `panel/longitudinal_2000_v1.parquet` | municipality |
+| Model-ready matrices | `outputs/model_ready/` | municipality × election × scenario |
+| Runs | `outputs/runs/<run_id>/` | one model fit |
+| Coverage | `outputs/longitudinal_2000_v1/production/current_estimation_coverage.csv` | scenario |
+| Partial municipality-level KRT | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_commune_240_candidate.parquet` | municipality × run |
+| Partial aggregate KRT | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_aggregate_240_candidate.parquet` | run × estimand |
+| Partial selection | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/krt_240_candidate_selection.csv` | election × scenario |
+| Complete candidate NLS | `outputs/longitudinal_2000_v1/production/rxc_nls_panel_extension_v11/longitudinal_nls_292_candidate.parquet` | specification × estimand |
+| Exact R replication | `outputs/longitudinal_2000_v1/r_replication/` | specification × estimand |
 
-## Commandes principales
+## Main commands
 
-Depuis ce dossier, avec l’environnement Python EI :
+From the repository root, with the ecological-inference Python environment
+activated:
 
 ```powershell
-$python = '..\pour_moi_avec_data\.venv-ei\Scripts\python.exe'
-
-& $python -m code_longitudinal.v11_pipeline krt `
+python -m code_longitudinal.v11_pipeline krt `
   --release-config config\releases\v1.1_pymc_fallback.json `
   --cores 1
 
-& $python -m code_longitudinal.consolidate_current_krt_all_2x2
-& $python -m code_longitudinal.build_current_estimation_coverage
-& $python -m pytest -q tests
+python -m code_longitudinal.consolidate_current_krt_all_2x2
+python -m code_longitudinal.build_current_estimation_coverage
+python -m pytest -q tests
 ```
 
-Les scripts de reprise vérifient les manifestes de succès avant chaque fit : un succès déjà présent avec le même contrat n’est pas recalculé.
+Restart scripts inspect success manifests before each fit. A successful run with
+the same contract is not recomputed.
 
-## Reproduction
+## Reproducibility levels
 
-- **Niveau 1 — audit** : ouvrir les Parquet, CSV, figures et manifestes livrés ; aucune donnée source n’est nécessaire.
-- **Niveau 2 — consolidation** : utiliser le bundle technique, les runs déjà calculés et l’environnement documenté.
-- **Niveau 3 — reproduction complète** : le dépôt parent et les archives brutes de `../pour_moi_avec_data/data/raw/archives/` sont requis.
-
-L’ancien README, qui décrivait principalement la production historique à 3 000 communes, est conservé dans `legacy/README_pre_longitudinal_2000_v1.md`.
+- **Level 1 — audit:** inspect delivered Parquet files, CSV files, figures, and
+  manifests; no source archive is required.
+- **Level 2 — consolidation:** use the technical bundle, completed runs, and the
+  documented environment.
+- **Level 3 — full reproduction:** obtain the raw source archives separately,
+  restore the local `panel/` and output inputs, and use the documented Python/R
+  environments. Raw data and generated results are intentionally not stored in
+  this repository.

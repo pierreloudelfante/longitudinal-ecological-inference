@@ -1,4 +1,4 @@
-# Secrets et configuration locale
+# Secrets and local configuration
 .env
 .env.*
 !.env.example
@@ -8,7 +8,7 @@ credentials*.json
 secrets*.json
 token*.json
 
-# Environnements et caches Python/R
+# Python/R environments and caches
 __pycache__/
 *.py[cod]
 .venv/
@@ -29,7 +29,7 @@ env/
 .numba/
 .pytensor/
 
-# Espaces de travail temporaires
+# Temporary workspaces
 .codex_tmp/
 .test_tmp/
 .test_tmp_*/
@@ -42,7 +42,7 @@ legacy/
 review_for_professor_*/
 work_professor_structure_*/
 
-# Données, modèles et résultats générés
+# Data, model artifacts, and generated results
 panel/
 output/
 outputs/
@@ -66,7 +66,7 @@ figures/
 *.hdf5
 *.sqlite*
 
-# Archives et livrables binaires
+# Archives and binary deliverables
 *.zip
 *.7z
 *.rar
@@ -81,7 +81,7 @@ figures/
 *.nbc
 *.nbi
 
-# Système et éditeurs
+# Operating-system and editor files
 .DS_Store
 Thumbs.db
 .idea/
