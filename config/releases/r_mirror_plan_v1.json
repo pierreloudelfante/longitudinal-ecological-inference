@@ -1,0 +1,72 @@
+{
+  "plan_version": "r_mirror_plan_v1",
+  "created_local": "2026-08-25",
+  "spec_version": "longitudinal_2000_v1",
+  "panel_sha256": "bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a",
+  "status": "planned_not_started",
+  "heavy_r_runs_allowed_now": false,
+  "blocking_reason": "Python PyMC production jobs are active on the local machine; exact R KRT production would compete for CPU and memory.",
+  "targets": {
+    "nls_pairs": 292,
+    "two_by_two_krt_pairs": 240,
+    "rxc_pairs_optional": 52
+  },
+  "lanes": [
+    {
+      "id": "R_NLS",
+      "purpose": "Numerical mirror of Rosen multinomial-logit NLS",
+      "engine": "R optimization and sandwich diagnostics",
+      "target_pairs": 292,
+      "completed_pairs": 292,
+      "identity": "numerically_equivalent",
+      "action": "Do not rerun unless the panel hash, scenario registry, or Python NLS implementation changes."
+    },
+    {
+      "id": "R_KING_ROBUSTNESS",
+      "purpose": "Cross-method robustness for two-by-two ecological inference",
+      "engine": "ei::ei; eiPack only where its model class is appropriate",
+      "target_pairs": 240,
+      "completed_pairs": 26,
+      "identity": "not_mathematically_identical_to_python_krt",
+      "gate": "Resolve the Windows gmm.dll loading block and validate three pilot elections."
+    },
+    {
+      "id": "R_KRT_EXACT",
+      "purpose": "Exact mathematical mirror of Python pyei TwoByTwoEI king99",
+      "engine": "cmdstanr with king99_pyei_exact.stan; NIMBLE fallback",
+      "target_pairs": 240,
+      "completed_pairs": 0,
+      "identity": "same_model_specification",
+      "sampler": {
+        "chains": 4,
+        "warmup_per_chain": 1000,
+        "draws_per_chain": 1000,
+        "target_accept": 0.99,
+        "max_treedepth": 14,
+        "king_lambda": 0.5
+      },
+      "gate": "Benchmark three canonical pairs and approve a compute host before production."
+    },
+    {
+      "id": "R_RXC_OPTIONAL",
+      "purpose": "Optional Bayesian RxC sensitivity for RXC1 and RXC2",
+      "engine": "eiPack::ei.MD.bayes",
+      "target_pairs": 52,
+      "completed_pairs": 0,
+      "identity": "separate_model_not_in_current_python_krt_scope",
+      "gate": "Treat as a separate robustness extension, never as KRT parity."
+    }
+  ],
+  "production_order": [
+    "Freeze inputs and environment",
+    "Run exact and classical three-pair pilots",
+    "Approve runtime and diagnostic gates",
+    "Mirror H0A and H1 references",
+    "Mirror H2 and H3",
+    "Mirror H6 and H7",
+    "Mirror H0B and H0C",
+    "Mirror H4 and H5",
+    "Compare Python and R, rerun only diagnostic failures",
+    "Consolidate both languages in one final scientific ZIP"
+  ]
+}

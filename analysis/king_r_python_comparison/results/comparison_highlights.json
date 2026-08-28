@@ -1,0 +1,12 @@
+{
+  "n_fits": 6,
+  "n_group_estimates": 12,
+  "all_inputs_same_effective_n": true,
+  "max_absolute_difference_pp": 17.986720891684964,
+  "max_difference_fit_group": "H1 1962 - beta2 autres",
+  "median_absolute_difference_pp": 6.084552632026499,
+  "mean_interval_overlap_ratio": 0.005523564040775287,
+  "python_diagnostics": "fail for all six pinned exploratory fits (1 chain, 20 draws)",
+  "r_diagnostics": "caveat when numerical checks pass because R ei exposes 99 importance simulations, not multi-chain MCMC",
+  "interpretation": "Differences combine implementation, prior, and posterior-simulation choices. Matching inputs isolates composition but does not make the two posterior engines mathematically identical."
+}

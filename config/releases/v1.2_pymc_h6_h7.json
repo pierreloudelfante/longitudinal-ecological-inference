@@ -1,0 +1,43 @@
+{
+  "release_id": "longitudinal_2000_v1.2_H6_H7_pymc_fallback",
+  "ready_scope": "H6-H7-pymc-fallback-candidate",
+  "public_schema_version": "longitudinal_public_schema_v1.0.2",
+  "spec_version": "longitudinal_2000_v1",
+  "krt_scenarios": ["H6", "H7"],
+  "panel_size": 2000,
+  "panel_sha256": "bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a",
+  "expected_elections": 26,
+  "expected_nls_pairs": 270,
+  "aggregate_estimands_per_pair": 3,
+  "pilot_pairs": [
+    {"election_id": "leg_1962_r1", "scenario_id": "H6"},
+    {"election_id": "leg_1962_r1", "scenario_id": "H7"},
+    {"election_id": "leg_1986_r1", "scenario_id": "H6"},
+    {"election_id": "leg_1986_r1", "scenario_id": "H7"},
+    {"election_id": "leg_2022_r1", "scenario_id": "H6"},
+    {"election_id": "leg_2022_r1", "scenario_id": "H7"}
+  ],
+  "krt_model": {
+    "model_key": "krt_beta_binomial",
+    "parameterization_version": "king99_beta_binomial_independent_beta_random_effects_v1",
+    "likelihood": "Y_i ~ Binomial(N_i, x_i*b1_i + (1-x_i)*b2_i)",
+    "hyperpriors": "c1,d1,c2,d2 iid Exponential(rate=king_lambda)",
+    "commune_priors": "b1_i ~ Beta(c1,d1); b2_i ~ Beta(c2,d2)",
+    "aggregate_estimand_version": "group_specific_population_v2",
+    "observed_count_roundtrip_version": "nextafter_floor_roundtrip_v1",
+    "king_lambda": 0.5
+  },
+  "mcmc": {
+    "chains": 4,
+    "warmup": 1000,
+    "draws": 1000,
+    "target_accept": 0.99,
+    "max_treedepth": 14,
+    "sampler_backend": "pymc",
+    "execution_cores": 1,
+    "sampler_backend_reason": "Separate PyMC fallback candidate because local Windows Code Integrity blocks jaxlib required by NumPyro. Model, priors, panel and calibration remain unchanged.",
+    "initial_base_seed": 20260802,
+    "rerun_base_seed": 20260817,
+    "seed_derivation_version": "sha256_first8_mod_int31_v1"
+  }
+}

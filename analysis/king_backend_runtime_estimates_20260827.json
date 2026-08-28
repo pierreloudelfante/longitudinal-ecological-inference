@@ -1,0 +1,53 @@
+{
+  "as_of": "2026-08-27",
+  "standard_fit": {
+    "panel_size": 2000,
+    "draws": 1000,
+    "tune": 1000,
+    "chains": 4,
+    "strengthened_reruns_included": false
+  },
+  "expected_runs": {
+    "H0A": 26,
+    "H0B": 26,
+    "H0C": 26,
+    "H1": 26,
+    "H2": 26,
+    "H3": 26,
+    "H4": 26,
+    "H5": 26,
+    "H6": 16,
+    "H7": 16
+  },
+  "pymc_active_time_clean_ratio": 1.9198698559556746,
+  "pymc_sleep_corrected_runs": 4,
+  "numpyro_step_corrected_runs": 3,
+  "strict_pymc_over_numpyro_multiplier": 2.927623537782611,
+  "strict_multiplier_low": 2.4940645539347224,
+  "strict_multiplier_high": 3.5,
+  "strict_matched_evidence": [
+    {
+      "scenario_id": "H2",
+      "numpyro_run_id": "20260822T190602Z__200f797a08d2",
+      "pymc_run_id": "20260825T033641Z__37795b17add3",
+      "numpyro_minutes": 39.48228865500035,
+      "pymc_active_minutes": 135.68289131068346,
+      "pymc_over_numpyro": 3.4365508164000396
+    },
+    {
+      "scenario_id": "H3",
+      "numpyro_run_id": "20260822T195314Z__361b3b2c9fb0",
+      "pymc_run_id": "20260825T101843Z__d3030b2cdc30",
+      "numpyro_minutes": 24.707439995000218,
+      "pymc_active_minutes": 61.62195030999913,
+      "pymc_over_numpyro": 2.4940645539347224
+    }
+  ],
+  "method_notes": [
+    "Complete scenario/backend cells are sums of observed standard production runs.",
+    "Partial cells keep observed anchors and predict missing elections from a same-backend election baseline.",
+    "Missing backends are converted with the geometric mean of two strict H2/H3 matched pairs.",
+    "Ranges for anchor projections use the minimum and maximum observed anchor factors; one-anchor projections use factor/2 to factor*2.",
+    "Ranges for backend conversion include a widened 2.5x to 3.5x PyMC/NumPyro multiplier."
+  ]
+}

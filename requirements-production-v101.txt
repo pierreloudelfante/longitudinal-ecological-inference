@@ -1,0 +1,12 @@
+# Python 3.12.10 was used for the numerical production runs.
+arviz==1.1.0
+matplotlib==3.10.9
+numpy==2.4.6
+pandas==3.0.3
+psutil==7.2.2
+pyei==1.1.4
+pymc==6.0.1
+pyarrow==24.0.0
+reportlab==4.4.9
+scipy==1.17.1
+xarray==2026.4.0

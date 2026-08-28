@@ -1,0 +1,64 @@
+{
+  "panel": {
+    "panel_seed": 20260803,
+    "primary_panel_size": 2000,
+    "master_panel_size": 3000,
+    "max_attempts": 1000,
+    "max_abs_smd": 0.1,
+    "max_abs_category_gap": 0.02,
+    "reference_year": 2022
+  },
+  "data": {
+    "political_partition_tolerance": 0.01,
+    "plm_policy": "whole"
+  },
+  "mcmc": {
+    "ladder": [25, 100, 250, 500, 1000, 2000, 3000],
+    "production_draws": 1000,
+    "production_tune": 1000,
+    "production_chains": 4,
+    "cores": 1,
+    "target_accept": 0.99,
+    "max_treedepth": 14,
+    "king_lambda": 0.5,
+    "original_seed": 20260802,
+    "rerun_seed": 20260817,
+    "max_estimated_hours_per_fit": 12,
+    "max_memory_fraction": 0.8,
+    "warning_rhat": 1.01,
+    "fail_rhat": 1.1,
+    "warning_ess": 400,
+    "fail_ess": 100,
+    "fail_divergence_fraction": 0.05
+  },
+  "nls": {
+    "n_starts": 20,
+    "start_scale": 0.5,
+    "n_start_strata": 5,
+    "max_nfev": 5000,
+    "tolerance": 1e-9,
+    "random_seed": 20260802
+  },
+  "historical_only": {
+    "legacy_panel_size": 3000,
+    "legacy_pilot_size": 2000,
+    "legacy_initial_seed": 20260802,
+    "smoke_test_draws": 20,
+    "smoke_test_tune": 20,
+    "smoke_test_chains": 1,
+    "note": "Provenance historique uniquement; ces valeurs ne definissent pas la release v1.0.1."
+  },
+  "pilot": {
+    "h0_elections": ["leg_1986_r1", "leg_2022_r1"],
+    "recent_hypothesis": {"election_id": "leg_2022_r1", "scenario_id": "H6"},
+    "nls": {"election_id": "leg_2022_r1", "scenario_id": "RXC1"},
+    "rosen_elections": ["leg_1962_r1", "leg_1986_r1", "leg_2022_r1"]
+  },
+  "longitudinal_2000_v1": {
+    "primary_sample_size": 2000,
+    "master_sample_size_if_available": 3000,
+    "priority_scenarios": ["H0A", "H1"],
+    "nls_scope": "all_source_valid_registry_pairs",
+    "benchmark_id": "benchmark_3000_1962_1986_2022_v2"
+  }
+}
