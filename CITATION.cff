@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite this repository and the exact revision used."
+title: "Longitudinal Ecological Inference in France, 1962–2022 — Replication Package"
+type: software
+authors:
+  - family-names: "Delfante"
+    given-names: "Pierre-Lou"
+version: "2.6"
+repository-code: "https://github.com/pierreloudelfante/longitudinal-ecological-inference"
+url: "https://github.com/pierreloudelfante/longitudinal-ecological-inference"
+abstract: >-
+  Code, computational contracts, manifests, and documentation for a longitudinal
+  ecological-inference analysis of 26 French elections using a fixed panel of
+  2,000 municipalities from 1962 to 2022.
+keywords:
+  - ecological inference
+  - electoral data
+  - longitudinal analysis
+  - reproducible research
+  - France
