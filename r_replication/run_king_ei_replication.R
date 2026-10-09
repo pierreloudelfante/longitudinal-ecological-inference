@@ -32,6 +32,32 @@ strip_utf8_bom <- function(value) {
   value
 }
 names(frame) <- vapply(names(frame), strip_utf8_bom, character(1L), USE.NAMES = FALSE)
+
+# H4 is the only 2x2 specification whose two social groups have substantive
+# names in the model-ready files.  Normalize those names locally so the same
+# King EI implementation can validate and estimate every 2x2 specification.
+# Keep the source names for the audit manifest below.
+social_share_column <- "X__target_group"
+social_target_column <- "N__target_group"
+social_complement_column <- "N__complement_group"
+scenario_values <- unique(frame$scenario_id)
+if (
+  length(scenario_values) == 1L &&
+  identical(scenario_values[[1]], "H4") &&
+  !all(c("X__target_group", "N__target_group", "N__complement_group") %in% names(frame))
+) {
+  h4_required <- c("X__agri_indp", "N__agri_indp", "N__salaries")
+  h4_missing <- setdiff(h4_required, names(frame))
+  if (length(h4_missing)) {
+    stop("missing required H4 columns: ", paste(h4_missing, collapse = ", "))
+  }
+  frame$X__target_group <- frame$X__agri_indp
+  frame$N__target_group <- frame$N__agri_indp
+  frame$N__complement_group <- frame$N__salaries
+  social_share_column <- "X__agri_indp"
+  social_target_column <- "N__agri_indp"
+  social_complement_column <- "N__salaries"
+}
 required <- c(
   "unit_id", "panel_id", "election_id", "scenario_id", "sample_rank", "N_g",
   "X__target_group", "N__target_group", "N__complement_group"
@@ -176,6 +202,9 @@ manifest <- list(
   election_id = frame$election_id[[1]],
   scenario_id = frame$scenario_id[[1]],
   y_column = y_column,
+  social_share_column = social_share_column,
+  social_target_column = social_target_column,
+  social_complement_column = social_complement_column,
   n_communes = nrow(frame),
   model = "King_1997_truncated_bivariate_normal_EI",
   comparison_target = "PyEI_king99_beta_binomial",

@@ -4,7 +4,11 @@ import os
 from pathlib import Path
 
 from code_longitudinal import run_r_ei_all_2x2
-from code_longitudinal.consolidate_r_ei_all_2x2 import RETAINED_SCENARIOS
+from code_longitudinal.consolidate_r_ei_all_2x2 import (
+    ALL_2X2_OUTPUTS,
+    ALL_SCENARIOS,
+    RETAINED_SCENARIOS,
+)
 from code_longitudinal.package_retained6_release import _code_closure
 from code_longitudinal.paths import ROOT
 from code_longitudinal.release_scope import load_release_scope
@@ -17,6 +21,13 @@ def test_retained6_release_counts_derive_from_configuration() -> None:
     assert scope.expected_krt_commune_rows == 312_000
     assert scope.expected_krt_aggregate_rows == 468
     assert scope.expected_nls_pairs == 156
+
+
+def test_full240_r_consolidation_scope_is_explicit_and_separate() -> None:
+    assert len(ALL_SCENARIOS) == 10
+    assert set(ALL_SCENARIOS) == {"H0A", "H0B", "H0C", "H1", "H2", "H3", "H4", "H5", "H6", "H7"}
+    assert ALL_2X2_OUTPUTS["aggregate"].name == "longitudinal_king_ei_r_aggregate_all_2x2.parquet"
+    assert ALL_2X2_OUTPUTS["commune"].name == "longitudinal_king_ei_r_commune_all_2x2.parquet"
 
 
 def test_r_library_search_path_keeps_project_library_first(monkeypatch, tmp_path: Path) -> None:

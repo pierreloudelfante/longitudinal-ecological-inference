@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+from reproducibility.replication_scope import get_scope
 
 from .paths import OUTPUT_DIR, ROOT, RUNS_DIR
 from .run_rxc_panel_extension_v11 import EXPECTED_PANEL_SHA256
@@ -56,12 +57,13 @@ def _krt_attempts() -> pd.DataFrame:
                 "finished_at_utc": manifest.get("finished_at_utc", ""),
             }
         )
-    return pd.DataFrame(rows)
+    return get_scope().filter_frame(pd.DataFrame(rows))
 
 
 def build_coverage() -> dict[str, object]:
+    scope = get_scope()
     nls_path = NLS_292 if NLS_292.exists() else NLS_270
-    nls = pd.read_parquet(nls_path)
+    nls = scope.filter_frame(pd.read_parquet(nls_path))
     nls_pair = (
         nls.sort_values(["election_id", "scenario_id"])
         .groupby(["election_id", "scenario_id"], as_index=False)
@@ -80,7 +82,7 @@ def build_coverage() -> dict[str, object]:
         # partially-written external artifact prevents consolidation.
         pass
     if ALL_2X2_SELECTION.exists():
-        selected = pd.read_csv(ALL_2X2_SELECTION, dtype="string")
+        selected = scope.filter_frame(pd.read_csv(ALL_2X2_SELECTION, dtype="string"))
         successful = selected.rename(columns={"mcmc_status": "diagnostic_status"}).copy()
         successful["execution_status"] = "success"
         successful = successful.merge(
@@ -99,7 +101,9 @@ def build_coverage() -> dict[str, object]:
 
     rows: list[dict[str, object]] = []
     for scenario in SCENARIOS:
-        expected = sum(scenario_is_allowed(scenario, election) for election in ELECTIONS)
+        expected = sum(pair[1] == scenario.scenario_id for pair in scope.nls_pairs)
+        if not expected:
+            continue
         nls_part = nls_pair.loc[nls_pair["scenario_id"].eq(scenario.scenario_id)]
         if scenario.model_family == "2x2":
             krt_expected = expected

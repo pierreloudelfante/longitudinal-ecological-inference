@@ -3,11 +3,16 @@ from __future__ import annotations
 import json
 import ctypes
 import os
+import re
+import sys
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+from reproducibility.replication_scope import get_scope
+from reproducibility.estimation_recovery import execute_estimation_batch
+from reproducibility.estimation_process import run_supervised
 
 from .audit_longitudinal import RUN_PLAN_PATH, build_longitudinal_audit
 from .build_longitudinal_panel import PANEL_PATH, build_longitudinal_panel, load_longitudinal_panel_manifest
@@ -73,7 +78,7 @@ def _filtered_plan(
     election_id: str | None = None,
     scenario_ids: tuple[str, ...] | None = None,
 ) -> pd.DataFrame:
-    selected = plan.copy()
+    selected = get_scope().filter_frame(plan).copy()
     if election_id:
         selected = selected.loc[selected["election_id"].eq(election_id)]
     if scenario_ids:
@@ -137,13 +142,29 @@ def _nls_success_index(panel_id: str) -> dict[tuple[str, str], dict[str, object]
         model_key = str(parameters.get("model_key", manifest.get("model_key", "")))
         if not model_key.startswith("rosen_nls"):
             continue
-        if not (run_dir / "longitudinal_estimates.csv").exists() or not (run_dir / "model_diagnostics.csv").exists():
+        if not all((run_dir / name).is_file() and (run_dir / name).stat().st_size > 0
+                   for name in NLS_REQUIRED_OUTPUTS):
             continue
         key = (str(parameters.get("election_id")), str(parameters.get("scenario_id")))
         current = selected.get(key)
         if current is None or str(manifest.get("finished_at_utc", "")) > str(current.get("finished_at_utc", "")):
             selected[key] = manifest
     return selected
+
+
+NLS_REQUIRED_OUTPUTS = (
+    "longitudinal_estimates.csv", "model_diagnostics.csv",
+    "nls_coefficients.csv", "nls_start_diagnostics.csv",
+)
+
+
+def _require_nls_saved_outputs(run_id: str) -> None:
+    if not run_id or Path(run_id).name != run_id:
+        raise RuntimeError("NLS success has no valid saved run identifier")
+    missing = [name for name in NLS_REQUIRED_OUTPUTS
+               if not (RUNS_DIR / run_id / name).is_file() or (RUNS_DIR / run_id / name).stat().st_size == 0]
+    if missing:
+        raise RuntimeError(f"NLS success is missing saved outputs for {run_id}: {missing}")
 
 
 def _krt_success_index(
@@ -197,6 +218,7 @@ def run_nls_longitudinal(
     election_id: str | None = None,
     scenario_id: str | None = None,
     force: bool = False,
+    supervise: bool = False,
 ) -> dict[str, object]:
     plan, panel_manifest = _ensure_inputs()
     progress_path = OUTPUT_DIR / SPEC_VERSION / "production" / "nls_progress.parquet"
@@ -206,8 +228,13 @@ def run_nls_longitudinal(
         scenario_ids=(scenario_id,) if scenario_id else None,
     )
     successful = _nls_success_index(str(panel_manifest["panel_id"])) if not force else {}
-    rows: list[dict[str, object]] = []
-    for item in selected.to_dict("records"):
+    rows_by_pair: dict[tuple[str, str], dict[str, object]] = {}
+
+    def record(item, row):
+        rows_by_pair[(str(item["election_id"]), str(item["scenario_id"]))] = row
+        _save_progress(progress_path, list(rows_by_pair.values()))
+
+    def run_one(item):
         base = {
             "election_id": item["election_id"],
             "scenario_id": item["scenario_id"],
@@ -215,7 +242,7 @@ def run_nls_longitudinal(
             "started_at_utc": _utc_now(),
         }
         if item["preparation_status"] != "admissible":
-            rows.append(
+            record(item,
                 {
                     **base,
                     "status": "skipped_ineligible",
@@ -223,11 +250,11 @@ def run_nls_longitudinal(
                     "finished_at_utc": _utc_now(),
                 }
             )
-            _save_progress(progress_path, rows)
-            continue
+            return rows_by_pair[(str(item["election_id"]), str(item["scenario_id"]))]
         existing = successful.get((str(item["election_id"]), str(item["scenario_id"])))
         if existing is not None:
-            rows.append(
+            _require_nls_saved_outputs(str(existing.get("run_id", "")))
+            record(item,
                 {
                     **base,
                     "status": "skipped_existing_success",
@@ -236,19 +263,39 @@ def run_nls_longitudinal(
                     "finished_at_utc": _utc_now(),
                 }
             )
-            _save_progress(progress_path, rows)
-            continue
+            return rows_by_pair[(str(item["election_id"]), str(item["scenario_id"]))]
         try:
-            result = run_nls(
-                ELECTION_BY_ID[str(item["election_id"])],
-                SCENARIO_BY_ID[str(item["scenario_id"])],
-                sample_size=2000,
-                panel_path=PANEL_PATH,
-                force=force,
-            )
-            rows.append({**base, **result, "reason": "", "finished_at_utc": _utc_now()})
+            election_key = str(item["election_id"])
+            scenario_key = str(item["scenario_id"])
+            if supervise:
+                key = election_key + "__" + scenario_key
+                safe = re.sub(r"[^A-Za-z0-9_.-]", "_", key)
+                state = ROOT / ".runtime" / ("replication_v2" if get_scope().is_full else "replication_court")
+                log = state / "estimation_processes" / "nls" / f"{safe}.log"
+                run_supervised(
+                    [sys.executable, "-m", "reproducibility.replication_complete", "estimation-worker",
+                     "--scope", get_scope().name, "--estimation-family", "nls", "--estimation-key", key],
+                    family="nls", key=key, cwd=ROOT, stdout_path=log,
+                    environment=os.environ.copy(),
+                )
+                resumed = _nls_success_index(str(panel_manifest["panel_id"])).get(
+                    (election_key, scenario_key), {})
+                result = {"status": "success", "run_id": resumed.get("run_id", "")}
+            else:
+                result = run_nls(
+                    ELECTION_BY_ID[election_key], SCENARIO_BY_ID[scenario_key],
+                    sample_size=2000, panel_path=PANEL_PATH, force=force,
+                )
+                if result.get("status") not in {"success", "skipped_existing_success"}:
+                    raise RuntimeError(f"NLS estimation returned unsuccessful status: {result}")
+                if not result.get("run_id"):
+                    resumed = _nls_success_index(str(panel_manifest["panel_id"])).get(
+                        (election_key, scenario_key), {})
+                    result = {**result, "run_id": resumed.get("run_id", "")}
+            _require_nls_saved_outputs(str(result.get("run_id", "")))
+            record(item, {**base, **result, "reason": "", "finished_at_utc": _utc_now()})
         except Exception as exc:
-            rows.append(
+            record(item,
                 {
                     **base,
                     "status": "failed",
@@ -256,7 +303,16 @@ def run_nls_longitudinal(
                     "finished_at_utc": _utc_now(),
                 }
             )
-        _save_progress(progress_path, rows)
+            raise
+        return rows_by_pair[(str(item["election_id"]), str(item["scenario_id"]))]
+
+    scope = get_scope()
+    rows = execute_estimation_batch(
+        selected.to_dict("records"), batch_name="nls_base",
+        key_fn=lambda item: str(item["election_id"]) + "__" + str(item["scenario_id"]), run=run_one,
+        state_dir=ROOT / ".runtime" / ("replication_v2" if scope.is_full else "replication_court") / "estimation_failures",
+        retry_failed=os.environ.get("LONGITUDINAL_RETRY_FAILED") == "1",
+    )
     frame = pd.DataFrame(rows)
     return {
         "panel_id": panel_manifest["panel_id"],

@@ -55,8 +55,11 @@ def _portable(path: Path) -> str:
 def _run_r(output_dir: Path, scenarios: tuple[str, ...]) -> None:
     environment = os.environ.copy()
     environment["R_LIBS_USER"] = _r_library_search_path()
+    environment["R_LIBS"] = ""
+    environment["R_LIBS_SITE"] = ""
     command = [
         str(_rscript_path()),
+        "--vanilla",
         str(R_SCRIPT),
         str(ROOT),
         str(output_dir),

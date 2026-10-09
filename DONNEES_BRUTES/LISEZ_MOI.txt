@@ -1,0 +1,18 @@
+DONNEES BRUTES EXTERNES — REPLICATION LONGITUDINALE
+
+Placer ici les 31 archives ZIP originales, sans les décompresser.
+Ou fournir au lanceur -DossierDonneesBrutes "D:\MonDossierDeDonnees".
+
+Liste exacte (noms, noms d'origine acceptés, tailles, SHA-256, URL historiques) :
+../reproducibility/contract_v2/DONNEES_REQUISES.csv
+
+26 archives d'élections + CSP + taille agglomérations/communes + revenus
++ capital immobilier + nationalités. Total attendu : 1 620 387 967 octets.
+
+Le lanceur scientifique ne retélécharge jamais les fichiers. Pour une acquisition
+explicite, authentifiée et reprenable, exécuter à la racine :
+powershell -ExecutionPolicy Bypass -File .\TELECHARGER_DONNEES_BRUTES.ps1
+Le lanceur refuse une source absente ou dont la taille/l'empreinte diffère de la référence.
+Aucune matrice déjà préparée ne remplace la reconstruction depuis ces sources.
+
+Ensuite suivre COMMENCER_ICI.md à la racine du ZIP.

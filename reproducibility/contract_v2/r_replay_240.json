@@ -1,0 +1,1216 @@
+{
+  "schema_version": "r_replay_240_v1",
+  "source_archive": "longitudinal_2000_results.zip",
+  "source_archive_sha256": "a5c0978e822e2276c7607764cfa74dd6ece8f135f2af1d290a8a880202cd5b79",
+  "source_table": "02_TABLES_PRINCIPALES/longitudinal_r_ei_commune.parquet",
+  "source_table_sha256": "23d97b21540b58c4bd07a7dbcfc9de223528bb2bf5aa376cd3beeb14f86509b6",
+  "verification": {
+    "reference_rows": 480000,
+    "pairs": 240,
+    "rows_per_pair": 2000,
+    "one_seed_per_pair": true,
+    "aggregate_table_seed_agreement": true
+  },
+  "entries": [
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0A",
+      "seed": 1179199304
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0A",
+      "seed": 20260803
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0A",
+      "seed": 20260804
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0A",
+      "seed": 20260805
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0A",
+      "seed": 20260806
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0A",
+      "seed": 20260807
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0A",
+      "seed": 20260808
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0A",
+      "seed": 20260809
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0A",
+      "seed": 20260810
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0A",
+      "seed": 20260811
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0A",
+      "seed": 20260812
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0A",
+      "seed": 20260813
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0A",
+      "seed": 20260814
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0A",
+      "seed": 20260815
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0A",
+      "seed": 20260816
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0A",
+      "seed": 20260817
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0A",
+      "seed": 20260818
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0A",
+      "seed": 20260819
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0A",
+      "seed": 20260820
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0A",
+      "seed": 20260821
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0A",
+      "seed": 20260822
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0A",
+      "seed": 20260823
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0A",
+      "seed": 20260824
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0A",
+      "seed": 20260825
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0A",
+      "seed": 20260826
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0A",
+      "seed": 20260827
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H1",
+      "seed": 746546913
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H1",
+      "seed": 1576548419
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H1",
+      "seed": 1817534220
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H1",
+      "seed": 83498312
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H1",
+      "seed": 532657439
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H1",
+      "seed": 1388368099
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H1",
+      "seed": 1048447009
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H1",
+      "seed": 438854356
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H1",
+      "seed": 1263333451
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H1",
+      "seed": 619358001
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H1",
+      "seed": 1645026312
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H1",
+      "seed": 1494465772
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H1",
+      "seed": 1884140679
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H1",
+      "seed": 968549354
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H1",
+      "seed": 1331675587
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H1",
+      "seed": 163264312
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H1",
+      "seed": 746809630
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H1",
+      "seed": 1172343128
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H1",
+      "seed": 2117652075
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H1",
+      "seed": 288103363
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H1",
+      "seed": 1701548981
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H1",
+      "seed": 537596624
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H1",
+      "seed": 1813416497
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H1",
+      "seed": 193702888
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H1",
+      "seed": 467465309
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H1",
+      "seed": 1534908932
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0B",
+      "seed": 1828206163
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0C",
+      "seed": 1742008355
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H2",
+      "seed": 200487595
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H3",
+      "seed": 900522427
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H4",
+      "seed": 908271822
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H5",
+      "seed": 1212079316
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0B",
+      "seed": 175834799
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0C",
+      "seed": 563056731
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H2",
+      "seed": 573084854
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H3",
+      "seed": 387622004
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H4",
+      "seed": 1796060044
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H5",
+      "seed": 694775748
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0B",
+      "seed": 257285900
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0C",
+      "seed": 778842884
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H2",
+      "seed": 244679827
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H3",
+      "seed": 1158332931
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H4",
+      "seed": 809983747
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H5",
+      "seed": 388000359
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0B",
+      "seed": 1554791144
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0C",
+      "seed": 824788720
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H2",
+      "seed": 273125478
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H3",
+      "seed": 360738938
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H4",
+      "seed": 1980506115
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H5",
+      "seed": 1083677710
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0B",
+      "seed": 1487694050
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0C",
+      "seed": 338710612
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H2",
+      "seed": 1567922241
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H3",
+      "seed": 1985876305
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H4",
+      "seed": 638363128
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H5",
+      "seed": 1886636471
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0B",
+      "seed": 25192390
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0C",
+      "seed": 1541370876
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H2",
+      "seed": 920424026
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H3",
+      "seed": 476383516
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H4",
+      "seed": 448747961
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H5",
+      "seed": 1870865879
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0B",
+      "seed": 2121601630
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0C",
+      "seed": 671296540
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H2",
+      "seed": 2129304750
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H3",
+      "seed": 515216156
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H4",
+      "seed": 378344326
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H5",
+      "seed": 1003383075
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H6",
+      "seed": 1602960220
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H7",
+      "seed": 40023650
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0B",
+      "seed": 2056708214
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0C",
+      "seed": 225840709
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H2",
+      "seed": 1637111841
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H3",
+      "seed": 28868675
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H4",
+      "seed": 1482773462
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H5",
+      "seed": 1336847237
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H6",
+      "seed": 758627165
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H7",
+      "seed": 1273118518
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0B",
+      "seed": 1988741390
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0C",
+      "seed": 164133069
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H2",
+      "seed": 1823772528
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H3",
+      "seed": 1774842014
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H4",
+      "seed": 1483090050
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H5",
+      "seed": 1095692967
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H6",
+      "seed": 75103991
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H7",
+      "seed": 1939681187
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0B",
+      "seed": 311828779
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0C",
+      "seed": 2044318024
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H2",
+      "seed": 521491289
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H3",
+      "seed": 229788350
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H4",
+      "seed": 1899073763
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H5",
+      "seed": 2007098032
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H6",
+      "seed": 1302644903
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H7",
+      "seed": 2092376333
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0B",
+      "seed": 1466384370
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0C",
+      "seed": 1057682091
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H2",
+      "seed": 874170858
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H3",
+      "seed": 8187141
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H4",
+      "seed": 977699159
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H5",
+      "seed": 357540986
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H6",
+      "seed": 305165192
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H7",
+      "seed": 1380274263
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0B",
+      "seed": 728175018
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0C",
+      "seed": 1889996702
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H2",
+      "seed": 1303333262
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H3",
+      "seed": 231959911
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H4",
+      "seed": 1369842424
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H5",
+      "seed": 115421073
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H6",
+      "seed": 48616071
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H7",
+      "seed": 715156193
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0B",
+      "seed": 2011043320
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0C",
+      "seed": 168165510
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H2",
+      "seed": 966210048
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H3",
+      "seed": 58930916
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H4",
+      "seed": 978586902
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H5",
+      "seed": 1477388077
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H6",
+      "seed": 322705939
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H7",
+      "seed": 1495129969
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0B",
+      "seed": 762438035
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0C",
+      "seed": 325614192
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H2",
+      "seed": 581192036
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H3",
+      "seed": 196608511
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H4",
+      "seed": 1360241995
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H5",
+      "seed": 1125747011
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H6",
+      "seed": 1875465240
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H7",
+      "seed": 2049255733
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0B",
+      "seed": 168598633
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0C",
+      "seed": 221879322
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H2",
+      "seed": 292281758
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H3",
+      "seed": 1216714972
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H4",
+      "seed": 1840455986
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H5",
+      "seed": 668535413
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H6",
+      "seed": 170944422
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H7",
+      "seed": 618919391
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0B",
+      "seed": 924143183
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0C",
+      "seed": 146854438
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H2",
+      "seed": 2031561004
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H3",
+      "seed": 264470946
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H4",
+      "seed": 1633907991
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H5",
+      "seed": 942395157
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0B",
+      "seed": 198309857
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0C",
+      "seed": 889245571
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H2",
+      "seed": 646347565
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H3",
+      "seed": 1073185976
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H4",
+      "seed": 1413824256
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H5",
+      "seed": 486654704
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0B",
+      "seed": 1534639048
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0C",
+      "seed": 926626573
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H2",
+      "seed": 608643679
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H3",
+      "seed": 389915473
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H4",
+      "seed": 1187486962
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H5",
+      "seed": 1535498493
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0B",
+      "seed": 443333278
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0C",
+      "seed": 1395917640
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H2",
+      "seed": 1217683010
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H3",
+      "seed": 35464308
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H4",
+      "seed": 1798556381
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H5",
+      "seed": 1932913935
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0B",
+      "seed": 502246330
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0C",
+      "seed": 1274261594
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H2",
+      "seed": 757243421
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H3",
+      "seed": 1365806257
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H4",
+      "seed": 13379293
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H5",
+      "seed": 710202142
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H6",
+      "seed": 1983105131
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H7",
+      "seed": 474377169
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0B",
+      "seed": 1488006667
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0C",
+      "seed": 1574905352
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H2",
+      "seed": 976864008
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H3",
+      "seed": 305187535
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H4",
+      "seed": 1886303841
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H5",
+      "seed": 530933880
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H6",
+      "seed": 814041838
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H7",
+      "seed": 1002958196
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0B",
+      "seed": 232004302
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0C",
+      "seed": 101057446
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H2",
+      "seed": 984951077
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H3",
+      "seed": 1290052621
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H4",
+      "seed": 1266101293
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H5",
+      "seed": 2084897439
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H6",
+      "seed": 1218920348
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H7",
+      "seed": 1496369433
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0B",
+      "seed": 398694766
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0C",
+      "seed": 668774181
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H2",
+      "seed": 217634969
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H3",
+      "seed": 1833679852
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H4",
+      "seed": 774344049
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H5",
+      "seed": 1080574994
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H6",
+      "seed": 916709157
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H7",
+      "seed": 1079405432
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0B",
+      "seed": 900003506
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0C",
+      "seed": 1233356361
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H2",
+      "seed": 194608038
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H3",
+      "seed": 270027559
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H4",
+      "seed": 1684492541
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H5",
+      "seed": 1474723975
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H6",
+      "seed": 759548416
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H7",
+      "seed": 2114068830
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0B",
+      "seed": 1967505311
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0C",
+      "seed": 1657653725
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H2",
+      "seed": 94568780
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H3",
+      "seed": 616428283
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H4",
+      "seed": 403845694
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H5",
+      "seed": 2030422279
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H6",
+      "seed": 362750519
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H7",
+      "seed": 541097501
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0B",
+      "seed": 52321789
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0C",
+      "seed": 34998224
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H2",
+      "seed": 2016552421
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H3",
+      "seed": 1152601092
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H4",
+      "seed": 1668833550
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H5",
+      "seed": 919366298
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H6",
+      "seed": 353612027
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H7",
+      "seed": 506872915
+    }
+  ]
+}

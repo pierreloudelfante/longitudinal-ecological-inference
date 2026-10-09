@@ -1,0 +1,280 @@
+{
+  "schema_version": "raw_sources_31_v2",
+  "raw_sources": [
+    {
+      "name": "political_leg_1962_csv.zip",
+      "required_sha256": "a3f50de55ee52f9207dbde187184c4f37c8fb5dabaefb47920352ef10c5f1b7d",
+      "bytes": 8179621,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1962_csv.zip",
+      "download_name": "leg1962_csv.zip"
+    },
+    {
+      "name": "political_leg_1967_csv.zip",
+      "required_sha256": "0dd4795fc26aae25a099f1c04942eae1005787225fee8704ccd34e941e179b80",
+      "bytes": 8503320,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1967_csv.zip",
+      "download_name": "leg1967_csv.zip"
+    },
+    {
+      "name": "political_leg_1968_csv.zip",
+      "required_sha256": "29a65a27fb334699981fc023acde79fb6d768b2f25940295a681e88e0a72b8b4",
+      "bytes": 7324140,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1968_csv.zip",
+      "download_name": "leg1968_csv.zip"
+    },
+    {
+      "name": "political_leg_1973_csv.zip",
+      "required_sha256": "e3158047af3592224ac01c61a6ea3057eb6d4eaa4f23d58d3209748cd92d1ee3",
+      "bytes": 7918520,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1973_csv.zip",
+      "download_name": "leg1973_csv.zip"
+    },
+    {
+      "name": "political_leg_1978_csv.zip",
+      "required_sha256": "a6cb8e499244059283da2652ddbd95ca40fab586cb2643b6da1b54ec5a60a3d1",
+      "bytes": 8546549,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1978_csv.zip",
+      "download_name": "leg1978_csv.zip"
+    },
+    {
+      "name": "political_leg_1981_csv.zip",
+      "required_sha256": "80d49260787d08a89061846488a2d634f94b38d2235e0c3d4e8502e905eb771d",
+      "bytes": 7850585,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1981_csv.zip",
+      "download_name": "leg1981_csv.zip"
+    },
+    {
+      "name": "political_leg_1986_csv.zip",
+      "required_sha256": "e265cdd2a0dd231e97496f715c83a01b3e6fd5a5914f942f51cb12bfbec43e64",
+      "bytes": 9052737,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1986_csv.zip",
+      "download_name": "leg1986_csv.zip"
+    },
+    {
+      "name": "political_leg_1988_csv.zip",
+      "required_sha256": "1567efc235de101279709e153172294e44b2aff7b96da623d29fd661f93e2ed2",
+      "bytes": 8104292,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1988_csv.zip",
+      "download_name": "leg1988_csv.zip"
+    },
+    {
+      "name": "political_leg_1993_csv.zip",
+      "required_sha256": "5c324f80f0f8cd8de80115b282046c7b9b57ebc6dbaf32ee98d5c0bdd11d2c0c",
+      "bytes": 10635893,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1993_csv.zip",
+      "download_name": "leg1993_csv.zip"
+    },
+    {
+      "name": "political_leg_1997_csv.zip",
+      "required_sha256": "20ace09e5c93156d89d5ecd2cc052001138aea96d6fc68d2be3205ce46a6db31",
+      "bytes": 9988178,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg1997_csv.zip",
+      "download_name": "leg1997_csv.zip"
+    },
+    {
+      "name": "political_leg_2002_csv.zip",
+      "required_sha256": "0c1ff3b26b5fa8cb373fae5bdca43ec3a86b4166f6676c7657bdca1cd2f541fb",
+      "bytes": 11505348,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg2002_csv.zip",
+      "download_name": "leg2002_csv.zip"
+    },
+    {
+      "name": "political_leg_2007_csv.zip",
+      "required_sha256": "3965958d55b700e1f1ef1ebc7e5a4f5999a802ae0fa1381dee987cd2658893ea",
+      "bytes": 11435389,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg2007_csv.zip",
+      "download_name": "leg2007_csv.zip"
+    },
+    {
+      "name": "political_leg_2012_csv.zip",
+      "required_sha256": "954861c3c073923b822d71840f4d401f6d2fe53608eb8b647f05b1b2ddeab5a8",
+      "bytes": 10438112,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg2012_csv.zip",
+      "download_name": "leg2012_csv.zip"
+    },
+    {
+      "name": "political_leg_2017_csv.zip",
+      "required_sha256": "d3c27cf4efb0e75ee4623f907ecb62bfe310e69de8fa33104820ab87a69bd412",
+      "bytes": 10924024,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg2017_csv.zip",
+      "download_name": "leg2017_csv.zip"
+    },
+    {
+      "name": "political_leg_2022_csv.zip",
+      "required_sha256": "5168e35ab1e0f03c796b98b84e036eef1c7e3e7a3cce7f39fb23e8cf278578e8",
+      "bytes": 9869702,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/leg2022_csv.zip",
+      "download_name": "leg2022_csv.zip"
+    },
+    {
+      "name": "political_pre_1965_csv.zip",
+      "required_sha256": "edd3c469d87788844d33ceac27aac3e42539bee0fd533a2613fd5eecd921895e",
+      "bytes": 8579678,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1965_csv.zip",
+      "download_name": "pres1965_csv.zip"
+    },
+    {
+      "name": "political_pre_1969_csv.zip",
+      "required_sha256": "85b11b1ee7e74e31bcb1f1d3fe732160da4790be503b659df16bfc1f68ac5c12",
+      "bytes": 8938841,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1969_csv.zip",
+      "download_name": "pres1969_csv.zip"
+    },
+    {
+      "name": "political_pre_1974_csv.zip",
+      "required_sha256": "ad022246931af2197070a88b8c39b64e2af05728c0f788ff4ef9c0d48fad7ea6",
+      "bytes": 10714782,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1974_csv.zip",
+      "download_name": "pres1974_csv.zip"
+    },
+    {
+      "name": "political_pre_1981_csv.zip",
+      "required_sha256": "a20d067bb3b71b66fb596e185a84dde6571c85490d8ee0a71e82fa6d25d99b30",
+      "bytes": 11209850,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1981_csv.zip",
+      "download_name": "pres1981_csv.zip"
+    },
+    {
+      "name": "political_pre_1988_csv.zip",
+      "required_sha256": "0ca19aa94c982c34e99cce9cc2670c7ed02da07c148ab2eafad86a689e0fa985",
+      "bytes": 10905214,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1988_csv.zip",
+      "download_name": "pres1988_csv.zip"
+    },
+    {
+      "name": "political_pre_1995_csv.zip",
+      "required_sha256": "40bd0fbb5c07f57693eb77b2384c836588d241555691cf2f7ba33a489e847efe",
+      "bytes": 11224442,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres1995_csv.zip",
+      "download_name": "pres1995_csv.zip"
+    },
+    {
+      "name": "political_pre_2002_csv.zip",
+      "required_sha256": "a4fa24fcb1920e4f9e9f63da53f06d0ae2f6de2b2d068a1c5d589bfd7e46ac53",
+      "bytes": 13897499,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres2002_csv.zip",
+      "download_name": "pres2002_csv.zip"
+    },
+    {
+      "name": "political_pre_2007_csv.zip",
+      "required_sha256": "380475d4ba5cdce989c29154c4cc3106a607438b60c776d25f3a22ce27541a60",
+      "bytes": 12535403,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres2007_csv.zip",
+      "download_name": "pres2007_csv.zip"
+    },
+    {
+      "name": "political_pre_2012_csv.zip",
+      "required_sha256": "3a57809bebf82da41a08b46d4637822b2d2af8c88c25dc3af2497ba546ac630d",
+      "bytes": 11721969,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres2012_csv.zip",
+      "download_name": "pres2012_csv.zip"
+    },
+    {
+      "name": "political_pre_2017_csv.zip",
+      "required_sha256": "f2740b91def0cd3f000a844e2faca48eb6da75ad73b452d4ae3d7f61882bc410",
+      "bytes": 11652206,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres2017_csv.zip",
+      "download_name": "pres2017_csv.zip"
+    },
+    {
+      "name": "political_pre_2022_csv.zip",
+      "required_sha256": "a5141029623cfbe7cf1254e0b6bc8c820a3c0df2fa509e71d7d756c7550dba9a",
+      "bytes": 11986740,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/pres2022_csv.zip",
+      "download_name": "pres2022_csv.zip"
+    },
+    {
+      "name": "socio_agl_csv.zip",
+      "required_sha256": "182f5fa61b13c65f57e7a0d08bd41b65c82935d7bf688f37f0660c8ebaad966c",
+      "bytes": 130185786,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/Taille_agglo_commune_csv.zip",
+      "download_name": "Taille_agglo_commune_csv.zip",
+      "provenance": "download_log.csv supplied with project"
+    },
+    {
+      "name": "socio_cap_csv.zip",
+      "required_sha256": "4f41233eef2806ac6e4262f321086ea5306c6d200ec5e5a2764c381ef997fb61",
+      "bytes": 511307324,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/Capital_immobilier_csv.zip",
+      "download_name": "Capital_immobilier_csv.zip",
+      "provenance": "download_log.csv supplied with project"
+    },
+    {
+      "name": "socio_csp_csv.zip",
+      "required_sha256": "9926c5103a54d0b36ee727b96c37566b4dbb626ee1b000ce7282ce0a04811522",
+      "bytes": 278774859,
+      "present_at_capture": true,
+      "verified_at_capture": true,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/CSP_csv.zip",
+      "download_name": "CSP_csv.zip"
+    },
+    {
+      "name": "socio_nat_csv.zip",
+      "required_sha256": "07441e2b91270749793502b427c647711cf781f548c245db451610fb19e5313e",
+      "bytes": 101685006,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/Nationalites_csv.zip",
+      "download_name": "Nationalites_csv.zip",
+      "provenance": "download_log.csv supplied with project"
+    },
+    {
+      "name": "socio_rev_csv.zip",
+      "required_sha256": "87b53872f11bdf945023cfc08a95b15debea288a432ee8d8defda8d9323f4516",
+      "bytes": 334791958,
+      "source_url": "https://conflit-politique-data.ams3.cdn.digitaloceanspaces.com/zip/Revenus_csv.zip",
+      "download_name": "Revenus_csv.zip",
+      "provenance": "download_log.csv supplied with project"
+    }
+  ]
+}

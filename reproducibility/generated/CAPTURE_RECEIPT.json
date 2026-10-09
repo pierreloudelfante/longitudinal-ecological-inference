@@ -1,0 +1,14 @@
+{
+  "schema_version": "longitudinal_reproducibility_capture_v1",
+  "status": "complete",
+  "captured_at_utc": "2026-09-01T09:45:57.372874+00:00",
+  "python_packages": 64,
+  "r_packages": 109,
+  "raw_sources": 27,
+  "raw_sources_verified": 27,
+  "model_ready_pairs": 240,
+  "code_files": 229,
+  "output_tables": 8,
+  "presentation_source_sha256": "a4ca6f65c5d4c8c6c8aa2d60abc4a91767df18b846619e038333a4b9a9a173e2",
+  "report_pdf_source_sha256": "a928bb7a0402b0abc0c30855fe1ca2598fb776931e87f9989419d0979f998501"
+}

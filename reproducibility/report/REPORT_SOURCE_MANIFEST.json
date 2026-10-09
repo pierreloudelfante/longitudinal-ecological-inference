@@ -1,0 +1,8 @@
+{
+  "schema_version": "longitudinal_report_pdf_source_v1",
+  "captured_at_utc": "2026-09-01T09:45:57.364213+00:00",
+  "source_sha256": "a928bb7a0402b0abc0c30855fe1ca2598fb776931e87f9989419d0979f998501",
+  "source_bytes": 6193329,
+  "path": "report/RAPPORT_LONGITUDINAL.source.pdf",
+  "rendering_policy": "portable HTML is rebuilt from data; QA-approved secondary PDF is frozen to avoid browser, font and pagination drift"
+}

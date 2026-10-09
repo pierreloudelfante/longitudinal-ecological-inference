@@ -1,0 +1,245 @@
+{
+  "base_r_packages": [
+    "MASS"
+  ],
+  "bytes": 21681167,
+  "file_count": 989,
+  "library_path": ".cache/R/library",
+  "package_count": 33,
+  "packages": [
+    {
+      "bytes": 2689067,
+      "files": 252,
+      "package": "Rcpp",
+      "tree_sha256": "93260ebc1b0c61fcff7516e7b53f6d23edd40a12dc6a21d72b1fceae14622ec4",
+      "version": "1.1.2"
+    },
+    {
+      "bytes": 2001345,
+      "files": 64,
+      "package": "cli",
+      "tree_sha256": "1cd0972ab52b54b870deaa121b5fcf8a78eae547db693b1df346a87e935aba59",
+      "version": "3.6.6"
+    },
+    {
+      "bytes": 215284,
+      "files": 17,
+      "package": "coda",
+      "tree_sha256": "8bfbd4b6a7a9a6663ea0cdbd87a43e6d1b5227b6e1ec9aac0823b8aa70eeac8e",
+      "version": "0.19-4.1"
+    },
+    {
+      "bytes": 2930185,
+      "files": 18,
+      "package": "cubature",
+      "tree_sha256": "986927b93e60df612839d7237f14892a61fa45abb30aae18bf92abaddb812bb0",
+      "version": "2.1.4-1"
+    },
+    {
+      "bytes": 1815982,
+      "files": 20,
+      "package": "data.table",
+      "tree_sha256": "88b5c16011a8685032b66ad239cbb8a46fe95951e46f8ed2eaeb7ca46e8086eb",
+      "version": "1.18.4"
+    },
+    {
+      "bytes": 286737,
+      "files": 32,
+      "package": "digest",
+      "tree_sha256": "ce41207fc4bd00c68a715c12858322cc4adc9f707d11c1121165e11beaf69ed3",
+      "version": "0.6.39"
+    },
+    {
+      "bytes": 216282,
+      "files": 24,
+      "package": "ei",
+      "tree_sha256": "55973716858de0eaf75406976d5b960e36da57cc52dfc2ac468863fa11b88417",
+      "version": "1.3-3"
+    },
+    {
+      "bytes": 207670,
+      "files": 22,
+      "package": "eiPack",
+      "tree_sha256": "a3de695fa1bf4168b77f52bdda26d0f2ba4f760cd2c4b6fe49525115986df63c",
+      "version": "0.2-2"
+    },
+    {
+      "bytes": 43648,
+      "files": 15,
+      "package": "ellipse",
+      "tree_sha256": "5c9166b3000d99084549309f961161f01338f796951ef820750a2177fbb95285",
+      "version": "0.5.0"
+    },
+    {
+      "bytes": 133143,
+      "files": 20,
+      "package": "expm",
+      "tree_sha256": "daa03b45339bf648b6045dee7b09ffe7b9151af8b9f2ca6dfdc105d76ac26cf8",
+      "version": "1.0-0"
+    },
+    {
+      "bytes": 193897,
+      "files": 41,
+      "package": "foreach",
+      "tree_sha256": "f4e75916384412801615ec5edb52089d9a9239a66bedb27d94616d0c4c747769",
+      "version": "1.5.2"
+    },
+    {
+      "bytes": 34267,
+      "files": 16,
+      "package": "generics",
+      "tree_sha256": "fa5b0ba6ddc11307b269d653978e785da2fa4931c3ab46f4ac7564961c45a748",
+      "version": "0.1.4"
+    },
+    {
+      "bytes": 84506,
+      "files": 19,
+      "package": "glue",
+      "tree_sha256": "39a9096e7750db3f42302111e2983dd4e8af7dc892544d828d9220341271a616",
+      "version": "1.8.1"
+    },
+    {
+      "bytes": 1209956,
+      "files": 23,
+      "package": "gmm",
+      "tree_sha256": "652fa86cd29257dfcdb864536e53e66ed62bd0f1080e3c8769c66963548d2773",
+      "version": "1.9-1"
+    },
+    {
+      "bytes": 68392,
+      "files": 34,
+      "package": "iterators",
+      "tree_sha256": "8406cbcf5545467aa68b0baa1ae4ee64d0260d5a19f18fc735929b9965f45dc9",
+      "version": "1.0.14"
+    },
+    {
+      "bytes": 225129,
+      "files": 19,
+      "package": "jsonlite",
+      "tree_sha256": "17df8da69a70ae4a7d84d3bf25ced1ce93a85f4a9881a942d68885e5abb26fd3",
+      "version": "2.0.0"
+    },
+    {
+      "bytes": 79434,
+      "files": 18,
+      "package": "lifecycle",
+      "tree_sha256": "0393cca4525de61aad53026403576a90da2b05df1b398f94ec2a42e442a82726",
+      "version": "1.0.5"
+    },
+    {
+      "bytes": 146875,
+      "files": 23,
+      "package": "magrittr",
+      "tree_sha256": "9bf730d9bf6802df87d047a3c4b5028371e42f753cf97b72c4252a66c8e79285",
+      "version": "2.0.5"
+    },
+    {
+      "bytes": 156432,
+      "files": 18,
+      "package": "mnormt",
+      "tree_sha256": "2f2a5005af98b56904a2df88eb53bd612584953081ee8cb1dc5cb49c719dd5f1",
+      "version": "2.1.2"
+    },
+    {
+      "bytes": 881038,
+      "files": 23,
+      "package": "msm",
+      "tree_sha256": "aab99e8784d137c113e425ce98950d3ac37fce2aeb505a0ce6cab42b46a251fc",
+      "version": "1.8.2"
+    },
+    {
+      "bytes": 570644,
+      "files": 26,
+      "package": "mvtnorm",
+      "tree_sha256": "251e0215422282dedeea363811ea9adab651862edec4c39780a9e105c784b160",
+      "version": "1.4-2"
+    },
+    {
+      "bytes": 331250,
+      "files": 18,
+      "package": "pillar",
+      "tree_sha256": "72e0ba7b9a8eddbfc85baadc0e401ba3c66cb053efa560c4bc1c6897f8652a41",
+      "version": "1.11.1"
+    },
+    {
+      "bytes": 18120,
+      "files": 17,
+      "package": "pkgconfig",
+      "tree_sha256": "c29ac5564cc4aff02a664f55c4fe88356beae18f48d14e05d6b9fdc2a05da254",
+      "version": "2.0.3"
+    },
+    {
+      "bytes": 628776,
+      "files": 21,
+      "package": "plotrix",
+      "tree_sha256": "4405ae80235b71fcf5bc9ff5d025bc358a098aee9a064964c75377d8ba1715f0",
+      "version": "3.8-14"
+    },
+    {
+      "bytes": 1110337,
+      "files": 19,
+      "package": "rlang",
+      "tree_sha256": "ee901c61aad59ba89cb6ba7854afdce28232858d55a51315ef30c15c3b271e50",
+      "version": "1.3.0"
+    },
+    {
+      "bytes": 637733,
+      "files": 22,
+      "package": "sandwich",
+      "tree_sha256": "bca1814eba3afddb7679b2ff5f124b54f851661bb4ee750b4395570731524770",
+      "version": "3.1-3"
+    },
+    {
+      "bytes": 1144166,
+      "files": 30,
+      "package": "sp",
+      "tree_sha256": "653a7d884a268105bb5a4ea399bc00d0f527a062899d2876033c8e78d63acef8",
+      "version": "2.2-3"
+    },
+    {
+      "bytes": 281643,
+      "files": 19,
+      "package": "tibble",
+      "tree_sha256": "8c0b4ca64770f5597cea7652e0ba2e1fe9da57f1e082af520ad10cdf99f6410c",
+      "version": "3.3.1"
+    },
+    {
+      "bytes": 880421,
+      "files": 20,
+      "package": "tmvtnorm",
+      "tree_sha256": "1f486a5721ad69a0683fbc8a848fddc92a10366634e5890638a839f94489ed15",
+      "version": "1.7"
+    },
+    {
+      "bytes": 47287,
+      "files": 17,
+      "package": "ucminf",
+      "tree_sha256": "a1db4c2d45ae9ac341db005ef2ff5151d64a4fce844a5be684d33428e7850f1d",
+      "version": "1.2.3"
+    },
+    {
+      "bytes": 369196,
+      "files": 19,
+      "package": "utf8",
+      "tree_sha256": "1c04c23c87ee522f5b18fdd35e6c01defde7eb97d1477114d922f061ce051911",
+      "version": "1.2.6"
+    },
+    {
+      "bytes": 1634796,
+      "files": 20,
+      "package": "vctrs",
+      "tree_sha256": "866f551874be173d890c5e559e3c07651e32a5860a6af2e7ac9a7b831bcff39a",
+      "version": "0.7.3"
+    },
+    {
+      "bytes": 407529,
+      "files": 23,
+      "package": "zoo",
+      "tree_sha256": "8caf08baa7d80fbd01be3d05325a9b2cc364c94dc4831fe55d19afe11ae59415",
+      "version": "1.9-0"
+    }
+  ],
+  "platform": "x86_64-w64-mingw32",
+  "r_version": "4.6.0",
+  "schema_version": "longitudinal_r_runtime_library_v1"
+}

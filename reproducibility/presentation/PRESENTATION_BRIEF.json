@@ -1,0 +1,70 @@
+{
+  "schema_version": "full_240_presentation_brief_v1",
+  "audience": "professeur encadrant et jury académique",
+  "purpose": "présenter la couverture complète, les évolutions interannuelles, la sensibilité Python-R et les limites",
+  "communication_job": "À la fin, le professeur doit comprendre ce que montrent les 240 estimations, leur robustesse inter-modèle et leurs limites écologiques.",
+  "language": "français",
+  "recommended_slide_count": 20,
+  "actual_slide_count": 20,
+  "required_sections": [
+    "question de recherche et panel",
+    "méthode et hypothèses",
+    "couverture 240/240",
+    "résultats législatifs",
+    "résultats présidentiels",
+    "trajectoires KRT-R EI-NLS pour H0A, H0B, H0C, H1, H2, H3, H4, H5, H6 et H7",
+    "comparaisons canoniques 1962-1986-2022",
+    "accord et sensibilité Python-R",
+    "diagnostics",
+    "limites et conclusion"
+  ],
+  "figure_catalog": "../03_FIGURES/FIGURE_CATALOG.csv",
+  "source_notes": "PRESENTATION_SOURCE_NOTES.txt",
+  "qa_requirements": [
+    "render every slide",
+    "inspect every slide at full size",
+    "zero unintended overlaps or clipping",
+    "verify every numeric claim against delivered Parquet",
+    "write PRESENTATION_QA.json with status=pass"
+  ],
+  "input_validation": {
+    "schema_version": "full_240_release_input_validation_v1",
+    "created_at_utc": "2026-08-29T22:31:36.016592+00:00",
+    "status": "pass",
+    "checks": {
+      "python_pairs_240": true,
+      "python_aggregate_rows_720": true,
+      "python_commune_rows_480000": true,
+      "python_communes_2000_per_pair": true,
+      "python_selection_240": true,
+      "r_pairs_240": true,
+      "r_aggregate_rows_720": true,
+      "r_commune_rows_480000": true,
+      "r_communes_2000_per_pair": true,
+      "r_audit_240": true,
+      "python_r_comparison_pairs_240": true,
+      "python_r_comparison_rows_720": true,
+      "no_duplicate_python_aggregate_key": true,
+      "no_duplicate_r_aggregate_key": true
+    },
+    "input_sha256": {
+      "outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_aggregate_240_candidate.parquet": "1fef47256883e31cc7d479961d71846cbc3e103e1e34e44241edc823892aade6",
+      "outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_commune_240_candidate.parquet": "0a8d03c469f2b0dff9a844f90a3d3fb2777e3b90a9e7ccba758e5c43ec84f633",
+      "outputs/longitudinal_2000_v1/production/all_2x2_candidate/krt_240_candidate_selection.csv": "074f61ed61dcdbca1672ae53f4794cd9dd57437c68a174d1e59f8f134d55a82d",
+      "outputs/longitudinal_2000_v1/production/all_2x2_candidate/krt_240_candidate_manifest.json": "04e90015f1ead34d8c7bf96c796c668d9fa8ef4f02c90a9bead3185d898ad028",
+      "outputs/longitudinal_2000_v1/r_replication/longitudinal_king_ei_r_aggregate_all_2x2.parquet": "d7834c624fd6b967e5c3737041f88e565bfb81496ef11c7de96043d229f841d1",
+      "outputs/longitudinal_2000_v1/r_replication/longitudinal_king_ei_r_commune_all_2x2.parquet": "c0a29cd66bdb1ccfa7db728424c83548b84c8a88c7ae61d37d1b843e4d8f36c8",
+      "outputs/longitudinal_2000_v1/r_replication/king_ei_all_2x2_run_audit.csv": "50c36c802e93503fef9666fa45697271a3009499d66876a0217f7d5b79d6e127",
+      "outputs/longitudinal_2000_v1/r_replication/king_ei_all_2x2_consolidation_manifest.json": "69f2a94f1d2f27f74070e1b09c9123c791d3d560d3652207c28d7bb3d27edda0",
+      "outputs/longitudinal_2000_v1/r_replication/king_python_r_full_240_aggregate_comparison.parquet": "a74253efc586210b23ab194db389ca3ae95d655c2e032ada63ce450cdd14d936",
+      "outputs/longitudinal_2000_v1/r_replication/king_python_r_full_240_commune_summary.parquet": "4472e6080b6f9bafb34c5f4804974561962a5bfa73d91f327eb2fca823d2387c",
+      "outputs/longitudinal_2000_v1/r_replication/king_python_r_full_240_comparison_manifest.json": "50ce397e2c1a0e63392963b4bfe8811032193e9e456f807280cb935ab0bb9710",
+      "outputs/longitudinal_2000_v1/production/rxc_nls_panel_extension_v11/longitudinal_nls_292_candidate.parquet": "8e8fe46875e1e74d836636bae782267f5afe3601b385df8baf6b895d3b21665d",
+      "panel/longitudinal_2000_v1.parquet": "bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a",
+      "outputs/longitudinal_2000_v1/production/current_estimation_coverage.json": "de5f8f5365794687a884935a586665e2fba39f6745b5bf142164bc65a9fedafb",
+      "outputs/longitudinal_2000_v1/production/current_estimation_coverage.csv": "29aafaa8a10f6236966ea69334c5c5ffc557d23f5d7b88972f6cb0e6d46deaf5"
+    }
+  },
+  "figure_count": 23,
+  "presentation_figure_composites": 8
+}

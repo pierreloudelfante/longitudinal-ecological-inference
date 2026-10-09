@@ -1,0 +1,195 @@
+{
+  "schema_version": "professor_release_240_v2",
+  "release_gate": {
+    "python_canonical_successes": 240,
+    "r_ei_successes": 240,
+    "python_selection_policy": "initial_only",
+    "targeted_diagnostic_reruns_in_release": false
+  },
+  "deliverables": {
+    "professor_zip": "longitudinal_2000_release_professeur.zip",
+    "technical_zip": "longitudinal_2000_release_technique.zip",
+    "presentation": "PRESENTATION_RESULTATS_240.pptx"
+  },
+  "professor_zip_structure": {
+    "00_README_PROFESSEUR.md": "Guide de lecture court, résultats clés, périmètre et avertissement sur l'inférence écologique.",
+    "01_RAPPORT": [
+      "RAPPORT_LONGITUDINAL.html",
+      "RAPPORT_LONGITUDINAL.pdf",
+      "ANNEXE_ATLAS_DENSITES.html",
+      "ANNEXE_ATLAS_DENSITES_GRILLE.html"
+    ],
+    "02_TABLES_PRINCIPALES": [
+      "longitudinal_krt_commune.parquet",
+      "longitudinal_krt_aggregate.parquet",
+      "longitudinal_nls.parquet",
+      "longitudinal_nls_covariates.parquet",
+      "longitudinal_nls_covariate_coefficients.parquet",
+      "longitudinal_r_ei_commune.parquet",
+      "longitudinal_r_ei_aggregate.parquet",
+      "longitudinal_contrasts_krt_r_nls.parquet"
+    ],
+    "03_FIGURES": [
+      "trajectoire_H0A",
+      "trajectoire_H1",
+      "trajectoires_NLS_autres_hypotheses",
+      "trajectoires_KRT_R_NLS_toutes_hypotheses",
+      "sensibilite_NLS_covariables",
+      "comparaison_KRT_NLS",
+      "distributions_2D_2022",
+      "densites_completes",
+      "atlas_densites_resumes"
+    ],
+    "04_PANEL_ET_HARMONISATION": [
+      "panel_2000.csv",
+      "balance_checks_summary.csv",
+      "HARMONISATION_POLITIQUE.csv",
+      "coverage_by_election.csv"
+    ],
+    "05_DIAGNOSTICS": [
+      "diagnostics_KRT_resume.csv",
+      "diagnostics_NLS_resume.csv",
+      "diagnostics_NLS_covariables_resume.csv",
+      "diagnostics_R_EI_resume.csv",
+      "identification_resume.csv",
+      "matrice_couverture_modeles.csv"
+    ],
+    "06_DOCUMENTATION": [
+      "DATA_DICTIONARY.csv",
+      "MODEL_SCENARIOS.csv",
+      "REPRODUCE.md",
+      "CHANGELOG.md",
+      "CATALOGUE_DENSITES_COMPLET.csv",
+      "COUVERTURE_BETA_PAR_COUPLE.csv",
+      "REPORT_QA.json",
+      "DELIVERY_MANIFEST.json"
+    ]
+  },
+  "table_contracts": {
+    "longitudinal_krt_commune.parquet": {
+      "grain": "commune x election x hypothese x parametre",
+      "required_content": [
+        "identifiants geographiques",
+        "departement",
+        "region",
+        "VBBM et provenance",
+        "beta_1 et beta_2",
+        "moyenne, ecart-type, q2.5, mediane, q97.5",
+        "poids des groupes",
+        "diagnostics",
+        "variables communales jointes et provenance"
+      ]
+    },
+    "longitudinal_krt_aggregate.parquet": {
+      "grain": "election x hypothese x estimand",
+      "required_content": [
+        "beta_1 agrege",
+        "beta_2 agrege",
+        "contraste beta_1 moins beta_2",
+        "moyenne et intervalle",
+        "nombre de communes",
+        "statut MCMC",
+        "statut d'identification"
+      ]
+    },
+    "longitudinal_nls.parquet": {
+      "grain": "election x hypothese x estimand",
+      "required_content": [
+        "estimation ponctuelle",
+        "objectif",
+        "conditionnement",
+        "nombre de departs",
+        "stabilite des solutions",
+        "statut numerique"
+      ]
+    },
+    "longitudinal_nls_covariates.parquet": {
+      "grain": "election x hypothese x specification de covariables x estimand",
+      "required_content": [
+        "estimation ponctuelle beta_1, beta_2 et contraste",
+        "specification VBBM, revenu-capital, part d'etrangers ou jointe",
+        "objectif, rang, conditionnement et stabilite",
+        "statut numerique et avertissements"
+      ]
+    },
+    "longitudinal_nls_covariate_coefficients.parquet": {
+      "grain": "election x hypothese x specification x groupe x coefficient",
+      "required_content": [
+        "coefficient sur l'echelle logit",
+        "nom et provenance de la covariable",
+        "standardisation et imputation eventuelle",
+        "statut numerique de l'ajustement"
+      ]
+    },
+    "longitudinal_r_ei_commune.parquet": {
+      "grain": "commune x election x hypothese x parametre",
+      "required_content": [
+        "moyenne, ecart-type et quantiles communaux",
+        "poids des groupes",
+        "identifiants geographiques",
+        "version R et version ei",
+        "graine et provenance"
+      ]
+    },
+    "longitudinal_r_ei_aggregate.parquet": {
+      "grain": "election x hypothese x estimand",
+      "required_content": [
+        "beta_1 agrege",
+        "beta_2 agrege",
+        "contraste",
+        "moyenne et intervalle",
+        "statut numerique et identification"
+      ]
+    },
+    "longitudinal_contrasts_krt_r_nls.parquet": {
+      "grain": "election x hypothese x methode",
+      "required_content": [
+        "contraste beta_1 moins beta_2",
+        "methode KRT Python, R EI ou NLS",
+        "bornes d'incertitude lorsqu'elles existent",
+        "statut numerique"
+      ]
+    }
+  },
+  "report": {
+    "audience": "technical",
+    "primary_surface": "html",
+    "secondary_export": "pdf",
+    "opening_rule": "Commencer par un resume des resultats et les constats principaux; ne jamais ouvrir par les problemes de code.",
+    "sections": [
+      "Resume des resultats",
+      "Question scientifique et lien avec Cage-Piketty",
+      "Donnees et limites de l'inference ecologique",
+      "Construction du panel de 2 000 communes",
+      "Methodes NLS et KRT",
+      "Trajectoire H0A : abstention populaire",
+      "Trajectoire H1 : vote populaire a gauche",
+      "H2/H3 : ouvriers et employes separes",
+      "H4 et H6/H7",
+      "Sensibilites NLS aux covariables communales",
+      "Comparaison KRT-NLS",
+      "Distributions communales et audit 2022",
+      "Convergence, identification et cellules fragiles",
+      "Prochaines extensions : modele 3x2 et validation hors echantillon des covariables"
+    ],
+    "claim_policy": "Toute affirmation chiffree doit etre verifiable dans les Parquet livres; distinguer clairement description, robustesse et inference.",
+    "visual_qa": "Rendre et inspecter toutes les pages PDF; zero chevauchement, debordement, glyphe illisible ou figure non lisible."
+  },
+  "technical_zip_structure": {
+    "README_TECHNIQUE.md": "Périmètre, conventions et guide d'audit.",
+    "CODE": "Code Python, R et scripts de lancement nécessaires à la reproduction.",
+    "CONFIG": "Spécifications, registres et configurations de livraison.",
+    "MANIFESTES_ET_AUDIT": "Manifestes canoniques, sélections initial_only, graines, versions et SHA-256.",
+    "DONNEES_DETAILLEES": "Tables transparentes détaillées et catalogues de colonnes.",
+    "DIAGNOSTICS_COMPLETS": "Diagnostics complets Python, R et NLS, y compris les erreurs conservées pour audit.",
+    "QA": "Contrôles de données, figures, rapport, présentation et archives.",
+    "REPRODUCTION": "Commandes, environnement et ordre d'exécution reproductible."
+  },
+  "archive_qa": {
+    "zip_crc_test": true,
+    "sha256_receipt": true,
+    "no_absolute_local_paths": true,
+    "all_manifest_members_exist": true,
+    "parquet_schema_and_row_count_checks": true
+  }
+}

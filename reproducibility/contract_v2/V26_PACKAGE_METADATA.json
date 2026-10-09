@@ -1,0 +1,72 @@
+{
+  "base_v25": {
+    "bytes": 30472207,
+    "entries": 1241,
+    "sha256": "f2513c4072bcb3e23dd69ebaaae01134bb60d3b899f095c8fba97bbdc37d18b3"
+  },
+  "cli_official_cran": {
+    "archive_bytes": 1408824,
+    "archive_sha256": "c4233e6a6ff42a0382b37a03546caf606a62a6b2a43493f78a07b80905dadfd8",
+    "bytes": 2001345,
+    "dll_sha256": "afc9e10865dae993dad71311e1219b4bdc24973a1732bcd7e8179aa3f632efac",
+    "files": 64,
+    "tree_sha256": "1cd0972ab52b54b870deaa121b5fcf8a78eae547db693b1df346a87e935aba59"
+  },
+  "declared_overlay_files": [
+    "COMMENCER_ICI.md",
+    "DONNEES_BRUTES/LISEZ_MOI.txt",
+    "PROVENANCE_SOURCE.md",
+    "REPRODUIRE_TOUT.ps1",
+    "TELECHARGER_DONNEES_BRUTES.ps1",
+    "reproducibility/CERTIFICATION_SCIENTIFIQUE_V2_2.md",
+    "reproducibility/README.md",
+    "reproducibility/check_r_environment_v2.R",
+    "reproducibility/contract_v2/R_CLI_3_6_6_CRAN_RECEIPT.json",
+    "reproducibility/estimation_process.py",
+    "reproducibility/failure_report.py",
+    "reproducibility/r-packages.lock.json",
+    "reproducibility/r-runtime-library-manifest.json",
+    "reproducibility/replication_complete.py",
+    "reproducibility/tests_v2/test_estimation_process.py",
+    "reproducibility/tests_v2/test_failure_report.py",
+    "reproducibility/tests_v2/test_production_scope.py",
+    "reproducibility/tests_v2/test_replication.py"
+  ],
+  "declared_removals": [
+    "PORTABILITE_V2_3.md",
+    "PORTABILITE_V2_4.md",
+    "PORTABILITE_V2_5.md",
+    "reproducibility/PORTABILITY_TEST_RECEIPT_V2_3.json",
+    "reproducibility/contract_v2/V25_OVERLAY_RECEIPT.json",
+    "reproducibility/contract_v2/V25_PACKAGE_METADATA.json"
+  ],
+  "frozen_scientific_and_production_source": {
+    "bytes": 5137351,
+    "files": 181,
+    "tree_sha256": "38985924165754ef75bca74c8f9998245f6a5940e8af554867403b118de74953"
+  },
+  "full_610_run_certified": false,
+  "package_version": "2.6",
+  "runtime_replacement_prefix": ".cache/R/library/cli/",
+  "schema_version": "longitudinal_v26_package_metadata_v1",
+  "scientific_plan": {
+    "densities": 480,
+    "expected_result_files": 610,
+    "king_r_pairs": 240,
+    "krt_pairs": 240,
+    "nls_base": 270,
+    "nls_covariates": 960,
+    "nls_rxc": 22,
+    "raw_archives": 31,
+    "stages": 17
+  },
+  "tests": {
+    "bytes": 36035,
+    "errors": 0,
+    "failures": 0,
+    "sha256": "7a06aeae020c90f07b2da754751af6b7c8290b4bd69b081d3f6c11fdfc034a43",
+    "skipped": 0,
+    "tests": 266
+  },
+  "validation_statement": "Fresh preflight, tests and bounded scientific probes do not replace one complete independent 610-file replay. The launcher certifies that replay only after completion."
+}

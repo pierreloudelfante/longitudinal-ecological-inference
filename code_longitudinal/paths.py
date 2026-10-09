@@ -7,7 +7,10 @@ from pathlib import Path
 _DEFAULT_ROOT = Path(__file__).resolve().parents[1]
 ROOT = Path(os.environ.get("LONGITUDINAL_PROJECT_ROOT", _DEFAULT_ROOT)).expanduser().resolve()
 PART2_ROOT = ROOT.parent
-RAW_ARCHIVES = PART2_ROOT / "pour_moi_avec_data" / "data" / "raw" / "archives"
+_DEFAULT_RAW_ARCHIVES = PART2_ROOT / "pour_moi_avec_data" / "data" / "raw" / "archives"
+RAW_ARCHIVES = Path(
+    os.environ.get("LONGITUDINAL_RAW_ARCHIVES", _DEFAULT_RAW_ARCHIVES)
+).expanduser().resolve()
 CONFIG_DIR = ROOT / "config"
 PANEL_DIR = ROOT / "panel"
 OUTPUT_DIR = ROOT / "outputs"

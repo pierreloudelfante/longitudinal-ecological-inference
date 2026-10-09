@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+from reproducibility.replication_scope import get_scope
 
 from .paths import OUTPUT_DIR, ROOT
 from .spec_registry import SPEC_VERSION
@@ -14,10 +15,18 @@ from .utils import file_sha256, portable_path, write_json
 
 REPLICATION_DIR = OUTPUT_DIR / SPEC_VERSION / "r_replication"
 RUN_DIR = REPLICATION_DIR / "king_ei_runs"
-COMMUNE_PATH = REPLICATION_DIR / "longitudinal_king_ei_r_commune_retained6.parquet"
-AGGREGATE_PATH = REPLICATION_DIR / "longitudinal_king_ei_r_aggregate_retained6.parquet"
-RUN_AUDIT_PATH = REPLICATION_DIR / "king_ei_retained6_run_audit.csv"
-MANIFEST_PATH = REPLICATION_DIR / "king_ei_retained6_consolidation_manifest.json"
+RETAINED6_OUTPUTS = {
+    "commune": REPLICATION_DIR / "longitudinal_king_ei_r_commune_retained6.parquet",
+    "aggregate": REPLICATION_DIR / "longitudinal_king_ei_r_aggregate_retained6.parquet",
+    "audit": REPLICATION_DIR / "king_ei_retained6_run_audit.csv",
+    "manifest": REPLICATION_DIR / "king_ei_retained6_consolidation_manifest.json",
+}
+ALL_2X2_OUTPUTS = {
+    "commune": REPLICATION_DIR / "longitudinal_king_ei_r_commune_all_2x2.parquet",
+    "aggregate": REPLICATION_DIR / "longitudinal_king_ei_r_aggregate_all_2x2.parquet",
+    "audit": REPLICATION_DIR / "king_ei_all_2x2_run_audit.csv",
+    "manifest": REPLICATION_DIR / "king_ei_all_2x2_consolidation_manifest.json",
+}
 
 EXPECTED_BY_SCENARIO = {
     "H0A": 26,
@@ -32,6 +41,7 @@ EXPECTED_BY_SCENARIO = {
     "H7": 16,
 }
 RETAINED_SCENARIOS = ("H0A", "H1", "H0B", "H0C", "H2", "H3")
+ALL_SCENARIOS = tuple(EXPECTED_BY_SCENARIO)
 
 
 def _utc_now() -> str:
@@ -101,16 +111,30 @@ def consolidate(
     *,
     scenarios: tuple[str, ...] = RETAINED_SCENARIOS,
     allow_partial: bool = False,
+    output_scope: str = "retained6",
 ) -> dict[str, object]:
     unknown = sorted(set(scenarios) - set(EXPECTED_BY_SCENARIO))
     if unknown:
         raise ValueError(f"unknown scenarios: {unknown}")
+    if output_scope not in {"retained6", "all_2x2"}:
+        raise ValueError(f"unknown output scope: {output_scope}")
+    scope = get_scope()
+    scope_scenarios = {pair[1] for pair in scope.pairs}
+    scenarios = tuple(scenario for scenario in scenarios if scenario in scope_scenarios)
+    if output_scope == "all_2x2" and set(scenarios) != scope_scenarios:
+        raise ValueError("all_2x2 output scope requires every scoped 2x2 scenario")
+    expected_pair_set = {pair for pair in scope.pairs if pair[1] in scenarios}
+    expected_by_scenario = {scenario: sum(pair[1] == scenario for pair in expected_pair_set)
+                            for scenario in scenarios}
+    output_paths = ALL_2X2_OUTPUTS if output_scope == "all_2x2" else RETAINED6_OUTPUTS
     commune_parts: list[pd.DataFrame] = []
     aggregate_parts: list[pd.DataFrame] = []
     audits: list[dict[str, object]] = []
     invalid: list[dict[str, str]] = []
     for run_dir in sorted(RUN_DIR.iterdir() if RUN_DIR.exists() else []):
         if not run_dir.is_dir() or "__" not in run_dir.name:
+            continue
+        if tuple(run_dir.name.split("__", maxsplit=1)) not in expected_pair_set:
             continue
         manifest_path = run_dir / "manifest_r.json"
         if not manifest_path.exists():
@@ -130,14 +154,16 @@ def consolidate(
     if not audits:
         raise RuntimeError("no valid R EI runs are available")
     audit_frame = pd.DataFrame(audits).sort_values(["scenario_id", "election_id"])
-    audit_frame.to_csv(RUN_AUDIT_PATH, index=False, encoding="utf-8-sig")
+    audit_frame.to_csv(output_paths["audit"], index=False, encoding="utf-8-sig")
     pair_counts = audit_frame.groupby("scenario_id")["election_id"].nunique().to_dict()
     missing_by_scenario = {
         scenario_id: expected - int(pair_counts.get(scenario_id, 0))
-        for scenario_id, expected in EXPECTED_BY_SCENARIO.items()
-        if scenario_id in scenarios
+        for scenario_id, expected in expected_by_scenario.items()
     }
-    missing_pairs = sum(missing_by_scenario.values())
+    observed_pairs = set(audit_frame[["election_id", "scenario_id"]].itertuples(index=False, name=None))
+    missing_pairs = len(expected_pair_set - observed_pairs)
+    if len(audit_frame) != len(observed_pairs) or observed_pairs - expected_pair_set:
+        raise AssertionError("duplicate or unexpected R EI pair after consolidation")
     if (missing_pairs or invalid) and not allow_partial:
         raise AssertionError(
             f"R EI scope incomplete: missing={missing_by_scenario}, invalid={len(invalid)}"
@@ -177,15 +203,16 @@ def consolidate(
     aggregate = pd.concat(aggregate_parts, ignore_index=True)
     if aggregate[["election_id", "scenario_id", "estimand"]].duplicated().any():
         raise AssertionError("duplicate R EI aggregate key after consolidation")
-    commune_wide.to_parquet(COMMUNE_PATH, index=False)
-    aggregate.to_parquet(AGGREGATE_PATH, index=False)
+    commune_wide.to_parquet(output_paths["commune"], index=False)
+    aggregate.to_parquet(output_paths["aggregate"], index=False)
 
-    expected_pairs = sum(EXPECTED_BY_SCENARIO[item] for item in scenarios)
+    expected_pairs = len(expected_pair_set)
     complete = missing_pairs == 0 and not invalid
     result = {
-        "schema_version": "longitudinal_r_ei_retained_scope_consolidation_v1",
+        "schema_version": "longitudinal_r_ei_scope_consolidation_v2",
         "created_at_utc": _utc_now(),
         "status": "complete" if complete else "partial",
+        "output_scope": output_scope,
         "model": "King_1997_truncated_bivariate_normal_EI_R_ei_depending_on_eiPack",
         "comparison_target": "Python_PyMC_KRT_king99_beta_binomial",
         "mathematical_identity_with_python_model": False,
@@ -197,14 +224,14 @@ def consolidate(
         "invalid_runs": invalid,
         "commune_rows": len(commune_wide),
         "aggregate_rows": len(aggregate),
-        "commune_path": portable_path(COMMUNE_PATH, root=ROOT),
-        "commune_sha256": file_sha256(COMMUNE_PATH),
-        "aggregate_path": portable_path(AGGREGATE_PATH, root=ROOT),
-        "aggregate_sha256": file_sha256(AGGREGATE_PATH),
-        "run_audit_path": portable_path(RUN_AUDIT_PATH, root=ROOT),
-        "run_audit_sha256": file_sha256(RUN_AUDIT_PATH),
+        "commune_path": portable_path(output_paths["commune"], root=ROOT),
+        "commune_sha256": file_sha256(output_paths["commune"]),
+        "aggregate_path": portable_path(output_paths["aggregate"], root=ROOT),
+        "aggregate_sha256": file_sha256(output_paths["aggregate"]),
+        "run_audit_path": portable_path(output_paths["audit"], root=ROOT),
+        "run_audit_sha256": file_sha256(output_paths["audit"]),
     }
-    write_json(MANIFEST_PATH, result)
+    write_json(output_paths["manifest"], result)
     return result
 
 
@@ -212,10 +239,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Consolidate the retained R ei/eiPack estimates.")
     parser.add_argument("--scenarios", nargs="+", default=list(RETAINED_SCENARIOS))
     parser.add_argument("--allow-partial", action="store_true")
+    parser.add_argument("--output-scope", choices=("retained6", "all_2x2"), default="retained6")
     args = parser.parse_args()
     print(
         json.dumps(
-            consolidate(scenarios=tuple(args.scenarios), allow_partial=args.allow_partial),
+            consolidate(
+                scenarios=tuple(args.scenarios),
+                allow_partial=args.allow_partial,
+                output_scope=args.output_scope,
+            ),
             ensure_ascii=False,
             indent=2,
         )

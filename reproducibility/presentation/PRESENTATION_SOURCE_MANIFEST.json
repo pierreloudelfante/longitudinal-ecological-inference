@@ -1,0 +1,27 @@
+{
+  "schema_version": "longitudinal_presentation_source_v1",
+  "captured_at_utc": "2026-09-01T09:45:57.353940+00:00",
+  "source_sha256": "a4ca6f65c5d4c8c6c8aa2d60abc4a91767df18b846619e038333a4b9a9a173e2",
+  "source_bytes": 5565098,
+  "rendering_policy": "frozen QA-approved binary source; analytical sources rebuilt first",
+  "entries": [
+    {
+      "source_role": "PRESENTATION_RESULTATS_240.pptx",
+      "path": "presentation/PRESENTATION_RESULTATS_240.source.pptx",
+      "bytes": 5565098,
+      "sha256": "a4ca6f65c5d4c8c6c8aa2d60abc4a91767df18b846619e038333a4b9a9a173e2"
+    },
+    {
+      "source_role": "PRESENTATION_BRIEF.json",
+      "path": "presentation/PRESENTATION_BRIEF.json",
+      "bytes": 4591,
+      "sha256": "8fa0c5f1206c2ca2b5c39db37c51e439091bc227e77585a265f52aa90de0de52"
+    },
+    {
+      "source_role": "PRESENTATION_SOURCE_NOTES.txt",
+      "path": "presentation/PRESENTATION_SOURCE_NOTES.txt",
+      "bytes": 635,
+      "sha256": "1fe55a81d6871ca5c3c48c05948786aac6f6e939e3515ba2385440cfdae866ce"
+    }
+  ]
+}

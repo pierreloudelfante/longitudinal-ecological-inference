@@ -1,0 +1,4 @@
+Toutes les affirmations chiffrées proviennent des Parquet livrés dans 01_DONNEES_CANONIQUES et 02_BASE_TRANSPARENTE.
+Le plan de restitution suit docs/PROFESSOR_GLOBAL_RECAP_1962_1986_2022.md et les règles de séparation des familles électorales.
+Les vingt diapositives couvrent les dix hypothèses H0A, H0B, H0C, H1, H2, H3, H4, H5, H6 et H7. H0A et H1 disposent d'une diapositive par famille électorale; H0B, H0C et H2-H7 présentent côte à côte les trajectoires législatives et présidentielles KRT, R EI et NLS.
+L'atlas exhaustif des 480 densités reste un document séparé afin de préserver la lisibilité du diaporama.

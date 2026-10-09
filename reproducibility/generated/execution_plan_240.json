@@ -1,0 +1,1448 @@
+{
+  "schema_version": "longitudinal_initial_only_execution_plan_v1",
+  "selection_policy": "initial_only",
+  "targeted_reruns": false,
+  "pairs": 240,
+  "rows": [
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0A",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0B",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H0C",
+      "release_config": "config/releases/v1.3_pymc_h0b_h0c.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H1",
+      "release_config": "config/releases/v1.0.2.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H2",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H3",
+      "release_config": "config/releases/v1.1.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H4",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1962_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1967_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1968_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1973_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1978_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1981_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1965_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1969_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1974_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1981_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H5",
+      "release_config": "config/releases/v1.4_numpyro_h4_h5_continuation.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H6",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1986_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1988_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1993_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_1997_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2002_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2007_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2012_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2017_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "leg_2022_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1988_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_1995_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2002_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2007_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2012_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2017_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    },
+    {
+      "election_id": "pre_2022_r1",
+      "scenario_id": "H7",
+      "release_config": "config/releases/v1.2_pymc_h6_h7.json",
+      "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+    }
+  ]
+}

@@ -1,0 +1,3354 @@
+{
+  "schema_version": "expected_results_610_v2",
+  "source_archive": "longitudinal_2000_results.zip",
+  "source_archive_sha256": "a5c0978e822e2276c7607764cfa74dd6ece8f135f2af1d290a8a880202cd5b79",
+  "files": [
+    {
+      "path": "00_README_PROFESSEUR.md",
+      "bytes": 1765,
+      "sha256": "3f05960a39cc257cf385869d7f1712c7482a9699598f305dd6e001176da58f85"
+    },
+    {
+      "path": "01_RAPPORT/ANNEXE_ATLAS_DENSITES.html",
+      "bytes": 153415,
+      "sha256": "be91ef09da1a3b6fab76c149a75c18f62d6e71db92d8e305fb6e6e4a40347f95"
+    },
+    {
+      "path": "01_RAPPORT/RAPPORT_LONGITUDINAL.html",
+      "bytes": 9887855,
+      "sha256": "cfff342617f89370f83f298bd79d1fc45553dac8c4c43d1beba9d3fbce165c5e"
+    },
+    {
+      "path": "01_RAPPORT/RAPPORT_LONGITUDINAL.pdf",
+      "bytes": 6193329,
+      "sha256": "a928bb7a0402b0abc0c30855fe1ca2598fb776931e87f9989419d0979f998501"
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_contrasts_krt_r_nls.parquet",
+      "bytes": 22779,
+      "sha256": "98d6ce5323c377e64c7678a25e828b56760d4d1dd4cdbe89ef78f9084bf05abc",
+      "parquet": {
+        "rows": 720,
+        "row_groups": 1,
+        "columns": [
+          "election_id",
+          "year",
+          "round",
+          "scenario_id",
+          "model_key",
+          "estimand",
+          "estimate",
+          "q025",
+          "q975",
+          "diagnostic_status",
+          "election_family"
+        ],
+        "schema": "election_id: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nmodel_key: large_string\nestimand: large_string\nestimate: double\nq025: double\nq975: double\ndiagnostic_status: large_string\nelection_family: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1358"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_krt_aggregate.parquet",
+      "bytes": 61494,
+      "sha256": "e1a626516607a8512c480ee81e5cdb7bc9e759467b00d268c1b4e1f8539e5d1a",
+      "parquet": {
+        "rows": 720,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "year",
+          "round",
+          "scenario_id",
+          "run_id",
+          "model_key",
+          "spec_version",
+          "harmonization_version",
+          "estimand",
+          "weight_basis",
+          "mean",
+          "median",
+          "q025",
+          "q975",
+          "n_posterior_draws",
+          "n_communes",
+          "weight_total",
+          "draws",
+          "tune",
+          "chains",
+          "target_accept",
+          "max_treedepth",
+          "king_lambda",
+          "mcmc_status",
+          "identification_status",
+          "public_schema_version",
+          "source_panel_id",
+          "selection_status",
+          "aggregation_method",
+          "legacy_mean",
+          "mean_difference_from_legacy"
+        ],
+        "schema": "panel_id: large_string\nelection_id: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nrun_id: large_string\nmodel_key: large_string\nspec_version: large_string\nharmonization_version: large_string\nestimand: large_string\nweight_basis: large_string\nmean: double\nmedian: double\nq025: double\nq975: double\nn_posterior_draws: int64\nn_communes: int64\nweight_total: double\ndraws: int64\ntune: int64\nchains: int64\ntarget_accept: double\nmax_treedepth: int64\nking_lambda: double\nmcmc_status: large_string\nidentification_status: large_string\npublic_schema_version: large_string\nsource_panel_id: large_string\nselection_status: large_string\naggregation_method: large_string\nlegacy_mean: double\nmean_difference_from_legacy: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3930"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_krt_commune.parquet",
+      "bytes": 42323077,
+      "sha256": "06f250cb67cd24a5fe3282b96a2f33b4f81d9114b6fba04993faeba64d95b164",
+      "parquet": {
+        "rows": 480000,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "year",
+          "round",
+          "scenario_id",
+          "run_id",
+          "model_key",
+          "spec_version",
+          "harmonization_version",
+          "unit_id",
+          "department",
+          "region13",
+          "vbbm",
+          "vbbm_reference_year",
+          "vbbm_status",
+          "vbbm_source_column",
+          "revenue_ratio",
+          "revenue_reference_year",
+          "revenue_status",
+          "revenue_source_column",
+          "capital_ratio",
+          "capital_reference_year",
+          "capital_status",
+          "capital_source_column",
+          "foreign_share",
+          "foreign_share_reference_year",
+          "foreign_share_status",
+          "foreign_share_source_column",
+          "N_g",
+          "b1_weight",
+          "b2_weight",
+          "b1_mean",
+          "b1_sd",
+          "b1_q025",
+          "b1_q50",
+          "b1_q975",
+          "b2_mean",
+          "b2_sd",
+          "b2_q025",
+          "b2_q50",
+          "b2_q975",
+          "mcmc_status",
+          "identification_status",
+          "commune_name_canonical",
+          "geography_version",
+          "commune_name_reference_year",
+          "public_schema_version",
+          "source_panel_id",
+          "selection_status",
+          "run_key",
+          "sample_id",
+          "sample_rank"
+        ],
+        "schema": "panel_id: large_string\nelection_id: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nrun_id: large_string\nmodel_key: large_string\nspec_version: large_string\nharmonization_version: large_string\nunit_id: large_string\ndepartment: large_string\nregion13: large_string\nvbbm: double\nvbbm_reference_year: double\nvbbm_status: large_string\nvbbm_source_column: large_string\nrevenue_ratio: double\nrevenue_reference_year: double\nrevenue_status: large_string\nrevenue_source_column: large_string\ncapital_ratio: double\ncapital_reference_year: double\ncapital_status: large_string\ncapital_source_column: large_string\nforeign_share: double\nforeign_share_reference_year: double\nforeign_share_status: large_string\nforeign_share_source_column: large_string\nN_g: int64\nb1_weight: double\nb2_weight: double\nb1_mean: double\nb1_sd: double\nb1_q025: double\nb1_q50: double\nb1_q975: double\nb2_mean: double\nb2_sd: double\nb2_q025: double\nb2_q50: double\nb2_q975: double\nmcmc_status: large_string\nidentification_status: large_string\ncommune_name_canonical: large_string\ngeography_version: large_string\ncommune_name_reference_year: int64\npublic_schema_version: large_string\nsource_panel_id: large_string\nselection_status: large_string\nrun_key: large_string\nsample_id: large_string\nsample_rank: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 6505"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_nls.parquet",
+      "bytes": 58449,
+      "sha256": "551a6627bbe33d986d3d4d9534578f6991ccbe200f0c57e5d2427bb03c528ee2",
+      "parquet": {
+        "rows": 2370,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "year",
+          "round",
+          "scenario_id",
+          "run_id",
+          "model_key",
+          "spec_version",
+          "harmonization_version",
+          "estimand_type",
+          "social_group",
+          "vote_category",
+          "estimate",
+          "n_communes",
+          "N_total",
+          "objective",
+          "optimality",
+          "bread_rank",
+          "bread_condition",
+          "n_starts",
+          "n_successful_starts",
+          "max_abs_solution_difference",
+          "boundary_estimate",
+          "fit_status",
+          "diagnostic_status",
+          "public_schema_version"
+        ],
+        "schema": "panel_id: large_string\nelection_id: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nrun_id: large_string\nmodel_key: large_string\nspec_version: large_string\nharmonization_version: large_string\nestimand_type: large_string\nsocial_group: large_string\nvote_category: large_string\nestimate: double\nn_communes: int64\nN_total: int64\nobjective: double\noptimality: double\nbread_rank: int64\nbread_condition: double\nn_starts: int64\nn_successful_starts: int64\nmax_abs_solution_difference: double\nboundary_estimate: bool\nfit_status: large_string\ndiagnostic_status: large_string\npublic_schema_version: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3246"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_nls_covariate_coefficients.parquet",
+      "bytes": 71213,
+      "sha256": "860f3cc58d8f87cb0c39ded423c6e63dc652442a2cf4022655e4172adb83ef5d",
+      "parquet": {
+        "rows": 6720,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "year",
+          "round",
+          "scenario_id",
+          "spec_id",
+          "social_group",
+          "vote_category",
+          "reference_vote_category",
+          "term",
+          "estimate_logit",
+          "diagnostic_status"
+        ],
+        "schema": "panel_id: large_string\nelection_id: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nspec_id: large_string\nsocial_group: large_string\nvote_category: large_string\nreference_vote_category: large_string\nterm: large_string\nestimate_logit: double\ndiagnostic_status: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1510"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_nls_covariates.parquet",
+      "bytes": 101247,
+      "sha256": "120ee094da7fa9459bbd11fa6e8dad07735d326ee85dace0b56e7805d494b75b",
+      "parquet": {
+        "rows": 2880,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "election_family",
+          "year",
+          "round",
+          "scenario_id",
+          "model_key",
+          "spec_id",
+          "spec_label",
+          "covariate_terms",
+          "estimand",
+          "estimate",
+          "n_communes",
+          "N_total",
+          "objective_sse_unweighted",
+          "rmse_unweighted",
+          "n_parameters",
+          "n_starts",
+          "n_successful_starts",
+          "max_abs_prediction_difference",
+          "jacobian_rank",
+          "jacobian_condition",
+          "optimizer_success",
+          "optimizer_status",
+          "nfev",
+          "elapsed_seconds",
+          "diagnostic_status",
+          "interpretation_status",
+          "source_manifest"
+        ],
+        "schema": "panel_id: large_string\nelection_id: large_string\nelection_family: large_string\nyear: int64\nround: int64\nscenario_id: large_string\nmodel_key: large_string\nspec_id: large_string\nspec_label: large_string\ncovariate_terms: large_string\nestimand: large_string\nestimate: double\nn_communes: int64\nN_total: int64\nobjective_sse_unweighted: double\nrmse_unweighted: double\nn_parameters: int64\nn_starts: int64\nn_successful_starts: int64\nmax_abs_prediction_difference: double\njacobian_rank: int64\njacobian_condition: double\noptimizer_success: bool\noptimizer_status: int64\nnfev: int64\nelapsed_seconds: double\ndiagnostic_status: large_string\ninterpretation_status: large_string\nsource_manifest: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3658"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_r_ei_aggregate.parquet",
+      "bytes": 57752,
+      "sha256": "796f085fc07dfed2c6c8585e1168b661d52fa83f8759e43f130691b3ad6e13a8",
+      "parquet": {
+        "rows": 720,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "scenario_id",
+          "model_key",
+          "estimand",
+          "mean",
+          "sd",
+          "q025",
+          "q50",
+          "q975",
+          "n_posterior_draws",
+          "year",
+          "round",
+          "n_communes",
+          "weight_total",
+          "r_version",
+          "ei_version",
+          "eiPack_version",
+          "seed",
+          "native_importance_draws",
+          "hessian_condition_number",
+          "elapsed_seconds",
+          "source_manifest",
+          "election_family",
+          "numerical_status",
+          "identification_status",
+          "provenance_table"
+        ],
+        "schema": "panel_id: string\nelection_id: large_string\nscenario_id: large_string\nmodel_key: large_string\nestimand: large_string\nmean: double\nsd: double\nq025: double\nq50: double\nq975: double\nn_posterior_draws: int64\nyear: int64\nround: int64\nn_communes: int64\nweight_total: double\nr_version: large_string\nei_version: large_string\neiPack_version: large_string\nseed: int64\nnative_importance_draws: int64\nhessian_condition_number: double\nelapsed_seconds: double\nsource_manifest: large_string\nelection_family: large_string\nnumerical_status: large_string\nidentification_status: large_string\nprovenance_table: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 3323"
+      }
+    },
+    {
+      "path": "02_TABLES_PRINCIPALES/longitudinal_r_ei_commune.parquet",
+      "bytes": 39615355,
+      "sha256": "23d97b21540b58c4bd07a7dbcfc9de223528bb2bf5aa376cd3beeb14f86509b6",
+      "parquet": {
+        "rows": 480000,
+        "row_groups": 1,
+        "columns": [
+          "panel_id",
+          "election_id",
+          "scenario_id",
+          "unit_id",
+          "sample_rank",
+          "b1_mean",
+          "b2_mean",
+          "b1_sd",
+          "b2_sd",
+          "b1_q025",
+          "b2_q025",
+          "b1_q50",
+          "b2_q50",
+          "b1_q975",
+          "b2_q975",
+          "department",
+          "region13",
+          "vbbm",
+          "vbbm_reference_year",
+          "vbbm_status",
+          "vbbm_source_column",
+          "revenue_ratio",
+          "revenue_reference_year",
+          "revenue_status",
+          "revenue_source_column",
+          "capital_ratio",
+          "capital_reference_year",
+          "capital_status",
+          "capital_source_column",
+          "foreign_share",
+          "foreign_share_reference_year",
+          "foreign_share_status",
+          "foreign_share_source_column",
+          "N_g",
+          "b1_weight",
+          "b2_weight",
+          "commune_name_canonical",
+          "geography_version",
+          "commune_name_reference_year",
+          "r_version",
+          "ei_version",
+          "eiPack_version",
+          "seed",
+          "native_importance_draws",
+          "hessian_condition_number",
+          "elapsed_seconds",
+          "source_manifest",
+          "model_key",
+          "numerical_status",
+          "identification_status",
+          "provenance_table"
+        ],
+        "schema": "panel_id: string\nelection_id: large_string\nscenario_id: large_string\nunit_id: large_string\nsample_rank: int64\nb1_mean: double\nb2_mean: double\nb1_sd: double\nb2_sd: double\nb1_q025: double\nb2_q025: double\nb1_q50: double\nb2_q50: double\nb1_q975: double\nb2_q975: double\ndepartment: large_string\nregion13: large_string\nvbbm: double\nvbbm_reference_year: double\nvbbm_status: large_string\nvbbm_source_column: large_string\nrevenue_ratio: double\nrevenue_reference_year: double\nrevenue_status: large_string\nrevenue_source_column: large_string\ncapital_ratio: double\ncapital_reference_year: double\ncapital_status: large_string\ncapital_source_column: large_string\nforeign_share: double\nforeign_share_reference_year: double\nforeign_share_status: large_string\nforeign_share_source_column: large_string\nN_g: int64\nb1_weight: double\nb2_weight: double\ncommune_name_canonical: large_string\ngeography_version: large_string\ncommune_name_reference_year: int64\nr_version: large_string\nei_version: large_string\neiPack_version: large_string\nseed: int64\nnative_importance_draws: int64\nhessian_condition_number: double\nelapsed_seconds: double\nsource_manifest: large_string\nmodel_key: large_string\nnumerical_status: large_string\nidentification_status: large_string\nprovenance_table: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 6457"
+      }
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0A/legislative.png",
+      "bytes": 246190,
+      "sha256": "b7e3b852c520629fd72fd202a4096fccd7ecf35cab544e1ef4583afd3fbc405c"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0A/presidential.png",
+      "bytes": 180937,
+      "sha256": "4615b9a474f8215cf439db1b9c98cc8ebbead335a2cc34eaffc8b7460da56831"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0B/legislative.png",
+      "bytes": 247087,
+      "sha256": "3491555ccecfd80920102bc0b7abfef705e74c682d2ab54ecdb1ab28dc7b6b28"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0B/presidential.png",
+      "bytes": 178497,
+      "sha256": "f133f15c73ad332b226a72985d031f0936f4912b86fc5cd17bcdc4f3e5c211bf"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0C/legislative.png",
+      "bytes": 244634,
+      "sha256": "66a2d7b6a65bb5d5e679ac77ad8468a2f3caad3ed20206a3cabf1fa0d3e91075"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H0C/presidential.png",
+      "bytes": 178125,
+      "sha256": "a2456065dd06d4e4c0fcdd0c605bbb9dca60e632dc6f671598af4bae43523089"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H1/legislative.png",
+      "bytes": 337782,
+      "sha256": "85f80e1469c24c57779529fb7acc7be772608a1e4c6015430ffea9d3bc1a23db"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H1/presidential.png",
+      "bytes": 222391,
+      "sha256": "bef61c183ae8868e541d6f51fb6d7f80cfe5fbe294ff587a5652604ffd5aa803"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H2/legislative.png",
+      "bytes": 333067,
+      "sha256": "9affd5a0c9403a8f81283cb9c5fbb1928e76d09857700cc2fe3d2b12df392d42"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H2/presidential.png",
+      "bytes": 217711,
+      "sha256": "8013a5ad1019aee77e9981bcbee6a82573ac94575d9cfd2a01dde13743020a74"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H3/legislative.png",
+      "bytes": 309701,
+      "sha256": "d85634db3bc0f6550f954d27a0eaf58b6e75a6f4103d07bb3c40e0f5d184f768"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H3/presidential.png",
+      "bytes": 203671,
+      "sha256": "6443d5eb6da38204603642b3c8de9800614832a33759fd2e1928d3f274c0ddc3"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H4/legislative.png",
+      "bytes": 349449,
+      "sha256": "3b9bc640f6014c593b2c46fe0ec5a1e02b704c0d1cbd9408dde8e3c6ec340bde"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H4/presidential.png",
+      "bytes": 224414,
+      "sha256": "2d863e8a67c077876ba93e50e86627f036213a40e51ba0bf002a3e232b26d10b"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H5/legislative.png",
+      "bytes": 202569,
+      "sha256": "28594bc0f45a419ba00f71c933fbf552d8d58777f6a582558290b3e4a7215e36"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H5/presidential.png",
+      "bytes": 157130,
+      "sha256": "c503c1effcbfcc820d748c441ff61970beb31f13c710386555e7185ec4a365ef"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H6/legislative.png",
+      "bytes": 163182,
+      "sha256": "dde171d60a01091cb51718cc42588eb2d37bfab06212211d61c59c11dcbe0cbf"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H6/presidential.png",
+      "bytes": 127238,
+      "sha256": "9ea9b6c5c7ce471e4fd8afa919929e7bf7934a7dc4319b9abae111abfa0b29a8"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H7/legislative.png",
+      "bytes": 163239,
+      "sha256": "a3b7256e0ecb45f24b368a6ba4ed91a992d501f3fbe12ca0ac5a22002507b254"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/krt_python/H7/presidential.png",
+      "bytes": 123288,
+      "sha256": "cef3bfb31f06eaaa2b6ad72298da231a7bbc8e091d653dce1a63f7cbfa74490c"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0A/legislative.png",
+      "bytes": 264395,
+      "sha256": "69af2456248a1e91867c9f475e90cec8de44e85c81c25da4095f5c646d9831ac"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0A/presidential.png",
+      "bytes": 191763,
+      "sha256": "21c957274f8c5ba0bbd13c32e87addb431b7572d1f81335a9d5e688ee3bbc246"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0B/legislative.png",
+      "bytes": 274598,
+      "sha256": "524a5a5dcaf69597e49cfc4b045a680421c640952238bb81aa4b8de7459790e8"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0B/presidential.png",
+      "bytes": 195267,
+      "sha256": "75b8d932e7eaa2d004a2ff1736dd5f4e7230f4b01c1b8e69f08accc58a7cb4ac"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0C/legislative.png",
+      "bytes": 274767,
+      "sha256": "3e3690dce59a7bcf238c6124e1b15e09c3eb300934d5c79a3d8b504d51a44125"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H0C/presidential.png",
+      "bytes": 192218,
+      "sha256": "c90160f06b449269490008e3afdcf70080bfef68a1f80f32ecb34824a5a0abec"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H1/legislative.png",
+      "bytes": 370780,
+      "sha256": "fdcf64a73e3304f5487e33b97333cdc4dba97f095ad54a412a46d69671af8f0d"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H1/presidential.png",
+      "bytes": 258821,
+      "sha256": "2323a0d908094e9c02a13aa3514e4b8d2a38d8dffca7ea7aabb2c85c9fca9ef4"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H2/legislative.png",
+      "bytes": 349001,
+      "sha256": "6652bfc39b23d5b380323848cbb6fcffbc7932f29962d77e5463f9aba972700d"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H2/presidential.png",
+      "bytes": 257833,
+      "sha256": "41936ad765b0748c777ab2e54997b79f753d490208fbe47db193ba0350a9e59e"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H3/legislative.png",
+      "bytes": 338944,
+      "sha256": "d7a257a83e01064c3b13e1ff7f1ebf23154ca003867b36a3be3641829715cf14"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H3/presidential.png",
+      "bytes": 243499,
+      "sha256": "2f5cba60f7a62d0d4dbff49ceabd4c6121cf37c792fe77a2783011b193a40ec7"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H4/legislative.png",
+      "bytes": 334420,
+      "sha256": "30ac5474fd51cd876340e40186641e09cace2430c82f46c6eab33d17daefd04f"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H4/presidential.png",
+      "bytes": 235552,
+      "sha256": "b7718f0dc7cdd9c2297031134ab061ac590d60568fa24673687e2425c38f0419"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H5/legislative.png",
+      "bytes": 200038,
+      "sha256": "c51f0791e1567aa7e4d8da246ccc3de25447bcaefc20ca18fdc1543a633f7da3"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H5/presidential.png",
+      "bytes": 161230,
+      "sha256": "d1dd4566a684b921bf53eaf4eb9df5ccc0cde41d48b29e750675fb9d692429fd"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H6/legislative.png",
+      "bytes": 168847,
+      "sha256": "43cd686b6fbadca624676b0362f6129f2054011d19b79eb408619ef88d7195bf"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H6/presidential.png",
+      "bytes": 138370,
+      "sha256": "1048843a26185f587be96ee6c523adcaa2acc057f31e01016d3cb1617794854f"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H7/legislative.png",
+      "bytes": 168838,
+      "sha256": "85ccc44233d1221d28476b2de8126086b9a805cc7e654df80dd2c3fe836c1035"
+    },
+    {
+      "path": "03_FIGURES/atlas_densites_resumes/r_eipack/H7/presidential.png",
+      "bytes": 134564,
+      "sha256": "ba6cd9e934fbd7756f2519258687c1c7261df92ac50f361f4ba0e1595e24aff3"
+    },
+    {
+      "path": "03_FIGURES/comparaison_KRT_NLS/comparaison_krt_nls.png",
+      "bytes": 136864,
+      "sha256": "7af15627d4f76c36a9603229df9e8ac9431b2144bf114bab5b45e6bdc9d7a454"
+    },
+    {
+      "path": "03_FIGURES/comparaison_KRT_NLS/comparaison_krt_nls.svg",
+      "bytes": 120619,
+      "sha256": "364687bb0758f89de10c93fccb4b4c772503781b9d8b4f89a9bc2355a9359f5f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1962_r1.png",
+      "bytes": 63110,
+      "sha256": "2decaf2567049f26e11ecc2e02259ddcbb909c2da739e459c1d0147e2bb83aed"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1967_r1.png",
+      "bytes": 57956,
+      "sha256": "658aa7a8d119c09b3fd6542514f75ffd92e0e2148f4d19e0fb90808cc2a10c16"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1968_r1.png",
+      "bytes": 53317,
+      "sha256": "0334649640f941889834f6da1cab41715c624921749ac4034a91e10df8f62b37"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1973_r1.png",
+      "bytes": 51192,
+      "sha256": "9a88291a7cb50390ec8cdcfd20fc8211de9113edd0acfc13433ba10dac1cfda7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1978_r1.png",
+      "bytes": 48868,
+      "sha256": "20a2d4aa594d97cc9923d20b450ec0bf8d86ef422d27b487009b00bb20f0d5c5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1981_r1.png",
+      "bytes": 57433,
+      "sha256": "cf91c633754e00c6bf219e8a6fc1b283bf12e3cb7665d88628490ce17949e179"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1986_r1.png",
+      "bytes": 54584,
+      "sha256": "49526e576d77f3134ba0f640dbafbc693afd0228457d2b5a81ad00b97f9ffc4a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1988_r1.png",
+      "bytes": 58022,
+      "sha256": "6283ba2bdcdf4b4ad21cb3b8916e6c936f57cf6b7b658f3f6852f8f48d8d620d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1993_r1.png",
+      "bytes": 55708,
+      "sha256": "346c1846dafceb9a4e5addc216087486db64017869d6485ec12b769bc38c4521"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_1997_r1.png",
+      "bytes": 55408,
+      "sha256": "241c8c1a1f12fae83ecd1eb926312b68f2dec734c9ccd598b756bbe8c7b51cd0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_2002_r1.png",
+      "bytes": 53299,
+      "sha256": "4027ac370ba2a869005db05a189ca0e36f5dcde2ab8b03a63e03f09e762e6bbc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_2007_r1.png",
+      "bytes": 54236,
+      "sha256": "f7fdb8576a8cf45da71570d1731e1098cae2555bb3e4e2f700d0481c237a3c5b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_2012_r1.png",
+      "bytes": 55640,
+      "sha256": "b134dd30d964445a3a9a34755209da38f7adb62b181911f88042871a57df5c99"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_2017_r1.png",
+      "bytes": 56685,
+      "sha256": "07a6271b1b2b632d448d9d8bced4fdc0876ad8d5cf14b9c77357b675b613026f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/leg_2022_r1.png",
+      "bytes": 57995,
+      "sha256": "09536ee56f0826a1594d6fe6e3e3adc50764083d2647dc4e4c2e3be8726e161b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1965_r1.png",
+      "bytes": 53567,
+      "sha256": "4e322e2ea5babd14417c9b08f2087280fcc9e411090383dfebbbd2ae1be47f11"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1969_r1.png",
+      "bytes": 58329,
+      "sha256": "c885387e57c951b7b1148b0183c6aace196dd64b5c837c626c08501a44ee245f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1974_r1.png",
+      "bytes": 54979,
+      "sha256": "88f2bd81de7437b39b1130eb49f15e92f6bfff49fa0874ced6297d95189a0e26"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1981_r1.png",
+      "bytes": 54012,
+      "sha256": "541c6625a21b909a20953eb80963eec08ec4b1653ac33407fa0e04a88bbc37b1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1988_r1.png",
+      "bytes": 52758,
+      "sha256": "de380413326b0408df92a6f1d0126b8a11f5a6c21395fb8ae6f3b24bfdabaeb5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_1995_r1.png",
+      "bytes": 51073,
+      "sha256": "16721d22277fdb16085244231069590bc234c748f3c6619606d2cdfc9564d343"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_2002_r1.png",
+      "bytes": 51801,
+      "sha256": "51aff9b28a31d978766279b32cd3dd5434f7cac68b3859f897402cef0b1be1ad"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_2007_r1.png",
+      "bytes": 49652,
+      "sha256": "3c91ddd2f5c23d863d6422e9315ed79c3cbd013567d52c746d149f32d7fca924"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_2012_r1.png",
+      "bytes": 49433,
+      "sha256": "42082aca149079d6ef6d634b9638a1a3e161b7237a0be8321eb87f8ac87b57af"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_2017_r1.png",
+      "bytes": 51661,
+      "sha256": "8cb5b01713a162ceb5f1e3ac9309ef63b2456ae09fefa0db1cb1d1cb1c03b1be"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0A/pre_2022_r1.png",
+      "bytes": 53596,
+      "sha256": "23f4a3874717595879258dbea5f59a3d695cb60436e81420bfc05d2d64b22e27"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1962_r1.png",
+      "bytes": 65396,
+      "sha256": "54808f6c40cfe0b7265dca48701fbd092a0ce985d2178386eeca6f7d07f060e1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1967_r1.png",
+      "bytes": 57699,
+      "sha256": "5bfc80d3e27b96f7282e08faa05007b49d3b34e9c4d0d853fc46802e934e00d4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1968_r1.png",
+      "bytes": 53188,
+      "sha256": "3de57b805902ac3db2617c7fa0a047f7b3b1be334d087d1419fb2642a6fa950e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1973_r1.png",
+      "bytes": 51976,
+      "sha256": "4f3e7b3fd04f3d583374b310ee8dd1a3992f5d6593bf1b849ef4564ba9230a85"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1978_r1.png",
+      "bytes": 47357,
+      "sha256": "3c9adfc91fb2a4443595ddacd5b5c98d7622011624b37aac347ebb22307439fb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1981_r1.png",
+      "bytes": 57818,
+      "sha256": "e84c020b5f206604a95fe5845e0cd432a89496663c32e3d6ac3b179d54a2af34"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1986_r1.png",
+      "bytes": 53704,
+      "sha256": "ec7c9e806d7df2edbc86fd5b92468b33b5c813384cc981be7c206d6d34bd3030"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1988_r1.png",
+      "bytes": 58145,
+      "sha256": "3447a681404a43e60edf3684f72c33c851d0b2ef02cb620d04aebfee91a39435"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1993_r1.png",
+      "bytes": 56646,
+      "sha256": "8ae74b19df18bf3376c1c839dcb26c4acc37789558d3bacab204e4349312e472"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_1997_r1.png",
+      "bytes": 54961,
+      "sha256": "19eb2c92168d3a0f559fa81256234f0a6e5c1bceb5cd00a60c407536b58ecf78"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_2002_r1.png",
+      "bytes": 56184,
+      "sha256": "e2e40d98abb5a9749585c33ed5c396ecfc1e061225953d35db8bc24b52ccc975"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_2007_r1.png",
+      "bytes": 56697,
+      "sha256": "5f3d81213639c4182fe12976ee03d2be821ba5154769de02b9991fb850ceedef"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_2012_r1.png",
+      "bytes": 57044,
+      "sha256": "484286d32f6e1742865e81ac503be6134cca6bf5cb99da64a3efea52ae39e276"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_2017_r1.png",
+      "bytes": 58709,
+      "sha256": "94919e0966a4253890f30fa7d7e67ab5c7d359c205014d0cd9d27ee91c68ea71"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/leg_2022_r1.png",
+      "bytes": 58307,
+      "sha256": "d52a9f8f0d8c1fdb468fb2369c5684a8059ad4660161dce239248aa5b28fa323"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1965_r1.png",
+      "bytes": 53209,
+      "sha256": "d14127763df7f2ac8846e431bcea66d08ed0e40a40943183b301df9c4cb5f11f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1969_r1.png",
+      "bytes": 56078,
+      "sha256": "cf525abb155698574c9c867abe9b218a8a1795873575b72b139b66c06c83c217"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1974_r1.png",
+      "bytes": 52191,
+      "sha256": "eafb7ccaba8ffb91fc5b8a6dca5850854911e9438296d2a149a652075b8de84f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1981_r1.png",
+      "bytes": 52383,
+      "sha256": "b12081aa664c3f5c3b31197ce7ca65e467fd3affe0e837cee6adf7c773d4e8fc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1988_r1.png",
+      "bytes": 51458,
+      "sha256": "0bea3f8785d4ec10854656e4c5a97ac0565a3138f0fa0def75eba01d63812755"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_1995_r1.png",
+      "bytes": 51242,
+      "sha256": "48e610db588778beb17ba4f5ac5b8769cfd0128d71cc26d630e3abc55518bcff"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_2002_r1.png",
+      "bytes": 52562,
+      "sha256": "75f3a744f21028315e681d4f07afb9188f57330b8cd971923256478e5f0260c2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_2007_r1.png",
+      "bytes": 50481,
+      "sha256": "9e8d3d2bd348caf309921aaf532d75791c3e14e20c9651578c754d0976a6468c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_2012_r1.png",
+      "bytes": 49942,
+      "sha256": "f35d09fa721032d64c640690e1be66e1589dcad09dc5a0b6c317169588e2f256"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_2017_r1.png",
+      "bytes": 51722,
+      "sha256": "79f47685e0b1548d88ba85bfff61f15673d8fd9e961631732e06da940daf741c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0B/pre_2022_r1.png",
+      "bytes": 52410,
+      "sha256": "fa22e536dda0f8274fd5f2b957aa2425e16118fb7df10def13cce966e8320569"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1962_r1.png",
+      "bytes": 54534,
+      "sha256": "e65c684994e9435ec5e732acaa9c690b79d93d2e40223d25d02821469d6774d8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1967_r1.png",
+      "bytes": 55884,
+      "sha256": "5b9ef453dbdf95682d043ba9b8c6ae762a1226a8d8a0cf2e88e242a5b756779d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1968_r1.png",
+      "bytes": 52736,
+      "sha256": "b5948afeb4f470e3735440b76921a1efa611362542a4afceee1413258476f73a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1973_r1.png",
+      "bytes": 52508,
+      "sha256": "f243e469231e5ff9f45acaabafdcd2406294742e37c6aa32db3f26eb68d6ccf2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1978_r1.png",
+      "bytes": 48898,
+      "sha256": "cc4ad993280f95add336641bdd8722910b653802a942503c44dddea01328ec25"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1981_r1.png",
+      "bytes": 56843,
+      "sha256": "b1b52ae74ae35bc4b0750c01eaa6ceef1ca21269c3a334e57aeb741534eddb33"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1986_r1.png",
+      "bytes": 53652,
+      "sha256": "a64c298745173dbe7f13544c3b412009d5dfb9f0467878ae76eba8e837116e7e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1988_r1.png",
+      "bytes": 57709,
+      "sha256": "6fb660d7943fe41d41639daed46cb081578c1599b6f1aa481b0adad3af80444f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1993_r1.png",
+      "bytes": 54617,
+      "sha256": "1e2ca9346d6c09f4d572e925164776f5f383fb635b3af9beb9ca41ba1390d2be"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_1997_r1.png",
+      "bytes": 55631,
+      "sha256": "3248048e9bbd7cc36d4a272659086caaf511e0024a82ce793af52dd08ab05db5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_2002_r1.png",
+      "bytes": 55346,
+      "sha256": "87d4d7af53dbd460609a5cc508a22c8ec1aaa770893ff036a83c8e3a321f1ac1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_2007_r1.png",
+      "bytes": 56690,
+      "sha256": "2abfd7da413655932f9feb9efb2c9813cf4290143a0c7132df131c9cae491db8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_2012_r1.png",
+      "bytes": 56556,
+      "sha256": "f5fe11c2037809a72f8bfbcc17b742b0c307791b45ab1e2baca6df396e61b61b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_2017_r1.png",
+      "bytes": 59471,
+      "sha256": "285e94af97bd46f8ed5f67aef278b7d2bb2b75c578327147be38a36041a47c33"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/leg_2022_r1.png",
+      "bytes": 58008,
+      "sha256": "afd33db5c4f416ad4dee5c0ef8aa48d21dc124b85c479b2dae52cad149ea802c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1965_r1.png",
+      "bytes": 50767,
+      "sha256": "0e95c1761497982817ce7c876933473b6f09c49541d0ede8f0ea8a7fa039c93b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1969_r1.png",
+      "bytes": 55472,
+      "sha256": "ec9d00766ea63843725285596a3db890efdc0314ad7b3c2eb31a3ad2e29eb4eb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1974_r1.png",
+      "bytes": 53075,
+      "sha256": "ad244f51c62aa32e0fb6f2ab0d4b6b3ad0cf89f8c464bc033029e0227a84fcc7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1981_r1.png",
+      "bytes": 53103,
+      "sha256": "f9477bfbd745039a6bbddae9c2793246793cb1c1127873776bf65159e9d74699"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1988_r1.png",
+      "bytes": 51866,
+      "sha256": "3c89a18f27dd2361081c5e8473b625e25dcb64eef8fd4aac6ac35ef3a7e5220c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_1995_r1.png",
+      "bytes": 50573,
+      "sha256": "e2a6dcf267eb05b8eebff9a43d9aeb441e13b6517b64bb8ddf60890b596e2b77"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_2002_r1.png",
+      "bytes": 52401,
+      "sha256": "6d52d29cb397d4bd88c7784caef2e78d15e50ae941090eae6d1760437f1f3eca"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_2007_r1.png",
+      "bytes": 49165,
+      "sha256": "ae020a521097ec90552cc3d18c3a22bf2bbbc47e48627e193d157369f730269b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_2012_r1.png",
+      "bytes": 50080,
+      "sha256": "0d7c87ff66335176e069724f59698a041dc75ce8597105ed89ac109d2bdc096d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_2017_r1.png",
+      "bytes": 52012,
+      "sha256": "e34df9f4609bf27b3c1ce7015e2f3b49289bb547ac1f996ba49c9a786dcf4c27"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H0C/pre_2022_r1.png",
+      "bytes": 52701,
+      "sha256": "19876a2c87d7f5f7dd2ac05529c51327b0e8cc7711b9f0531e5ed58b05d83f59"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1962_r1.png",
+      "bytes": 108518,
+      "sha256": "1b59cb4d6af500bff19348a341ed19ec092045d8d7a430bc2292b526f0d19c66"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1967_r1.png",
+      "bytes": 103855,
+      "sha256": "5c62415351941e20e69716d236aba95c29d3ee3c7b5f5b68b8985724c17a9b43"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1968_r1.png",
+      "bytes": 80321,
+      "sha256": "129d71373db16e6275176320cb4230b5398ee70aade3e05c55f52c85f1b0de59"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1973_r1.png",
+      "bytes": 76966,
+      "sha256": "3958a5711355ab56c5e7321fccefd1d07369ef3804e208d677bbaf683c68c82c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1978_r1.png",
+      "bytes": 66886,
+      "sha256": "f9cc82534c1a8498f259af81bf7bbefe3b8a6d6ff0ac21a1b6f86d9949de7546"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1981_r1.png",
+      "bytes": 79899,
+      "sha256": "e073ed1edb63b940b8467081b0cfa31317338c6925dc0a2143130d0d9fe3ebc0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1986_r1.png",
+      "bytes": 69456,
+      "sha256": "5e0fa5cb0d7466942f29253d07b8987398522452b3155bac993a70f0b56a4c06"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1988_r1.png",
+      "bytes": 78899,
+      "sha256": "96854ee88a0c4d42650048666607360d943ef46a5bcfffe93c8b007ffbf007bc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1993_r1.png",
+      "bytes": 75542,
+      "sha256": "befd3a162d8c89b730aa3056a8b9f6275936934f6dfc87567d053337b24d81e6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_1997_r1.png",
+      "bytes": 67777,
+      "sha256": "12c8a0437a0f5d771ff3e26497da33f4f32b43cc7f290d72e3888bc7b7537fad"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_2002_r1.png",
+      "bytes": 74151,
+      "sha256": "90bff50e56bd2ab52e9d44069539f33e7168dc32619e8d126144c725058b903b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_2007_r1.png",
+      "bytes": 69563,
+      "sha256": "fa5adb831655400e98435d61f6a99b30b101c3da3b7442a99091fc54b80887a1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_2012_r1.png",
+      "bytes": 79123,
+      "sha256": "0bb822fdeb4fba77fa8a0309055fba6225f737633b0c193c2c5f88e653486117"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_2017_r1.png",
+      "bytes": 74345,
+      "sha256": "78d55201b606014e11ca73c7d2422d0e85000910360ddc1025dfd84143fb09dc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/leg_2022_r1.png",
+      "bytes": 69309,
+      "sha256": "8f138a3082b59a764db5e285ed2c08eaf532ffc3bc912cd075dcf4b10c24d938"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1965_r1.png",
+      "bytes": 82956,
+      "sha256": "adbb2179496dbee2e6c99f5d8e04bdddbb9c93ba2af1c73f708f17f2fd7fa349"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1969_r1.png",
+      "bytes": 76684,
+      "sha256": "87d2ee78b9fd9accdf3b74d60a70369e9db4aa4c80e3a466ff60c41150ce672b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1974_r1.png",
+      "bytes": 69989,
+      "sha256": "4eb00becb061c3bc1f80a84406ed2550a71626688f92b384987aad1820e66903"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1981_r1.png",
+      "bytes": 76031,
+      "sha256": "de4da24f3211dcc84e664ca21403b5d5be21acc11725f6431064afd8167830b2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1988_r1.png",
+      "bytes": 67052,
+      "sha256": "4b2f08cfd34a5d052dada7fcb0c0d49b9e8d6131d669df3ee0ea190c51f14b78"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_1995_r1.png",
+      "bytes": 66370,
+      "sha256": "51520e42e19c5616f27426ec5742bbaab1911717d234ccb8e58bea1c929d750d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_2002_r1.png",
+      "bytes": 60199,
+      "sha256": "cda7d0b30134f53581df5c9c45a8dbd6e86b7aff26618d9472a46a229ba2827f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_2007_r1.png",
+      "bytes": 61509,
+      "sha256": "45230ae36f093114890e24dea486fef7a3b528d8ed3234a26bc7f5d283340cad"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_2012_r1.png",
+      "bytes": 65823,
+      "sha256": "2cf9a305561fc52d105baf28e7b737edcea2fe7b58d329a60cfc6324f6f17997"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_2017_r1.png",
+      "bytes": 59503,
+      "sha256": "2aee9d1830cd81215fc15536adfcb406533a0005e18af5f10f197e640af4bf51"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H1/pre_2022_r1.png",
+      "bytes": 59507,
+      "sha256": "5431b8a70bfab3daa3e5e6372bdcff5c3b8eddab60f3123f3d9d84be8643f8f8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1962_r1.png",
+      "bytes": 106433,
+      "sha256": "429ecbbcd61009d0c36ab56195f946080baaa955cc772672140b1080118518e0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1967_r1.png",
+      "bytes": 101650,
+      "sha256": "f740a8ea38869e0d1a216c8141fc0952abfcebb7d7e882eb88ed48205732cfc4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1968_r1.png",
+      "bytes": 80113,
+      "sha256": "798331ea83d7cb963327d87f33d1cae17c87985f05f161e36ccbceafc2cc4551"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1973_r1.png",
+      "bytes": 70325,
+      "sha256": "ce9da7445e75c13c566f788c82d5ada760f070364b490f4f407f5ade14b94557"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1978_r1.png",
+      "bytes": 66588,
+      "sha256": "627bcd9d7e1b61e3d8b1cb18e834d4791d27f0eb702cdb091498c15309f78d29"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1981_r1.png",
+      "bytes": 77998,
+      "sha256": "0ef63b82a2ccd63ad927371518262616a45b1ebf126ea5414a8dcf8bcd4102b5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1986_r1.png",
+      "bytes": 69049,
+      "sha256": "c5b3f8965dea3a9fb0911c3f7a6e21f761073146127d8cc7eef8b40810a673a1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1988_r1.png",
+      "bytes": 80845,
+      "sha256": "8f631f4a4477c0044be6fd81eeb4adcf1da4929fcb4856e04f26f4fe2f8f6a6d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1993_r1.png",
+      "bytes": 69296,
+      "sha256": "15734e07f2b6c5e00d28ddb2591ec1646999b899c76d1e2be379190bd6287e79"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_1997_r1.png",
+      "bytes": 68312,
+      "sha256": "e208af80169fc3a707fb62e05255b38c2bf171c124534bf23f63f223000f099a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_2002_r1.png",
+      "bytes": 68767,
+      "sha256": "2476b39eb4394a66d28d0743055bcb60e138ac9dfadb6ac8cc293ee84b309210"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_2007_r1.png",
+      "bytes": 75332,
+      "sha256": "7a530ee401d30283ea0a69f9639d7643bb94f86fcafaba420a6074aed41e098a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_2012_r1.png",
+      "bytes": 75941,
+      "sha256": "5971dc21377074bf2746c42c73b7efb78bb09b50f87a3a71cf08f38e0588c232"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_2017_r1.png",
+      "bytes": 75760,
+      "sha256": "413c88263458489953aa4dae8afa94ad8fd6889a94c124bd0d304bf772f317c8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/leg_2022_r1.png",
+      "bytes": 66829,
+      "sha256": "44e2c892bd6af994f6d7e02219e2f9fdf70d21b835a94fb42672572f41d3553e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1965_r1.png",
+      "bytes": 95052,
+      "sha256": "991a8371b7063b3099a4af0fa75eadd9b622497d75b5bccc024d7ae26c87b8dd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1969_r1.png",
+      "bytes": 75705,
+      "sha256": "fbe949ac949ed00eae0c8cce8f02ae3bed841f883807ea42587f892b79e34209"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1974_r1.png",
+      "bytes": 69137,
+      "sha256": "0b583d91c82e34e48bb40e7ee21db4ed581fb434e374a92838e52957d8c4299d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1981_r1.png",
+      "bytes": 68367,
+      "sha256": "bd79aa704efb91a5234f1c60823db31ab5e1264a86d6ef406b4c633b562b0fec"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1988_r1.png",
+      "bytes": 65673,
+      "sha256": "8a5798be8e4b5a3ca4662c8cd0589111e82d4bb62a09cd200553e7b245cbbe31"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_1995_r1.png",
+      "bytes": 66098,
+      "sha256": "eaefbdb094f2ffe31307f811cb42b81812a83651bfd6c3a10c12436c15e5158b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_2002_r1.png",
+      "bytes": 59615,
+      "sha256": "f62e29ef18c262a4d90652f4eda174e95bbfde4a50711d4592a96ed560865058"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_2007_r1.png",
+      "bytes": 59786,
+      "sha256": "61819d74799f905d244e8f93de02131120d937582c096459d3f88092068426b6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_2012_r1.png",
+      "bytes": 64833,
+      "sha256": "4da843b0da15de982c5559660a1a1ee8728abc226967109dda94e8db2e0984c8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_2017_r1.png",
+      "bytes": 58171,
+      "sha256": "71e42ed0e38702fe5034fdeb1ea9042b06660b26c19b4f87eea1b8f435c69da4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H2/pre_2022_r1.png",
+      "bytes": 57948,
+      "sha256": "6ef25dca9037bdba803697b4ac61e74e1e9e45772ca2c6ce1243ae4a6cd21f68"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1962_r1.png",
+      "bytes": 77314,
+      "sha256": "070945a9763d6a10a08e0a3008dddf412d0f6eb8ef64926d65cf16fcc407ba45"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1967_r1.png",
+      "bytes": 79986,
+      "sha256": "907de46d66a81a80a89912717b04b043800129321584976bb358190ec4b58245"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1968_r1.png",
+      "bytes": 77190,
+      "sha256": "87f019034e4abd4cabb00bb1614208141b638f5c5c97b6ad9c73ee56a15903a4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1973_r1.png",
+      "bytes": 70118,
+      "sha256": "892b666ed83bfa42e217bcdfa38c05347ce4a3ee2af97474b53cb7b895ca8662"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1978_r1.png",
+      "bytes": 65899,
+      "sha256": "2622b8ff10be61ae0f8ecb787e7a4842f83b9c8869da745bca999079d0d09258"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1981_r1.png",
+      "bytes": 68856,
+      "sha256": "f10ced6fdb86b7e8ecc2472c0c0326fe15191117354939570c4002206969f4ee"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1986_r1.png",
+      "bytes": 65132,
+      "sha256": "fe48a6b0d69ad88ae8702c3c0f7663c86a2b01c437e970cf7188bc619147acb4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1988_r1.png",
+      "bytes": 76225,
+      "sha256": "29e4baaa0b40ea4d6ae7e29c77b30f00aa8c17d717c0992d8805970a1e3ebe3b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1993_r1.png",
+      "bytes": 63633,
+      "sha256": "92a8fe7ffc77fd74d20820a784bab37c71dcb51d50d75f5dfa59a410377c92c6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_1997_r1.png",
+      "bytes": 67861,
+      "sha256": "19829d40c0fdf0135f8b69d95519951df92b02c95a8bf0f0e459f9b1010c35aa"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_2002_r1.png",
+      "bytes": 67133,
+      "sha256": "82e1faa07a94f8041294ef9adaeabf7b4b8856cc4a22d399345e9a6c56111fb1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_2007_r1.png",
+      "bytes": 73696,
+      "sha256": "67e9b21008e33b6b680f84277d8bf75ddc3efa8607051e1ebb7142fd96fd0b55"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_2012_r1.png",
+      "bytes": 71194,
+      "sha256": "4da7dd27ec8e4e085bb34e5c59dc1e03ab8d45ab152a872f0a14c2d663b53146"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_2017_r1.png",
+      "bytes": 75503,
+      "sha256": "4bb9eb874bde5553a59186eaf4a708f5018c9ba8a4dabc2fda5b873f66eb3870"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/leg_2022_r1.png",
+      "bytes": 68303,
+      "sha256": "a34884462d91722623500a40bc635abb200f00d0d3370ef21fbaf7f8ce72b322"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1965_r1.png",
+      "bytes": 66783,
+      "sha256": "04d5f0e6c403607829bf735db329e3301420bec35910622c004bccfdc7ecefce"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1969_r1.png",
+      "bytes": 67519,
+      "sha256": "b289fb0ed5da1d9b2baa696af8a6ea28a9b30a101fe794e1ff4a97bd7f2e2a6f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1974_r1.png",
+      "bytes": 64815,
+      "sha256": "bdf24412fa78efd14c06135579d3c1a87eac4f19810d5226ef42b341892f5b75"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1981_r1.png",
+      "bytes": 64936,
+      "sha256": "f51d3c856c9779bb6fde1f18c482572a06b6f4223b765301eb08696c8fc39b66"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1988_r1.png",
+      "bytes": 63676,
+      "sha256": "d62fe5fff029519ec6515fb1a8e02c38fd40ef98523442b5308364c0e5794907"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_1995_r1.png",
+      "bytes": 62979,
+      "sha256": "607321846c93a17dcc35e7ac30a46d4f5a26b0f729bd3ac46d575c9133c68fcd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_2002_r1.png",
+      "bytes": 58499,
+      "sha256": "741b0230a6e129b1a6f0fa8ebbde66402a270bf196e518728632e2db53f0f1dd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_2007_r1.png",
+      "bytes": 59509,
+      "sha256": "39a2162a9fe830bb7632efb98de06bcc63cb9b73c51efcce1f93d795c20293b7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_2012_r1.png",
+      "bytes": 61001,
+      "sha256": "03d543f260cbfefca7e5f599ec8a5ebae179cbac02acbc4fa033130dc90b3b18"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_2017_r1.png",
+      "bytes": 58880,
+      "sha256": "87fc9fb338ad694e060852e8ec6721b59b4e472cd8b0c5feeb27b770f436ae0d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H3/pre_2022_r1.png",
+      "bytes": 59085,
+      "sha256": "de2aa7a09155f6ee632f8b4ba8b0083748e20d3e31d578b255e990ebdb92998a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1962_r1.png",
+      "bytes": 107031,
+      "sha256": "533cbbcc0e15b736a262e3f6104a249bfc93baf040e3089f2a589a69e8ec1e5d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1967_r1.png",
+      "bytes": 100599,
+      "sha256": "d89ea79d8769f80091a5ed05e3b694ed8e717ae349d4e8ffdeadc03acd3e37a5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1968_r1.png",
+      "bytes": 80195,
+      "sha256": "a3188acbc689c879b17267ab7c86473f89cc8538495e6643f3130255d898cb04"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1973_r1.png",
+      "bytes": 72717,
+      "sha256": "aad233b11cb4eb027457d899c7a3d37e20a25c5d19080a3caeb7d470e5c76c02"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1978_r1.png",
+      "bytes": 65302,
+      "sha256": "fa26f6a215be5d62675235af1a2f38c69f01f8ff3a5af0bc1fb6e2255fd0362c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1981_r1.png",
+      "bytes": 78670,
+      "sha256": "2a8625bf932c1ff130f7cb2d87db65d134b75193935685db855316786c1f39fe"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1986_r1.png",
+      "bytes": 76096,
+      "sha256": "17807c72a5fb4ade9218528f7121fa5f88eb1bb3f2647497b795a4a0c30b712d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1988_r1.png",
+      "bytes": 77940,
+      "sha256": "83fbd6674d031117e251010e4106df5d727ef382b7f023b2163d41441c64c92a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1993_r1.png",
+      "bytes": 76885,
+      "sha256": "420389d392a84707645f638d53f4fe85cc245f1d66bc809e7336be97c62732d9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_1997_r1.png",
+      "bytes": 69596,
+      "sha256": "98f04bbd4831fae7076fcd29a466865cd93f05cfc8360b289e649a1707ba1271"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_2002_r1.png",
+      "bytes": 75412,
+      "sha256": "8b605f294516b3d2e75e82a239be36cf405f5d5e00610e1ae54de1a1e281f9b7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_2007_r1.png",
+      "bytes": 76143,
+      "sha256": "ec6fc180b29f681b6c31e4c16e93eddb4dd64f165765aecb95f7e83d96858466"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_2012_r1.png",
+      "bytes": 79747,
+      "sha256": "d3f435041c0c3d60ff2d49c61b77cdf4a5aebebfee2cb4f050c1f879aba82a66"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_2017_r1.png",
+      "bytes": 70303,
+      "sha256": "dcddebf2f06ddf16edbed61f9e5b40ab8680712669bef87447cfcdbe05a68031"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/leg_2022_r1.png",
+      "bytes": 69572,
+      "sha256": "9ca911b4d87fdf56b8f368401d0f0cfa0c260b928ba9dd7c007a735c96952161"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1965_r1.png",
+      "bytes": 66046,
+      "sha256": "2424a70a3919ea111c7a9d509cb60df86204cf40ba8448903665d92aab46dafb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1969_r1.png",
+      "bytes": 76562,
+      "sha256": "1ea728605c3bf79e759ca5995bdee154277ef391095c79df90bdaf1cb4dee2a1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1974_r1.png",
+      "bytes": 69120,
+      "sha256": "a7d54815fc93ae87b0a3443d42dcbe7bf6e4b1726dd0527de6abecbcd0d4347e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1981_r1.png",
+      "bytes": 69326,
+      "sha256": "b7fb63d92b31cc1c70dd701275cdf22f888a8a832b297b4e09d5f96ab77ba4b8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1988_r1.png",
+      "bytes": 66686,
+      "sha256": "f87a61e1287add4ac42921321fea628e30907001fe1527409a32a1da9e5910f4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_1995_r1.png",
+      "bytes": 67824,
+      "sha256": "dc5f3813c98c1a24f90e227158cafec1e5c15fd7fc8062263eedadc28d128e37"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_2002_r1.png",
+      "bytes": 63292,
+      "sha256": "594e3addf38699d0b00e46b7c4a096644599bf570970f32bcbbe44b9f20b1e99"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_2007_r1.png",
+      "bytes": 64381,
+      "sha256": "dbdfcc6ae7ba7cd009f6893e8b6039316a28f665ac521dc388dc0a526c8ad142"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_2012_r1.png",
+      "bytes": 66052,
+      "sha256": "09ac1196b85105bad4085069a05f98897eddcfcd422ccfb92ddc8381078639e4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_2017_r1.png",
+      "bytes": 63649,
+      "sha256": "189635b2aaae9e5b0f49cbbb7be4cee4e95716eade63913ff076b9afdc120568"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H4/pre_2022_r1.png",
+      "bytes": 58306,
+      "sha256": "eeaa262ff8c2180e5b3177b6141e019c46ed90d18628a236e2738279f453e5ab"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1962_r1.png",
+      "bytes": 24578,
+      "sha256": "688837896d991de99153bc88bf29e3636d24ddfc95faebc65990f048f0faac88"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1967_r1.png",
+      "bytes": 25078,
+      "sha256": "81b00069abe8424efcbb5d8f2ce4d654ec097932030323b022bcbb920b07b2f2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1968_r1.png",
+      "bytes": 25186,
+      "sha256": "2714fc3350fbe1c79e3d5a86fce07616e83e8dd802ea5195a69c52db0b0438da"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1973_r1.png",
+      "bytes": 25579,
+      "sha256": "2152ef1adc989c403d2d16d419af55352e03412407eed693e7dffa7a1962cf12"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1978_r1.png",
+      "bytes": 43793,
+      "sha256": "fe7c66ac194340f04a6a9d8c2ba3082aedadb4d4b0360b1ceccd6e3a8aa1079d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1981_r1.png",
+      "bytes": 42601,
+      "sha256": "a35f27a23f10d10154900a93a25cbee4c1c8a2dbf75950e7a81d2494de11e62d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1986_r1.png",
+      "bytes": 24541,
+      "sha256": "8a6d4f0180827305adb88ac544328d582cf264fab48db995eb2d957e6871bd7c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1988_r1.png",
+      "bytes": 24240,
+      "sha256": "387db37352a3e42930a049fc13c91acf0a978b4377f9a771d7699a111f8766ce"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1993_r1.png",
+      "bytes": 42624,
+      "sha256": "54dd553421bb9b411c91934be060af574b772cc41b875f924a418f171fe3a876"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_1997_r1.png",
+      "bytes": 24672,
+      "sha256": "dd9d575cb06ff1bec4465b7b6be3efcfef36198073e57ced4a1633023d0a7e3e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_2002_r1.png",
+      "bytes": 43690,
+      "sha256": "6fa73e3dcb75b008e4b5c4d69f57ff544b6acd74bb5f588bae6a33b9a9bb3b72"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_2007_r1.png",
+      "bytes": 56878,
+      "sha256": "89ce823714039efa09452927d0d61d600b0038ac2a90f6076140bcb47b6840b5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_2012_r1.png",
+      "bytes": 52126,
+      "sha256": "4ce399081b07661a2b9ad661aa57ab9b3d96fa94b67f7fa19af1136cec97ca42"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_2017_r1.png",
+      "bytes": 74549,
+      "sha256": "304b9ebfad39f5a1ac05b9acb669b8dd7d3cf9916410dce6c7bd09f57f268878"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/leg_2022_r1.png",
+      "bytes": 68660,
+      "sha256": "180e17a54789e388533a2c257e3f8fc1d15b8c0152514a7950eaa5c78aca44ca"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1965_r1.png",
+      "bytes": 49762,
+      "sha256": "ad39724ed19c7f60dd5f6f81dbdacf5b5f20e0fc010b14b1e897b3d1f4cad165"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1969_r1.png",
+      "bytes": 43962,
+      "sha256": "c43506155bfb73361c40f0ec78e57e19305046d893c1f165d73812983489c5ec"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1974_r1.png",
+      "bytes": 43938,
+      "sha256": "dddc490f8226f4b78314c6a0fdbdfb06e52ee8c4a4fcf05fb9e75e7bdd92657f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1981_r1.png",
+      "bytes": 43579,
+      "sha256": "73ec4c4259e3424aa20b50f019b5687bedc442312705cb992db74932935f8163"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1988_r1.png",
+      "bytes": 44127,
+      "sha256": "7eb3b9ed2c3bd1c943e539d345df0dd7a02222c4f2caeb882c4e6bc06753ad99"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_1995_r1.png",
+      "bytes": 24590,
+      "sha256": "d315e4f3708a92defa9f4f9d3909c70f4b1904b3c1a02a7f8d1b874703c3e900"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_2002_r1.png",
+      "bytes": 45845,
+      "sha256": "b807336e3eb52f19bb7a8ee48051190ecb59cdad6e22f92aee878b2850d5574e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_2007_r1.png",
+      "bytes": 25271,
+      "sha256": "3855b8c10f0d875fe57daa42a9c9ff9f66b236434778c86bd70b55a7246be05a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_2012_r1.png",
+      "bytes": 47055,
+      "sha256": "2e001d77356e539f09df020692a873bf3595f8fb05d191ad4bc5b2e332b7eaba"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_2017_r1.png",
+      "bytes": 54759,
+      "sha256": "3f48694f5146f3e1bd0d96ad0a620f52cfda42dfcd7801719386cd6a8ffe6d85"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H5/pre_2022_r1.png",
+      "bytes": 56968,
+      "sha256": "bed6f0846a20bbe1c322639d95ea50a1625c315323b8fbfa624ea18345e359ce"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_1986_r1.png",
+      "bytes": 53025,
+      "sha256": "60edc97982b8769669ec2f8d53c8945afb35723a7f2c4d67571af7aaf051282e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_1988_r1.png",
+      "bytes": 53409,
+      "sha256": "e732b6f0c5fdced3c7696ad8fdd3f8d8b5c3cf08c3c2c28f306c8e6d98d55872"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_1993_r1.png",
+      "bytes": 55764,
+      "sha256": "14ded826971800802e6dcedfb60344e59a19fb1481feb73d52543848e560f0fd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_1997_r1.png",
+      "bytes": 57155,
+      "sha256": "ffd22795272ad9946e114bbc9c996aa1ddde30471920b679db287cee5c871640"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_2002_r1.png",
+      "bytes": 56111,
+      "sha256": "a3cb10b75aee3fe859979c99da29c31d30e69f11bf66a573d2fcb04fab4b6b5f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_2007_r1.png",
+      "bytes": 48412,
+      "sha256": "dddcd20dcaa6ccdde8d3e3c90b2dbd780c8c36569f04ac1b738082217625a960"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_2012_r1.png",
+      "bytes": 57484,
+      "sha256": "7021efab32bd19977f8e6f66f3b29e5c8e7c13d91a694dc5fc398685173920f0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_2017_r1.png",
+      "bytes": 61427,
+      "sha256": "6e50f67cc2dbf0187925a0a6550ebecbdcffb86882f8481eca73868ff6e47379"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/leg_2022_r1.png",
+      "bytes": 67059,
+      "sha256": "35512a2c5d97eae7196eb6c7231a05b44ce9ed31fcbcb87396149fe43d472fc9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_1988_r1.png",
+      "bytes": 55498,
+      "sha256": "ffc8d93111efb5288069ea833b65c016831dba9566e057d8434b9b964d30c127"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_1995_r1.png",
+      "bytes": 57315,
+      "sha256": "a0b75f6eecf213ab92bd9986719e347243e4ff9025b5b6aea32d391795c08e7f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_2002_r1.png",
+      "bytes": 56426,
+      "sha256": "2494405f2e6b4737d993c00daf95d5184dfb345178b36afab128fd9759d88d2f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_2007_r1.png",
+      "bytes": 53791,
+      "sha256": "5cedcec77a64db5f0ef75b80e9e4acce0606f0c7ff9e69e99bf13e73f38f56e4"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_2012_r1.png",
+      "bytes": 57453,
+      "sha256": "6cc75de5c9378c21f7b76002c1c33e2163e6792ac419a3788c42026481d60061"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_2017_r1.png",
+      "bytes": 64652,
+      "sha256": "afcc6aed3a14f16b94418f3aa81dea67d9ef7c57f6d5218ba20fad5b3d228139"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H6/pre_2022_r1.png",
+      "bytes": 61228,
+      "sha256": "47a9e744ce2d26a969a186cf7a7c466d6bfc30d5eabdbe8f6e646c3079edc00b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_1986_r1.png",
+      "bytes": 53753,
+      "sha256": "ee4e6e9554a28fa26230aae827a4b953b07cb1957f0b7cadbb0d6130765cc46f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_1988_r1.png",
+      "bytes": 53225,
+      "sha256": "fe7e61bfea410b59db1847e9fbd2e3dbfb7eefc8950e11c3e3f3e9ee0f6f1d9e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_1993_r1.png",
+      "bytes": 56611,
+      "sha256": "0077d942ea66b48cc046a2e144fb614c082c1ea1cfd59ad3e2def62c6323c9db"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_1997_r1.png",
+      "bytes": 57011,
+      "sha256": "05a3b6e1653ce6fc2d1bbb444ca96820c72b9e142fdc5f545719b3a1316ce5d3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_2002_r1.png",
+      "bytes": 54898,
+      "sha256": "cb56e1dd0809dd289108fa8be23ddb18dfc1ca5cd24390b66743403ad83860f2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_2007_r1.png",
+      "bytes": 46107,
+      "sha256": "005d1c508f422c839a9d6fe45a56bf5b9f4df51578f1e3802368e0083e807fc2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_2012_r1.png",
+      "bytes": 56474,
+      "sha256": "bb3e2c9e305f5823507485d493d2062513666e86bcb534148baaca0366a3065f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_2017_r1.png",
+      "bytes": 61057,
+      "sha256": "d57099f0fce26990b1c37310cd9027adb0c9d20c4728a28c5d86501957094d7c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/leg_2022_r1.png",
+      "bytes": 67965,
+      "sha256": "e7c88b18ee1e377f886b45b1595881418958b6aff688463a6f2528eec74d4278"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_1988_r1.png",
+      "bytes": 54599,
+      "sha256": "33b2733cd9da50238916e7f52f3d63c699748e42386e7d316243575f2992d0a9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_1995_r1.png",
+      "bytes": 55530,
+      "sha256": "1ea15facf0f8278d8246f1ba2f97b13ebbc4738ccacaba5b57217cfe1fd95763"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_2002_r1.png",
+      "bytes": 56617,
+      "sha256": "7f13e141a147cbfc94de6cdfbb603fc60103a4afda2c029a5e50bed127051bea"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_2007_r1.png",
+      "bytes": 51212,
+      "sha256": "31f53af74225baf47b48b1b4cf34010379e1a6a484e432ef73041600600e2802"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_2012_r1.png",
+      "bytes": 56372,
+      "sha256": "ee1ffaa5e13467394b05f41f3503b31978be57e64360627b748af17dfb7afc41"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_2017_r1.png",
+      "bytes": 61644,
+      "sha256": "48003c812081d9ce66ec1aa22d69805ba77691eb770b3d842f70db0b2c7b2fec"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/krt_python/H7/pre_2022_r1.png",
+      "bytes": 61923,
+      "sha256": "7fe041841c44a49285dbaa1166e1e72cd6e7c97761be92ad563627cb60343d2a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1962_r1.png",
+      "bytes": 68016,
+      "sha256": "1733029fef3893c65346aedbfce07336df9ffcaf3f6837eca127d02ec204a75e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1967_r1.png",
+      "bytes": 65872,
+      "sha256": "e37ed97f768e34990a1cc75c329e9911dd583f17cea3899917b4caaa5b310e69"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1968_r1.png",
+      "bytes": 56939,
+      "sha256": "0a2ee20ad23c888604382183ab323d4ad27cd5dde760218e0b2a1f47c62b7538"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1973_r1.png",
+      "bytes": 56046,
+      "sha256": "e154d9d42afc0c214d4ae857fa67461e132dacdf223c974315e840589756d97b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1978_r1.png",
+      "bytes": 50374,
+      "sha256": "a255f932a0733db67cbb3a3ce00c108b65c03c838e816e2a1083176d27c08de3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1981_r1.png",
+      "bytes": 66220,
+      "sha256": "b547e813382a2dfd3ca9f951c5a691a710ca951130c070a5f6317e4e9d09c39d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1986_r1.png",
+      "bytes": 63021,
+      "sha256": "a5d77218068e0e1a581b1ac9b38dbae4a7742b54b0fca44364dbe3d35ede371e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1988_r1.png",
+      "bytes": 65566,
+      "sha256": "63300d5efe347dc9ddb25001d18d298efb982221202a78206388d7c5b921f235"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1993_r1.png",
+      "bytes": 66108,
+      "sha256": "e263d6429588f88e2a08c852f750395c14f80895005aeb273e24102845b8060b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_1997_r1.png",
+      "bytes": 64282,
+      "sha256": "2ae85983c83b2ef16cdc5b4fe076e360c5018b5c24d1c8fb242431791f9cde93"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_2002_r1.png",
+      "bytes": 64496,
+      "sha256": "d3b88469be03f6f6a47c66351929d4bb22d1f006ca3b76f5ac162d2d2691a55f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_2007_r1.png",
+      "bytes": 62707,
+      "sha256": "6c90e3efc34e75fe0ca59676a9953951c82e508b9ae51c58a9df7eb06e6850d1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_2012_r1.png",
+      "bytes": 66620,
+      "sha256": "713f91d95bb3f1e901bfc2d0c5b33eefb9c22fb5806a328d6438d9a2285e6b5b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_2017_r1.png",
+      "bytes": 67181,
+      "sha256": "b9690d8da7a8c411fd5702521b28a2d01a673a165a7c8637cd4a92f30130a84b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/leg_2022_r1.png",
+      "bytes": 65989,
+      "sha256": "4a8b9c1d67808cc737c479c646fa5d287d4a7dcc52e3711286c66ce5128b754d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1965_r1.png",
+      "bytes": 66739,
+      "sha256": "5eb6869b684089106d7f3ebb1c644ff9e5c2bd572b033f51828ee24832f7892b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1969_r1.png",
+      "bytes": 68512,
+      "sha256": "4ed91f45b956e86e67dab6c01c6ceabaa3d17fddbfc2a17b619bc667e56490fb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1974_r1.png",
+      "bytes": 59929,
+      "sha256": "4589df9c21cc2bf9b6c0ec8bd4ec623fc51ce82e0178a3e500c90ac9ca647247"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1981_r1.png",
+      "bytes": 65997,
+      "sha256": "14f5bcac16d4caf011d53b9b04c39d1e1bacb56affc536897f04de6580cbe56f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1988_r1.png",
+      "bytes": 63606,
+      "sha256": "4c5501af563a8847a74f93a0b28acc68b82a98db5e2365fe6a50e240900f1471"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_1995_r1.png",
+      "bytes": 60173,
+      "sha256": "34bd928bf2e602ddd27bdcdf96e2111b4d9838a914441b1b0c58f3ae9e3d7dbc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_2002_r1.png",
+      "bytes": 66647,
+      "sha256": "42ceec50614827fe69b1e3ba3dfe8db9d65f20ac7a68ab54d41eb9fb91608434"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_2007_r1.png",
+      "bytes": 56464,
+      "sha256": "9664ee69ab7bde01b53d8e019d8921e4b99ac79d68643637c1c46b435690734d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_2012_r1.png",
+      "bytes": 58689,
+      "sha256": "2c329a532a35469cd452bd0eb400e06d2d957189b5327c658388f87bc10ff862"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_2017_r1.png",
+      "bytes": 56917,
+      "sha256": "fca0bf11af983014781e899614a50312443efcaeec0b622d3ee90e72abcfd30a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0A/pre_2022_r1.png",
+      "bytes": 56267,
+      "sha256": "89fb51af03fe251b59c9233e628439cc442a5e1040a4483b0fd1f95206b706b7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1962_r1.png",
+      "bytes": 76085,
+      "sha256": "e42b0eee1a401bba6cea915f3592296310036c3f6e336f41d564b2be4e391334"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1967_r1.png",
+      "bytes": 64676,
+      "sha256": "42ca8b0ca8bf3096dbd439b490c3c43952773a231bfa8fa4b187699426d460ac"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1968_r1.png",
+      "bytes": 55304,
+      "sha256": "945ac319567cc920a872dad5637151d20dc80c17b460b06bd3fe5105ae7f2b1e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1973_r1.png",
+      "bytes": 54721,
+      "sha256": "a1fb05a00f73720b246377d788865132488a0d983b64b2d3eeb35929e31a4a21"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1978_r1.png",
+      "bytes": 51069,
+      "sha256": "d1d1cc8782bbe28a3873692943d0354a8c4c1a79e9a6bfcda5b6e76e9fa4a429"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1981_r1.png",
+      "bytes": 78038,
+      "sha256": "c30d08c59ffe6d46feb05d22a18bd9aed2530a242d8ed15ef47ce3f116a35fdf"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1986_r1.png",
+      "bytes": 61808,
+      "sha256": "662afb283fe4eeec9a40e9104d227a1d581c94bd9bff1c69bf401351c1a75a01"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1988_r1.png",
+      "bytes": 66235,
+      "sha256": "bfabf17f6137433584bd269c16f79d827cf20ae8253fb7e53e15c7b365890909"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1993_r1.png",
+      "bytes": 65645,
+      "sha256": "e9b2bb439275f819b23b26b1aace7344803ce7e8bf98232d68d02093c7833d10"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_1997_r1.png",
+      "bytes": 64287,
+      "sha256": "20082260cd44eaebd6fd1b4b927f82d2457f6ef6f7f05b7944ba6b605ca13b78"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_2002_r1.png",
+      "bytes": 66407,
+      "sha256": "f48ea0a6323aebb2a36ec567e3a218c0a31f3de499cc83e524680f5bd952df87"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_2007_r1.png",
+      "bytes": 67050,
+      "sha256": "16cdf4e19b1123403a6f112e4a1efc818d5b9d70f00d0af72626f87056179072"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_2012_r1.png",
+      "bytes": 67704,
+      "sha256": "6ed740cad37cce2bf08674bfb6e292fd8f045da6c19c648eb60d3eaf804c347e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_2017_r1.png",
+      "bytes": 73814,
+      "sha256": "9fb61ae567a03cb575aeb2a611e969b7157393202074adf68c49c4e4426a9ac0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/leg_2022_r1.png",
+      "bytes": 66153,
+      "sha256": "2f76edbe94305f8c4c6030531a05077b7d897c7c33df6671338f754a07482ba1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1965_r1.png",
+      "bytes": 56684,
+      "sha256": "fb99ff11b478d8634d62a40a95e51a9f98ccff565a52805c7c432fd9d798c9e9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1969_r1.png",
+      "bytes": 68246,
+      "sha256": "d703f54b301a64bd10a5161063064f1c49c361eac9a193e75d23428f608890d5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1974_r1.png",
+      "bytes": 59511,
+      "sha256": "f7338093af3c5094535248bc6a688eecee5f29961fc65fb4a28e22a3c657524c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1981_r1.png",
+      "bytes": 65574,
+      "sha256": "a65842e99decda405f942a264fec00041754eaecd5b2a6573d4f76bdd72a1283"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1988_r1.png",
+      "bytes": 60206,
+      "sha256": "90a7665d0a7cc43669a678599daad21feac15f81b382ad5cfd8c218f1dcc1659"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_1995_r1.png",
+      "bytes": 64514,
+      "sha256": "357a3df1aa6217347991489053dc5c3c25556828b123eb7285a7d0cfc782e9a5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_2002_r1.png",
+      "bytes": 67907,
+      "sha256": "3ad878c988a6b8decfbcfab09efaca025657256a7fae40e2fdde21d55a62840f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_2007_r1.png",
+      "bytes": 58964,
+      "sha256": "4421192e5b66791caf35c656d93150875ed4c1aab02bef552d0995578dba6b2d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_2012_r1.png",
+      "bytes": 61959,
+      "sha256": "13d04db73636d41c5e1c1d7ad4a6414f912ac22c9bdc9de951e9556fd1d95c86"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_2017_r1.png",
+      "bytes": 58764,
+      "sha256": "c60263058a164a2da0cfce51a79dc14373551363295e8165f7a7a1ed252bc191"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0B/pre_2022_r1.png",
+      "bytes": 55576,
+      "sha256": "f121c86abfe2e8857321a7e1464af72a1bcc7a007ccea5efd5aa4994cf30d130"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1962_r1.png",
+      "bytes": 69790,
+      "sha256": "58c8f4d4d3e195449aa210ffebf76af35cbfe3a86d4d416e9662ba5b234f32d7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1967_r1.png",
+      "bytes": 56663,
+      "sha256": "a2d1f0350bcadec76efd23b2ba4f2516eb90139c16bc0c49b2695c80e2adfab2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1968_r1.png",
+      "bytes": 58347,
+      "sha256": "990c91f888b23833d1e1d8e1e3d129b663fcbd04701bc6fef6c544f139858e1b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1973_r1.png",
+      "bytes": 60483,
+      "sha256": "faabb893b176ac198e5f4cd4e9664c0fae3c597ac94e3211c5bfd7fe6ca02563"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1978_r1.png",
+      "bytes": 55762,
+      "sha256": "8c2ec16ceafebb21ce0ca3eb5376a9e1637b0d86682ba2ec4af34635567bd4af"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1981_r1.png",
+      "bytes": 71441,
+      "sha256": "82a3458bba4a698bae80809a23f3d5f7f6cd64ea65183a7b1d3b6e5737160098"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1986_r1.png",
+      "bytes": 63524,
+      "sha256": "b5b52a9741d52b9da58c7e20fdc8faf17103b07cd9f387896cf1ca2c183537f0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1988_r1.png",
+      "bytes": 72706,
+      "sha256": "3d78d44456724d18baa6eeb6b5b223e9b67cc892e2b9c1b3aafb04e281917731"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1993_r1.png",
+      "bytes": 71988,
+      "sha256": "366d840d7fed07cd89956777bd357e0f64f61a5fd54d93d1b30d8f93995fd44f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_1997_r1.png",
+      "bytes": 72894,
+      "sha256": "3205ef302877b6ffa1c0e9af7638c701dfb385f1be55d63ae7401ed1d8108afb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_2002_r1.png",
+      "bytes": 72557,
+      "sha256": "36725defbfd4ec755ae0ed01628ca37fd63c7ae6a451539f49a4f5b28b21c4c1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_2007_r1.png",
+      "bytes": 73138,
+      "sha256": "2c35e4347398b08e8acd73a2ae7d4ea4597308e38bd4411d961ae2e7bdb8e6f5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_2012_r1.png",
+      "bytes": 73712,
+      "sha256": "6fdea93f0fcfbe6403a3b6a51a1e38ba2135ef71dbb4a601bb05f4f0231d269e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_2017_r1.png",
+      "bytes": 73845,
+      "sha256": "0a8c21785331528eb45f840c1d765c32d4ae2b5d257e6272a69ff6fe38a03bea"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/leg_2022_r1.png",
+      "bytes": 66825,
+      "sha256": "7489b02273a13f5d9dd2d011de8950f4ce02699bd30c847fb2c34e8d7928976c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1965_r1.png",
+      "bytes": 49529,
+      "sha256": "0ed5b4c18feba0e5b24352ae648a0638c7b03743f76889fcdd37f20c0ec99315"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1969_r1.png",
+      "bytes": 66513,
+      "sha256": "ea9402af4b682652a33bce233eaabde8d2da7ebe3e9df008e94bd2539fedbdb3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1974_r1.png",
+      "bytes": 51764,
+      "sha256": "81e06f3085f8bf35ec2d341371448c9b23d1607b7650edd67609ea5461d9c89b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1981_r1.png",
+      "bytes": 56747,
+      "sha256": "cb9ccb7154cdb54217be6f7acc41a019fc38fc67fe63c267bf05d614b62045f0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1988_r1.png",
+      "bytes": 61732,
+      "sha256": "f91e85913306d0f47ebe6a2278259b2ece11a8aa4236007ac29d45f310c09c5f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_1995_r1.png",
+      "bytes": 64899,
+      "sha256": "f7ae2db3949a87c30272fda97f458554833a9a3bba8b545894cc952bf3884b69"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_2002_r1.png",
+      "bytes": 75349,
+      "sha256": "70f001f141c7cc43ff2f463bffd5ab9ef510053107e90d8fd4a825b03a18d216"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_2007_r1.png",
+      "bytes": 57041,
+      "sha256": "597af87a23eafbb9dfc34f0ed038eb25eb3dfaa0838fb8bd85669894fdeca44d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_2012_r1.png",
+      "bytes": 59561,
+      "sha256": "82cf3ca0ca264654159d27280a9715471728890903638df1c46deb64b6084913"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_2017_r1.png",
+      "bytes": 63345,
+      "sha256": "43bfd11845ec188f0938fb752214793f4cc8fcfba34c4ad2260e07e6ffb7649d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H0C/pre_2022_r1.png",
+      "bytes": 59588,
+      "sha256": "e9370b933d07553ac11446362a5a6955e02bb26d85ca3d895d7997b19732426e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1962_r1.png",
+      "bytes": 75093,
+      "sha256": "311afe2d9525a6ec1098c2c3f50de3732dad943f4f33c5f1239cdccece73f4f3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1967_r1.png",
+      "bytes": 109019,
+      "sha256": "5348e614db1ec4e37d2cf25a22b16133ef0f308689c164ee0c29c7f47d19c957"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1968_r1.png",
+      "bytes": 70530,
+      "sha256": "df9916509eec2b3662df2022655001efd047fd89cc0e305541a50753c0d47c56"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1973_r1.png",
+      "bytes": 78996,
+      "sha256": "e73c3a03bd18d7fa985fce1dafcb04d23217dcfc913765bd6758972871441f3f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1978_r1.png",
+      "bytes": 78521,
+      "sha256": "975e8a92d6284cce7e4fcc7e137018bb16da67f08209663dd90534b996db6ccc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1981_r1.png",
+      "bytes": 98953,
+      "sha256": "0ce8be11d8a9a0de2d487aff2097c7a00ce941a248554ef6cd8fd4e69a885b61"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1986_r1.png",
+      "bytes": 97425,
+      "sha256": "ef7a981419b349593c90830c3fc58acc346919165ef12edc442e14e6d5dfbcd9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1988_r1.png",
+      "bytes": 106408,
+      "sha256": "665930cb53469186b1d7cd0e43864a6786c7520c4a982ca0d330e930417b1e2c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1993_r1.png",
+      "bytes": 95903,
+      "sha256": "5ec4796e30d05dcb9ac741473a3fc2fe28a20651324c844daa0ecb3a457a8264"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_1997_r1.png",
+      "bytes": 97012,
+      "sha256": "59599ebd90e0cef4ca215e7367221adb5a6bff04427fc2bd763a75aa33c8c588"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_2002_r1.png",
+      "bytes": 95895,
+      "sha256": "c8356565cfa690f1c21e0429a45ea712c31f4aeabe2eb5ea5f9f22ab9457c6d9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_2007_r1.png",
+      "bytes": 96905,
+      "sha256": "f17ab87024b833e1f520c1de48dba257990197ef2f5685566401c130e10a91cb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_2012_r1.png",
+      "bytes": 100261,
+      "sha256": "15903ab56a3fde4a7ea4b2a46240e781d0c608cf5790ebf1dc9e3c388c949ea2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_2017_r1.png",
+      "bytes": 88550,
+      "sha256": "26c84ffeee516fe91ab9f68c93c8ac89ed11d58d76740244f0af242f3a82d76a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/leg_2022_r1.png",
+      "bytes": 90482,
+      "sha256": "cbdea04b02a6bddca90d5dc242459a30f26d1f538e7a2e63ccb797b6019e161c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1965_r1.png",
+      "bytes": 97957,
+      "sha256": "b864ba50c8a041e72430c2308e481a798fd4a2f0a3c26247a52a880910930a0e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1969_r1.png",
+      "bytes": 92811,
+      "sha256": "f923560506bff68208c0ffaf2e1b698ba01dfe3a35fac89fa6efeb345f3b54a9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1974_r1.png",
+      "bytes": 94358,
+      "sha256": "ad655e767d769f9f4ed3187c4fd1b2723de4f6db8fba3cd12ec78a970a0dd007"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1981_r1.png",
+      "bytes": 95350,
+      "sha256": "f3a27eb6f143d783f28ba8de3b0e3f277d11d9025908cda0d9d6affc82914e97"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1988_r1.png",
+      "bytes": 95918,
+      "sha256": "ae3433cddc6969974f1b4451b9d7dc24e764d13ebf138f7418e7ddf9af44ee22"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_1995_r1.png",
+      "bytes": 95059,
+      "sha256": "a877ac15677365e71efd30f5c736fa7e66930cdd86eb95df9c6fa6e3110054f1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_2002_r1.png",
+      "bytes": 78177,
+      "sha256": "bffbc7cf07959d328067fdb45bca734107d230762196f465214c7a4d774c726f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_2007_r1.png",
+      "bytes": 90995,
+      "sha256": "f0725497c3ce7fb601d0ed096d034ae6582e4127129121c64acb6146002e98ad"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_2012_r1.png",
+      "bytes": 91480,
+      "sha256": "84071e7a965d6513fbc22ae3f70bb51e87ea4a1466616559e653abbe804b6673"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_2017_r1.png",
+      "bytes": 74987,
+      "sha256": "92c29a5a9b1525f7cb983657e9038bb96591826dc938122903ec1d879fae2752"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H1/pre_2022_r1.png",
+      "bytes": 72490,
+      "sha256": "760237e8c90bab8c060e30bf0b726adbea5c5be1d98924119099a1a8ba5a92e3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1962_r1.png",
+      "bytes": 74828,
+      "sha256": "fb026b4567dd4a28cf8de52ace42f7f2121b8eae4b858edee233864e1550e9d0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1967_r1.png",
+      "bytes": 106886,
+      "sha256": "57019aff63803ec194c6bbe637d48eb75f54d043974035ee7708d4471df5284b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1968_r1.png",
+      "bytes": 75778,
+      "sha256": "cce1cd8a147f91fff109649a6aefbacc268d3ca991e16b38e2e91a49fa47b391"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1973_r1.png",
+      "bytes": 76788,
+      "sha256": "af2d2779122c8d52f9046d7f183f1b722008905fa965a5f169b794c54d87a461"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1978_r1.png",
+      "bytes": 76016,
+      "sha256": "2936ffb507cc3528f28ddc9e4bfa7e39ce8041c04afb34e0e04c287b00d9d909"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1981_r1.png",
+      "bytes": 101935,
+      "sha256": "6413561ef6e88bbdad88216110b189d22b14a31bb2d5100ad8d0cc1c3c85d64c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1986_r1.png",
+      "bytes": 95874,
+      "sha256": "68ad657d5dafddf57b76640801333f12794d75aa3a12a1179d19c2b1bf9b0c57"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1988_r1.png",
+      "bytes": 100867,
+      "sha256": "75b20fd9354683f10e998b15ec0260e77f7b958f3ae9c6667e3fc8550adb6172"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1993_r1.png",
+      "bytes": 93573,
+      "sha256": "a4fcd6fd90567e6a07b3985cbd635fcf7deff7e057c1d55a7bce958d084ca166"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_1997_r1.png",
+      "bytes": 93515,
+      "sha256": "67d26d118e789241384abddc3fdbfa761f36a5e389136ffadfde85928b5f8b98"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_2002_r1.png",
+      "bytes": 90781,
+      "sha256": "e85fc27cff3b06b76b577ddec9b873e72eb9c7c9632b6960a8f9f65f8cef9e3a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_2007_r1.png",
+      "bytes": 93793,
+      "sha256": "034d776f6e3595375eb44791c3531ab97718d7a8bb67a2e34e7e8de9adf21515"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_2012_r1.png",
+      "bytes": 92573,
+      "sha256": "7ea2dc53a1295a144e1c0074024f800ebf5be534228001dc05286b94b6d20f45"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_2017_r1.png",
+      "bytes": 71667,
+      "sha256": "5d14f63500489e3501fce750bef0f8c9f23998e44bed808f1b08bca4cccde0ec"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/leg_2022_r1.png",
+      "bytes": 70169,
+      "sha256": "9fe7d9654b9a0b58e89d315acb0b5874b205f84a0414133d72863909cbd135c1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1965_r1.png",
+      "bytes": 99488,
+      "sha256": "13da042947ce11d4670326a550ed6eaa960bb2416393b1069519081b0d6cdb4c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1969_r1.png",
+      "bytes": 93979,
+      "sha256": "0235d3089a7e19bbd8da3dc3bdc10053ea6b95b3e5a1b0c0ec88e92e90e7b710"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1974_r1.png",
+      "bytes": 81689,
+      "sha256": "83de9d9ba02c232bae4fae5e9ae773d2a06e22a4ffe2950e5dd6f0443fb0701f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1981_r1.png",
+      "bytes": 95790,
+      "sha256": "3f7268b6b78c7ecfafd9548e65ff83580fffebe2c0e2ba685fccdc778a85f49a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1988_r1.png",
+      "bytes": 94281,
+      "sha256": "16736a6df43d7db022d9852f4da840ee14b7202d3233e9063e6124196b7a14ba"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_1995_r1.png",
+      "bytes": 93550,
+      "sha256": "1dfd948448abfea78075aaf3517eeb8a9820a1b19b4f394bc7a16682491c4aab"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_2002_r1.png",
+      "bytes": 76148,
+      "sha256": "b5b1bafd48ce376defe2967f4bedb5a3d47c6ac28e2de67f0e241fdbfe286385"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_2007_r1.png",
+      "bytes": 78036,
+      "sha256": "62280fe7761a1664f4676b9c8f2b8573be1cbba56083bc37d3c8292c5318c9e6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_2012_r1.png",
+      "bytes": 87795,
+      "sha256": "dd6b933c54ebf9203244b4e0db5316333e2bb5e71ff0ea7a9e6fa05bdc1a058b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_2017_r1.png",
+      "bytes": 73118,
+      "sha256": "44ceb8f9afb12f178e8e37681148763ea28a4a9fd4b2d448523e7a7d5860a250"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H2/pre_2022_r1.png",
+      "bytes": 71357,
+      "sha256": "114ec00c8ae0eb2613aad45cd1c1ffb5556d1cef5136e046a6972bb81b8dabd7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1962_r1.png",
+      "bytes": 92940,
+      "sha256": "d22c0e4c05c7ac820a2b9a102640ab7850bec40208c3bdd5245406d188a0cfcc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1967_r1.png",
+      "bytes": 94897,
+      "sha256": "bacf5de162877d739cb9ae7e30252f31aac25274c86a71662a98827185cf1037"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1968_r1.png",
+      "bytes": 88419,
+      "sha256": "a01854600ace0cdf137bb8394a49546bbd3c43cac5ffebf31bbb1391ec216935"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1973_r1.png",
+      "bytes": 76278,
+      "sha256": "a26fcae4f3ab469bd2cf26659e420ae56764d9ffcdad95ead6e7b6fb5bd4869d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1978_r1.png",
+      "bytes": 74600,
+      "sha256": "3b73a5d0c87dcbe4844452bd7e8be890cfe5c536b6a728439979ed2fc20d12ec"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1981_r1.png",
+      "bytes": 92934,
+      "sha256": "0397e5b17fce652fe84f6e06d11926971f7e0c2059f2ea9be4e6421086352f70"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1986_r1.png",
+      "bytes": 91611,
+      "sha256": "06b29020f4eebce71c1114b5397f91c9fba917d6ddd32de6264a6e6e62805ea1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1988_r1.png",
+      "bytes": 95514,
+      "sha256": "73357c9407e2075dff8837bc5dbdede1ddb5de02052b114438142d311cc5cb1a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1993_r1.png",
+      "bytes": 93344,
+      "sha256": "4dfacc15a61d63483c781529ef7d0b985ce4f4638d1b87ad666db0f71b5940d9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_1997_r1.png",
+      "bytes": 90108,
+      "sha256": "48dc60a89f5f0131da8c3029914be05a282ff71883dc421f6137308826b2431a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_2002_r1.png",
+      "bytes": 93665,
+      "sha256": "13f16ad1f6445c4bb832bfa6f55fabecb62585438bff43703bdd43bfb9bb9e54"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_2007_r1.png",
+      "bytes": 92725,
+      "sha256": "48bc4890cf915937f0b75935526eba4614fc29a17e0d211366f8147eb3c23103"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_2012_r1.png",
+      "bytes": 96516,
+      "sha256": "f8d0924b5c57a7e9fdb32782d4ec8b25f02fe2a69d710b41de2061cdd4f3fcc6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_2017_r1.png",
+      "bytes": 89387,
+      "sha256": "6154df035a1347c1cc72a09cc5f7a255f36a88fc5f30bd39f411d775e4b92def"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/leg_2022_r1.png",
+      "bytes": 73574,
+      "sha256": "35660c21ea921eaeeb981e9fff5125f7a9cee2ffc61ac929d980f8b92dfc4704"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1965_r1.png",
+      "bytes": 76359,
+      "sha256": "7c66dc7a92a9b22b64753ce19934f723a5dcf13f5cde35222586d05069fc70dc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1969_r1.png",
+      "bytes": 88472,
+      "sha256": "ba735c18b5ea58d58c72ad9e56cb336855fb40e5bce703fd9f8da4611cc5ffb9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1974_r1.png",
+      "bytes": 88128,
+      "sha256": "ceeff80b22fdbea918ba83c6cb879b32173d98a9984be45025e8dbaefda70232"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1981_r1.png",
+      "bytes": 89481,
+      "sha256": "ea43fe51e17d77fd43f8af5739752a5e7b10903ccb16edab2cc8de6d549b4838"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1988_r1.png",
+      "bytes": 90360,
+      "sha256": "d5c033e026a7fc46308f6de8181f22e125d096478e467b3b041ef5933d6b56b5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_1995_r1.png",
+      "bytes": 89276,
+      "sha256": "8ffb369a585db90ce0aa7033cc88c9a1531ba264e2e983afbc354a3b30e7d4fc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_2002_r1.png",
+      "bytes": 87646,
+      "sha256": "7c726d6e342593202b17d9c70c2fe84443cddc873ab3ebdbea3ccd05bceb1663"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_2007_r1.png",
+      "bytes": 88820,
+      "sha256": "2a9cf71ee69304446a8d97ee166d180adb3afed2211d482e90bf0796a07fae1b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_2012_r1.png",
+      "bytes": 88994,
+      "sha256": "98801b3ac02fb138e06e96ab714a7e5f0e23c1d8e0c48f441df99d52120052bb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_2017_r1.png",
+      "bytes": 74705,
+      "sha256": "d98f2bd6cf730703137e9a915db59bf36e6792366fd71c05274574d669654e39"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H3/pre_2022_r1.png",
+      "bytes": 72251,
+      "sha256": "58e9692767f3c095081fbb6ebf58640c722252f01f75d71bc284646b33bf5374"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1962_r1.png",
+      "bytes": 72419,
+      "sha256": "5117cb5f8873e306ea6296a6050ea9d0fd42450622acc49b7ffdc5b788a30b68"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1967_r1.png",
+      "bytes": 101055,
+      "sha256": "0be115f66f9943e7cb47b643c09baf0e1318c69c47b47882087a3ba2c20baa7f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1968_r1.png",
+      "bytes": 73521,
+      "sha256": "c0ba7f9043da8effe9a3af4694485750f08690ec0ebcd2993c13f34ea32d175d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1973_r1.png",
+      "bytes": 92179,
+      "sha256": "2fcba5d7e1801124947f4a527947483852ba8108fee1dff32d883d14e684ce85"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1978_r1.png",
+      "bytes": 76370,
+      "sha256": "198feb0d26f2406e844f708aa997cabde62ec49720dbae864a25e351e21ff75f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1981_r1.png",
+      "bytes": 97656,
+      "sha256": "db0eced4a76ee699ac7d03cfea445d513b932c8717ad9e3e616a34efe1c6c07b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1986_r1.png",
+      "bytes": 81200,
+      "sha256": "a5c4347c7b0facc341ea91b6cbfb87f80e843c7a288a05a3dd76d1f4dc9cbe9c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1988_r1.png",
+      "bytes": 98558,
+      "sha256": "a94239aef2be115e0c45c33f8b048137d15086c3a4a984e28db8226e6f35c5e0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1993_r1.png",
+      "bytes": 77976,
+      "sha256": "0f3027b0586a6dca599510c82fee02a50ed0b7f322efe7e1d1c22ad2400dc6cd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_1997_r1.png",
+      "bytes": 90587,
+      "sha256": "f7e4ca246557b72b3d299e476fa9a1c9911ad1e0237e266a9572c094f5a21463"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_2002_r1.png",
+      "bytes": 78907,
+      "sha256": "200f37df287a055310379974c5c911b6762be3e40780141462d3a17bbf1b1371"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_2007_r1.png",
+      "bytes": 80056,
+      "sha256": "ea8234eccf05472902c2b1bd3af81375966a131bb218bbc3f23750aae3a445af"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_2012_r1.png",
+      "bytes": 83024,
+      "sha256": "58ddfcb28dd6b6c635ed08b5c42c3f0c1dc3d0fb4e9160f0d493467dbc6d3f74"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_2017_r1.png",
+      "bytes": 79660,
+      "sha256": "98fe09bcd1632df5c56e51a330be318b3804aaee8677b81e4543671fd64387aa"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/leg_2022_r1.png",
+      "bytes": 79958,
+      "sha256": "d161892e10857d59c8e8597f002e277e0150b85adfe35c79f8330fa8b372a2a6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1965_r1.png",
+      "bytes": 78848,
+      "sha256": "f1729947d299a76afba73ee120cb9bbd13b39461793d2cf07ab09b809b8d9f4d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1969_r1.png",
+      "bytes": 79599,
+      "sha256": "3a29ce1eb4b5d000219536adef0151bd675eb759ab9c09e75cdfeababf44cc67"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1974_r1.png",
+      "bytes": 81081,
+      "sha256": "3e296a8c688fd7490d9222d3dcf62b8bca27946aa61c9bb5143110bcc8d65ebe"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1981_r1.png",
+      "bytes": 91712,
+      "sha256": "ce55215b6fcdd2f5544a23606d6574a6f9dbec526676512fee0b4c2f6ed4fb04"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1988_r1.png",
+      "bytes": 78508,
+      "sha256": "c6207a6815593a991df0bebfe7e2bb0090081b5d7bae817918047c676967272e"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_1995_r1.png",
+      "bytes": 77429,
+      "sha256": "0c8107fb513451fde3bf523c7b620badd9757040454be6f756aa936ff23d5dbd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_2002_r1.png",
+      "bytes": 75169,
+      "sha256": "2549790713daaaf85ad3a8973c534a43fc731bcd57279ffc989bc74c8f97c361"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_2007_r1.png",
+      "bytes": 73012,
+      "sha256": "3de3e96faeff7e612d754473343ee5841fd608d24e92019abf33520397524c0f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_2012_r1.png",
+      "bytes": 76894,
+      "sha256": "7d7d108bd96302ea688090876089a75dc6d503f1086ce58554171571a27eebed"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_2017_r1.png",
+      "bytes": 73399,
+      "sha256": "81f85eeb47c961d13c6c3fa518a1093aec30acfc45129c485bf7307505ff5fe7"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H4/pre_2022_r1.png",
+      "bytes": 70457,
+      "sha256": "930aee353f327395920efe839fbf7dec309919d436496966e916c0955c85fe26"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1962_r1.png",
+      "bytes": 25791,
+      "sha256": "a161060e875c4934b2e4fe3e69f014cbd676fa607252a12c187b310c7c7625b1"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1967_r1.png",
+      "bytes": 25902,
+      "sha256": "a6c300b9a1a88586d915b94a874018741d6d2a21810ebc3ea3509c7f99e516d2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1968_r1.png",
+      "bytes": 25685,
+      "sha256": "2be4873ba6249bd4a656964cf67d88ec3a030fd53fed57bfbed3f6a61abb4c3d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1973_r1.png",
+      "bytes": 25652,
+      "sha256": "5aa7af6feeb2467c176df16bc9ecffc3a3a6b2f5039864257fe15e7b8cb7498a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1978_r1.png",
+      "bytes": 26016,
+      "sha256": "e5a2f118c289fac6cf0507ad6e5ac1383b27cf738be946b4301fdb8f568542d6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1981_r1.png",
+      "bytes": 25202,
+      "sha256": "3bf9621c66e7f45309615d6c5107c44226ef453078e501b2ffef6d1f305e77ae"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1986_r1.png",
+      "bytes": 43283,
+      "sha256": "bbc3ae2a815486ac406e59b4f8d0ce867746a8d88030b5514d07b036a985d0bc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1988_r1.png",
+      "bytes": 24984,
+      "sha256": "298dcc5f53d64f23dcb9a96e532dafe363e6168b1633035a28e3807dfe7fa9bf"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1993_r1.png",
+      "bytes": 43242,
+      "sha256": "46b57d1808c6088a3b6b1e384a7197ed12e35780e0fad9ce7f70f4b65b62475a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_1997_r1.png",
+      "bytes": 25357,
+      "sha256": "b799a41e59b263a9e0a66b8e25f1c2f385081717415f45f01990a005c8c6eb8f"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_2002_r1.png",
+      "bytes": 43901,
+      "sha256": "3e37c1448b68471a804d10eac922f3457e63684f1e5e4bfe332f3208ad558cca"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_2007_r1.png",
+      "bytes": 53288,
+      "sha256": "655ff5414a527d015718444e388422371687f7a9fb2ee7df8328a0d67a10a02a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_2012_r1.png",
+      "bytes": 26739,
+      "sha256": "4465321ebe982ada0a44864348ebd09fc0316af9c9f5d8dba1ad341b3b6fa929"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_2017_r1.png",
+      "bytes": 58678,
+      "sha256": "db24f3cd5c86aed1053d8c67491ac8dbbd42067f65287551279c9d7fc8e334fb"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/leg_2022_r1.png",
+      "bytes": 59698,
+      "sha256": "c7a924c0b3825de8283632ce5678b977ccad4a3eb08d345ef37975bfe71c7986"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1965_r1.png",
+      "bytes": 47366,
+      "sha256": "1ffeb0c85b3d693ada42ec0d70fb0feb13eb632c2bb13a991b4cba70d4a61022"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1969_r1.png",
+      "bytes": 25344,
+      "sha256": "ea3efb4283c5ea002df03a3262fe98f87e0369d985daf9b43d5c142045fe0926"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1974_r1.png",
+      "bytes": 43858,
+      "sha256": "238910800dec5bb535af1639fc603eebc2a5a517e3a524d06abe8c9dd95d6be5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1981_r1.png",
+      "bytes": 44197,
+      "sha256": "6e1e7d01beb5fefdc72508a132a747fcd737a38b6590be9de903c5d5da1fe08c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1988_r1.png",
+      "bytes": 43776,
+      "sha256": "8f261445c43c6c37ff5790cc4532f0a089b4a9c5ca1d51e700a89044ce0b72cf"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_1995_r1.png",
+      "bytes": 24827,
+      "sha256": "2ec27d2633e633b22f9caf8c9d0639f2b5bd37fd14e8bf44bbdef44eecde022c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_2002_r1.png",
+      "bytes": 52624,
+      "sha256": "a96bec5598ce0a01fa9bc91156173fe920f141eb0c64373ee9b634929b0b6820"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_2007_r1.png",
+      "bytes": 44159,
+      "sha256": "715b0bef4c903d7c8f42833ec4b1526df6abc75a07423be406ca15ba30f63362"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_2012_r1.png",
+      "bytes": 59010,
+      "sha256": "09b9db52d6d8b37544c2eaa8817cfc898cd42361f51031e111a9181161ff703d"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_2017_r1.png",
+      "bytes": 65776,
+      "sha256": "267db4ed790ccc245aed409082cfd6f2f131b9402e6f9e9959aad0bdf1a67db6"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H5/pre_2022_r1.png",
+      "bytes": 64620,
+      "sha256": "30269dac4fa6be6eec6f1f436f5f459941ea56842227fbb79b25a00063bdc6a5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_1986_r1.png",
+      "bytes": 56742,
+      "sha256": "243a6b98018bb6b9075dfa68cd052564c074beb82abc685d8e526acf338ac441"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_1988_r1.png",
+      "bytes": 54858,
+      "sha256": "6231418759deef50791b5b1310fcbebda33dde62249d95d5abb7d57928f791c0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_1993_r1.png",
+      "bytes": 59781,
+      "sha256": "5b0d2528ee368b2f28bd0a5379b69615e8e366eb4702ae09dbac28a920e3666c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_1997_r1.png",
+      "bytes": 62960,
+      "sha256": "ae0bc1d10f905d3c7fe029d3bfc8875f40209106ab3bdab3dc7083ca1351aa4b"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_2002_r1.png",
+      "bytes": 62769,
+      "sha256": "41dad6e5b17eab341dcec1eecf3d3d4c2a41c0a3648cc8eaa138325f915b3609"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_2007_r1.png",
+      "bytes": 50108,
+      "sha256": "52dc13f1029c89af671755ff06859aeb8e238ed2f3ac4fdde3e57de61927e0a3"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_2012_r1.png",
+      "bytes": 70960,
+      "sha256": "d4296b73fd4e1c5b066f0c683fee282152f91796537ddd97ddcf51ffe3e43868"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_2017_r1.png",
+      "bytes": 75575,
+      "sha256": "79ad0534dda02fe40175ccdbafb01574b856467258178c7abd73ab22901c5fe5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/leg_2022_r1.png",
+      "bytes": 76905,
+      "sha256": "69319a106cc8447008fe2d5c403944ad4f5e5aaf2c31272fe072953a6ef54eae"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_1988_r1.png",
+      "bytes": 64135,
+      "sha256": "ac7c757715ee74753eff94d84570a7329e6c75bc55012e59f14edb1708b74d81"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_1995_r1.png",
+      "bytes": 62435,
+      "sha256": "588148bc8dbcfedd43dd29653c3c883a5e287d86d17dd57acf4ca7a31d0b1886"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_2002_r1.png",
+      "bytes": 64089,
+      "sha256": "e99fbc45c6f926c53c8ead7f128a62ea88ce38d5e0245302ec22df1bd58dd704"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_2007_r1.png",
+      "bytes": 62000,
+      "sha256": "51d58b5ef0490684e609d17928de9d9baa9ca043bf320127e7e4777517b72007"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_2012_r1.png",
+      "bytes": 75811,
+      "sha256": "4dfe5db87ba2c35dc32846fa4bc5daf1af9fdaf612973b10fe158609fc2b4d84"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_2017_r1.png",
+      "bytes": 78563,
+      "sha256": "618625f3e38357ffa07afadfa16c88fc5b2a0f0166a434a87f12473aeb911dfd"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H6/pre_2022_r1.png",
+      "bytes": 74872,
+      "sha256": "d6676928c30b7895e280043d71447f62601615f45f2cc10da6f62f367c54813a"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_1986_r1.png",
+      "bytes": 60247,
+      "sha256": "67c4e9428ed68b8559caa9e3ca2f3eb9cd71fe3187d58eb4c797f42cdb43f518"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_1988_r1.png",
+      "bytes": 54239,
+      "sha256": "9f18cde064f7401a23796c70d8e70a7c8c3251003ca23f50128164f4480e7fc8"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_1993_r1.png",
+      "bytes": 60375,
+      "sha256": "65559e1dcac2e29f172dd43e01349da642aecf84368c90317b8d2382ca36bfcc"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_1997_r1.png",
+      "bytes": 65013,
+      "sha256": "f8e1931b01e674c315e82daffc9e57d357b581ac7f46cc186c6a5bf4d7822cc5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_2002_r1.png",
+      "bytes": 62000,
+      "sha256": "64b9a0cbd6dfb6e1fab96163a2bdceadc57b53eebc1d1160e337d2ae5b859b6c"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_2007_r1.png",
+      "bytes": 48264,
+      "sha256": "09b6e3d60f86234b442eb7300c29e817c6e202350499c8cb71f3147bc53ad1b2"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_2012_r1.png",
+      "bytes": 70048,
+      "sha256": "d063cd7a5b30bc9173829315bfe03fe5d6ab633ee6ef9db5258ec5220a02a870"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_2017_r1.png",
+      "bytes": 68148,
+      "sha256": "0fbeb70693732fa640f0b2fd4f8be1025b32c2e73fb40590a9a8e65679ca9777"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/leg_2022_r1.png",
+      "bytes": 78834,
+      "sha256": "38a46700d7b874360f5687779fe3d7c9ac05cf6fbcb207993358b67f6beab7f0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_1988_r1.png",
+      "bytes": 64030,
+      "sha256": "ce0116e4b635d65463972e2a7bec182fb6c85756e2966f9c329c77663f5931c9"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_1995_r1.png",
+      "bytes": 69324,
+      "sha256": "989d1ebc4ed4634a2e183cc4e2d25709f1ac52df71fcdbd587b7415829b7d680"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_2002_r1.png",
+      "bytes": 71792,
+      "sha256": "7b1f3135dc45040bbe93d70c933efa301126a2bd7f22695536d06e4190cfa9d0"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_2007_r1.png",
+      "bytes": 60368,
+      "sha256": "b3d294ccc9b03e9a123737672cf5d81847be9df6c36de13c7885292adeabcbca"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_2012_r1.png",
+      "bytes": 74787,
+      "sha256": "518b28bde98b68a9769d8aea8b04e534a83fedb6b214e29ba25848a3c170fcf5"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_2017_r1.png",
+      "bytes": 79203,
+      "sha256": "48c48208479803da76716dba7a1f5d60aa68f4fe81e1a1e4dea6c0707984aa00"
+    },
+    {
+      "path": "03_FIGURES/densites_completes/r_eipack/H7/pre_2022_r1.png",
+      "bytes": 76068,
+      "sha256": "09a32de834a21ba00b835507f9fc04e9c1c66c8b52806dfbceb29e78400864d6"
+    },
+    {
+      "path": "03_FIGURES/distributions_2D_2022/distributions_2d_2022.png",
+      "bytes": 274710,
+      "sha256": "f66b34a827c39867ac44a3d038050d2d4bbfa5d3a7f8577c550fc1fb2bcc4bf3"
+    },
+    {
+      "path": "03_FIGURES/distributions_2D_2022/distributions_2d_2022.svg",
+      "bytes": 310534,
+      "sha256": "9ba4c2a052d32df48452907b995b20830128284d55ccb1bd8ee3c03e6aac27eb"
+    },
+    {
+      "path": "03_FIGURES/sensibilite_NLS_covariables/sensibilite_nls_legislative.png",
+      "bytes": 920775,
+      "sha256": "fe5c5efd09bfe852cc68cb3bc3d2222a8318f05c0633a0f3d24b9bb81903a123"
+    },
+    {
+      "path": "03_FIGURES/sensibilite_NLS_covariables/sensibilite_nls_legislative.svg",
+      "bytes": 326789,
+      "sha256": "5c2023950bc6807b81138c7b0b1cdbb764c3e920c31366c9d8f502d35f97cbd1"
+    },
+    {
+      "path": "03_FIGURES/sensibilite_NLS_covariables/sensibilite_nls_presidential.png",
+      "bytes": 838186,
+      "sha256": "bdf18070d91ba6f6ff6d15aa39f8d0a25de9d09c49d52627c9c4c866eafe65f6"
+    },
+    {
+      "path": "03_FIGURES/sensibilite_NLS_covariables/sensibilite_nls_presidential.svg",
+      "bytes": 285391,
+      "sha256": "73a6dbda17cc586379ab107abb95c4af36e2bc6ef08f60171a011d4a54b67591"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H0A/H0A_legislative.png",
+      "bytes": 195238,
+      "sha256": "f53a47f5e4125b723808e197b49afda745893afbd9cdd52eb086556650c20b02"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H0A/H0A_legislative.svg",
+      "bytes": 76193,
+      "sha256": "7e793449a6eadfef7b4f5887ff58b8a841e10bdd22dd439655c0f7e005540338"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H0A/H0A_presidential.png",
+      "bytes": 178084,
+      "sha256": "5a9ff27f84a3d88720a9077032f7503d3c3ffc159733ea28f22c579ec0c0827f"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H0A/H0A_presidential.svg",
+      "bytes": 70481,
+      "sha256": "50899921621023ae5d8db4eff4450a2f0f145476df89043912dec1b6ec65852f"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H1/H1_legislative.png",
+      "bytes": 229906,
+      "sha256": "963fa725ed809478113c5cec5c4175c2ec05aeb9ce7dddf67d5e195def815092"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H1/H1_legislative.svg",
+      "bytes": 74669,
+      "sha256": "eae50de87d1be072081e5cc1f318aadb992fabd3bc80465727af575e925a96b8"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H1/H1_presidential.png",
+      "bytes": 227136,
+      "sha256": "ade850b34995d1a100fc7455a0b1d2572bfc32680e1932d5750f503fa87b17d6"
+    },
+    {
+      "path": "03_FIGURES/trajectoire_H1/H1_presidential.svg",
+      "bytes": 71571,
+      "sha256": "21f49a5a1b7fcd644a2550c4527a59ec6b644e345d89dd3ef0a6e478a50700e4"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H0B_legislative_presidential.png",
+      "bytes": 525629,
+      "sha256": "c3f9d44f8c74366f7ae2f40fcf53b4020bbae03ac99eb7c0007493717333591a"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H0C_legislative_presidential.png",
+      "bytes": 573125,
+      "sha256": "c1416fc37b815c3645807d5833fdc3812577eb2f074bb10c1ab175e3ea7390bb"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H2_legislative_presidential.png",
+      "bytes": 583021,
+      "sha256": "2aad5312998bd20a3992c3f39d399b740fc4810171c29c0b96b1b53343093d50"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H3_legislative_presidential.png",
+      "bytes": 574175,
+      "sha256": "44f9c856b5c7c74eb240e10fb5cf9541c4d9a2015fd56c53ff8f8b0bb10ab762"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H4_legislative_presidential.png",
+      "bytes": 620138,
+      "sha256": "0f402f2e99d30d62a1d65ef97a9c8bb84be8a59b3b7e8cc71932a9e0bc188bbf"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H5_legislative_presidential.png",
+      "bytes": 547052,
+      "sha256": "58ca05bd6f4a89c70ab7bf937a2edf1dd0dea2338bdcb7657a24220464203a64"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H6_legislative_presidential.png",
+      "bytes": 609695,
+      "sha256": "6dc5b813a495d82e6fc0d5d471fb86c95c47636064361d187679149f1c324762"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/combined/H7_legislative_presidential.png",
+      "bytes": 554619,
+      "sha256": "46f92c0ffb06a41232d4f647f67cbc7f5aecb8deaae69c19e8f52188de18e0f9"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0B/H0B_legislative.png",
+      "bytes": 197659,
+      "sha256": "f55e8639214680355513b5b5a1bb0eb3b9ca66e0a4482b5c2edf0e8f2a6bb908"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0B/H0B_legislative.svg",
+      "bytes": 76533,
+      "sha256": "4d7cf2ee8e3c04f7d8164383cb6aab119058d6a7694dceda7774d68a8bda93c4"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0B/H0B_presidential.png",
+      "bytes": 180656,
+      "sha256": "318af5f5efc0a41364967a87c8bc021c8a0efb11cc6276c2acb66646e6982ec7"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0B/H0B_presidential.svg",
+      "bytes": 71779,
+      "sha256": "d2615cb7d81dd6a18aa9d50808e75194b7394fb77121467a81a719a60e4bc499"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0C/H0C_legislative.png",
+      "bytes": 203278,
+      "sha256": "43d19282fdfb0913b037a6eaa7958df8d8ee11b3e394a7bf7a7b5ec374fcf2d1"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0C/H0C_legislative.svg",
+      "bytes": 77503,
+      "sha256": "12d2c63ab5fc83219308090175f287fe5257ee67dbc769d89de7dfc29503df90"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0C/H0C_presidential.png",
+      "bytes": 213702,
+      "sha256": "a88bf80bb428e7a48bf8e0f1cac46fd2cca73c5ed368baaca18629dc27d4f294"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H0C/H0C_presidential.svg",
+      "bytes": 72561,
+      "sha256": "4afa1106a06eb19f2ef77f5742c4153ad553cca98e0c6427112cc970786765a3"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H2/H2_legislative.png",
+      "bytes": 219680,
+      "sha256": "389414699efa630b09a9fdc46c06a3c88d7dc9eedb6cc4f78666fa2c410cfb5e"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H2/H2_legislative.svg",
+      "bytes": 75850,
+      "sha256": "52824801f55c2be322a4e10d44d77aff6107a6d536d15db54b80497c5192a729"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H2/H2_presidential.png",
+      "bytes": 236237,
+      "sha256": "31dce8ae7defc2a156dd049ce452d17101cfd357d1c66e71bd674f4e424bb558"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H2/H2_presidential.svg",
+      "bytes": 72869,
+      "sha256": "de7cc1ac3d3e5e2cd7d4544d77172e505e07af7db2805de62e89fb08e41fe40b"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H3/H3_legislative.png",
+      "bytes": 221443,
+      "sha256": "584585e33f644b25d87112e3df442524eb705142d6da2075ac35f25948def436"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H3/H3_legislative.svg",
+      "bytes": 75586,
+      "sha256": "53af6ce17f3c4b8a73188526005a91ed6630f8497b08e81c5e6ec67faa4573f8"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H3/H3_presidential.png",
+      "bytes": 213000,
+      "sha256": "02bcd0af1120fb72b4bc963700123a2ec5499f53865d3441b7b6f0ee0262ecfb"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H3/H3_presidential.svg",
+      "bytes": 71478,
+      "sha256": "e673d67cdd19b8123e9964c4ce1fbf55bcaf2fdc7ba84e6876eb9a44c5de8cb1"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H4/H4_legislative.png",
+      "bytes": 241852,
+      "sha256": "3388cddc0c1b11c31c33445922c09de2d916f30ce9dd7ba58f91320b7faab301"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H4/H4_legislative.svg",
+      "bytes": 74736,
+      "sha256": "4cf8a1ab3a24f60419f2e560dbacdc7004a5c3a55e363fa3c01f9c63b885d266"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H4/H4_presidential.png",
+      "bytes": 223334,
+      "sha256": "d917a7c00d6d8203016b149a38522e41319c3db08176068459bbffee237021d9"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H4/H4_presidential.svg",
+      "bytes": 69851,
+      "sha256": "eb319afb3bed11954b09444e9216a0d53e4bc16a729f34786a7337b9d271343d"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H5/H5_legislative.png",
+      "bytes": 191570,
+      "sha256": "ceb28ea0cb00deab24132b4a32fad557a427db145926ef6fde2b02c04fead2f1"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H5/H5_legislative.svg",
+      "bytes": 75314,
+      "sha256": "9ac342e9b7fbbb51245ba7f919b5df366ea5ff658e072e817292935484725598"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H5/H5_presidential.png",
+      "bytes": 188888,
+      "sha256": "9f4b848b36a6d51acbf5a67ecc2c2800616885710bf647b68d805a3d57379ea8"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H5/H5_presidential.svg",
+      "bytes": 73955,
+      "sha256": "1fdcffa606f081de32c4f928c88e4dccdde31b6d2540e2011d4e7608198233fa"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H6/H6_legislative.png",
+      "bytes": 246760,
+      "sha256": "2275ec3766c45f1fa2494e6f60ce5cb5d0aeea5dfde18ff74658b8c669c44690"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H6/H6_legislative.svg",
+      "bytes": 73281,
+      "sha256": "a3f93d70da581f3762a31b628230c5261166506af8122ac96f58cc8311c050ab"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H6/H6_presidential.png",
+      "bytes": 196532,
+      "sha256": "a87fb0be0ab0d3c80d360b5cbc1f79ed12b2dba9dcadf9470e77c835f497828c"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H6/H6_presidential.svg",
+      "bytes": 68658,
+      "sha256": "7694c80e6c69e91162113df2dd9d0303ffaddf09bbab4ef179aabc5b9895f0dd"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H7/H7_legislative.png",
+      "bytes": 207353,
+      "sha256": "47f784349717e431f0137643e6d12c21ffa48c0a14dc919bb7ea7f7520ab2f80"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H7/H7_legislative.svg",
+      "bytes": 72964,
+      "sha256": "63f22bfbf7c1160835de4618b88d1cb3adbfcf278aaa2aab7760be1155f1e5f7"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H7/H7_presidential.png",
+      "bytes": 183552,
+      "sha256": "d0cceebf0fbc8576472ca54243e0c85cc9074d54c6c61b87054fe965f38c747b"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_KRT_R_NLS_toutes_hypotheses/H7/H7_presidential.svg",
+      "bytes": 70969,
+      "sha256": "e115986ce56a9fbcc49dfffe1d314f154350c680bebc0be3d2ef159f35cfad59"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_NLS_autres_hypotheses/trajectoires_krt_r_nls_legislative.png",
+      "bytes": 537848,
+      "sha256": "9f5c0cf60496234dec34bb5a41288fae2e2c7e2f02d296689d1595aaab373fdf"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_NLS_autres_hypotheses/trajectoires_krt_r_nls_legislative.svg",
+      "bytes": 223184,
+      "sha256": "a26a48a0feb5a4ab39f66c4a7d07cf4c4b70875df04743109d9ec126390e2f59"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_NLS_autres_hypotheses/trajectoires_krt_r_nls_presidential.png",
+      "bytes": 533038,
+      "sha256": "e27bcd836f452b22d201589e035115eb35537c14cfc98ef17084ee606d61ec0e"
+    },
+    {
+      "path": "03_FIGURES/trajectoires_NLS_autres_hypotheses/trajectoires_krt_r_nls_presidential.svg",
+      "bytes": 202644,
+      "sha256": "07d3ce86367ef4c0d7b54d2565b40e33b071073fe3ade09fdf6c985a9f526162"
+    },
+    {
+      "path": "04_PANEL_ET_HARMONISATION/balance_checks_summary.csv",
+      "bytes": 1033,
+      "sha256": "359ad8be12b812f28303eb9c973a6e1c3a6ad48337bfb430abf16c422a7fb7d2"
+    },
+    {
+      "path": "04_PANEL_ET_HARMONISATION/coverage_by_election.csv",
+      "bytes": 1627,
+      "sha256": "32539fb2c1cee1dec841558fb8a59e4f26f7ee23aff8a67a6a996fee505a996b"
+    },
+    {
+      "path": "04_PANEL_ET_HARMONISATION/HARMONISATION_POLITIQUE.csv",
+      "bytes": 1804,
+      "sha256": "7ffbba36bd5e24a30dfb565823625ee73485b573617548e80be8c2a3830ed6dc"
+    },
+    {
+      "path": "04_PANEL_ET_HARMONISATION/panel_2000.csv",
+      "bytes": 692666,
+      "sha256": "651912cbab9ca16efbc0326ba4cf6c4067874e476aa8234ebf0c3b6232b4fb11"
+    },
+    {
+      "path": "05_DIAGNOSTICS/diagnostics_KRT_resume.csv",
+      "bytes": 26773,
+      "sha256": "ef866ef0ad43d3ff59144b7579d824e5fa63e7a63beb99403c7096ab30b8bdbe"
+    },
+    {
+      "path": "05_DIAGNOSTICS/diagnostics_NLS_covariables_resume.csv",
+      "bytes": 774109,
+      "sha256": "d22efe53e3c8499b1be321be43ac89be6b69e759b9ea73e644c9b3a00b563bd2"
+    },
+    {
+      "path": "05_DIAGNOSTICS/diagnostics_NLS_resume.csv",
+      "bytes": 38723,
+      "sha256": "49ec33920ee270d8010c3174eb0378196bece1620d766824bb21437fb25846e7"
+    },
+    {
+      "path": "05_DIAGNOSTICS/diagnostics_R_EI_resume.csv",
+      "bytes": 46452,
+      "sha256": "3362bd333cd1325f6588f8ea831faaf22574887fe49c2e50266c4f9efdc67713"
+    },
+    {
+      "path": "05_DIAGNOSTICS/identification_resume.csv",
+      "bytes": 24384,
+      "sha256": "959748b38a222c818a4dbb5978216ee482f00f7341d29494529eb6ec854aa093"
+    },
+    {
+      "path": "05_DIAGNOSTICS/matrice_couverture_modeles.csv",
+      "bytes": 1340,
+      "sha256": "c82f8c35296052683208ab7e48fb9e1b2033aae01651e6881d12ac368896842c"
+    },
+    {
+      "path": "06_DOCUMENTATION/CATALOGUE_DENSITES_COMPLET.csv",
+      "bytes": 170350,
+      "sha256": "1011d7021f28528b81a724afb08dd385f39b2b01b5481822c775c99d0f4620df"
+    },
+    {
+      "path": "06_DOCUMENTATION/CHANGELOG.md",
+      "bytes": 1051,
+      "sha256": "25b321dbd8b2e020c7292a327add1cc4c2d1a5c6e839015d4836d666be062a0f"
+    },
+    {
+      "path": "06_DOCUMENTATION/COUVERTURE_BETA_PAR_COUPLE.csv",
+      "bytes": 22306,
+      "sha256": "df0d65a21cae4e5f3bc914a664c8266742785cca6d50b975b6f3a93cd138f34c"
+    },
+    {
+      "path": "06_DOCUMENTATION/DATA_DICTIONARY.csv",
+      "bytes": 58345,
+      "sha256": "5b2d9b07a15f254682b490ce05ca5282b19da94e83a105a5b6109c075050459c"
+    },
+    {
+      "path": "06_DOCUMENTATION/MODEL_SCENARIOS.csv",
+      "bytes": 1156,
+      "sha256": "71c3419ee7aec6763424ddc9fc40601fc2f4fb845f95131addc7767f02fca1e2"
+    },
+    {
+      "path": "06_DOCUMENTATION/REPORT_QA.json",
+      "bytes": 591,
+      "sha256": "accc76db434cd0e1aad6708e4d5502673c060ad003a75a71c23aa055e943e394"
+    },
+    {
+      "path": "06_DOCUMENTATION/REPRODUCE.md",
+      "bytes": 1146,
+      "sha256": "9fa50bb570c9a90e969b3fdabc4ab41d9ce87a520e1a71251b812d86ba62bad1"
+    },
+    {
+      "path": "06_DOCUMENTATION/DELIVERY_MANIFEST.json",
+      "bytes": 133453,
+      "sha256": "ba0ed890b9ad52c7d7b92e5ce8e849930a893a9b1298c0eea0348ac20ba78cad"
+    }
+  ],
+  "statistical_comparison": "Separate from file completeness; historical SHA256 values identify reference files, not Monte Carlo acceptance thresholds."
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "description": "Two-level certification policy for the longitudinal 2,000-commune replication.",
+  "default_numeric": {
+    "atol": 0.0,
+    "rtol": 0.0
+  },
+  "non_table_artifacts": {
+    "png": {
+      "pixel_change_threshold": 0.03137254901960784,
+      "max_mean_absolute_error": 0.01,
+      "max_root_mean_square_error": 0.08,
+      "max_changed_pixel_fraction": 0.15
+    },
+    "svg": {
+      "atol": 2.0,
+      "rtol": 0.02
+    },
+    "html": {
+      "atol": 0.01,
+      "rtol": 0.05,
+      "integers_exact": true
+    },
+    "md": {
+      "atol": 0.0,
+      "rtol": 0.0,
+      "integers_exact": true
+    },
+    "pdf": {
+      "max_size_ratio_difference": 0.20
+    }
+  },
+  "identifier_aliases": [
+    {
+      "id": "legacy_targeted_leg2022_h1_panel_alias",
+      "path": "02_TABLES_PRINCIPALES/longitudinal_krt_aggregate.parquet",
+      "column": "source_panel_id",
+      "reference": "v101_targeted_rerun_current_primary_2000",
+      "candidate": "longitudinal_2000_v1__strict_nested_3000__seed_20260803",
+      "where": {
+        "election_id": "leg_2022_r1",
+        "scenario_id": "H1",
+        "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+      },
+      "requires_table": "04_PANEL_ET_HARMONISATION/panel_2000.csv"
+    },
+    {
+      "id": "legacy_targeted_leg2022_h1_panel_alias",
+      "path": "02_TABLES_PRINCIPALES/longitudinal_krt_commune.parquet",
+      "column": "source_panel_id",
+      "reference": "v101_targeted_rerun_current_primary_2000",
+      "candidate": "longitudinal_2000_v1__strict_nested_3000__seed_20260803",
+      "where": {
+        "election_id": "leg_2022_r1",
+        "scenario_id": "H1",
+        "panel_id": "longitudinal_2000_v1__strict_nested_3000__seed_20260803"
+      },
+      "requires_table": "04_PANEL_ET_HARMONISATION/panel_2000.csv"
+    }
+  ],
+  "tables": {
+    "02_TABLES_PRINCIPALES/longitudinal_contrasts_krt_r_nls.parquet": {
+      "keys": ["election_id", "scenario_id", "model_key", "estimand"],
+      "ignore_columns": [],
+      "interval_classifications": [["q025", "q975"]],
+      "numeric_rules": {
+        "estimate": {"atol": 0.005, "rtol": 0.0, "preserve_sign": true},
+        "q025": {"atol": 0.01, "rtol": 0.0},
+        "q975": {"atol": 0.01, "rtol": 0.0}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_krt_aggregate.parquet": {
+      "keys": ["election_id", "scenario_id", "model_key", "estimand"],
+      "ignore_columns": [],
+      "run_provenance": {"family": "krt", "pair_keys": ["election_id", "scenario_id"]},
+      "interval_classifications": [["q025", "q975"]],
+      "numeric_rules": {
+        "mean": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10, "preserve_sign": true},
+        "median": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10, "preserve_sign": true},
+        "q025": {"atol": 0.005, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.15},
+        "q975": {"atol": 0.005, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.15},
+        "legacy_mean": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10},
+        "mean_difference_from_legacy": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_krt_commune.parquet": {
+      "keys": ["election_id", "scenario_id", "unit_id"],
+      "ignore_columns": [],
+      "run_provenance": {"family": "krt", "pair_keys": ["election_id", "scenario_id"], "run_key_column": "run_key"},
+      "numeric_rules": {
+        "b1_mean": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.10},
+        "b1_q50": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.10},
+        "b1_q025": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.15},
+        "b1_q975": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.15},
+        "b1_sd": {"atol": 0.005, "rtol": 0.05},
+        "b2_mean": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.10},
+        "b2_q50": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.10},
+        "b2_q025": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.15},
+        "b2_q975": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.15},
+        "b2_sd": {"atol": 0.005, "rtol": 0.05}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_r_ei_aggregate.parquet": {
+      "keys": ["election_id", "scenario_id", "model_key", "estimand"],
+      "ignore_columns": ["elapsed_seconds", "source_manifest"],
+      "interval_classifications": [["q025", "q975"]],
+      "numeric_rules": {
+        "mean": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10, "preserve_sign": true},
+        "q50": {"atol": 0.0025, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.10, "preserve_sign": true},
+        "q025": {"atol": 0.005, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.15},
+        "q975": {"atol": 0.005, "rtol": 0.0, "width_columns": ["q025", "q975"], "width_fraction": 0.15},
+        "sd": {"atol": 0.005, "rtol": 0.05}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_r_ei_commune.parquet": {
+      "keys": ["election_id", "scenario_id", "unit_id"],
+      "ignore_columns": ["elapsed_seconds", "source_manifest"],
+      "numeric_rules": {
+        "b1_mean": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.10},
+        "b1_q50": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.10},
+        "b1_q025": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.15},
+        "b1_q975": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b1_q025", "b1_q975"], "width_fraction": 0.15},
+        "b1_sd": {"atol": 0.005, "rtol": 0.05},
+        "b2_mean": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.10},
+        "b2_q50": {"atol": 0.005, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.10},
+        "b2_q025": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.15},
+        "b2_q975": {"atol": 0.01, "rtol": 0.0, "width_columns": ["b2_q025", "b2_q975"], "width_fraction": 0.15},
+        "b2_sd": {"atol": 0.005, "rtol": 0.05}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_nls.parquet": {
+      "keys": ["election_id", "scenario_id", "model_key", "estimand_type", "social_group", "vote_category"],
+      "ignore_columns": [],
+      "run_provenance": {"family": "nls", "pair_keys": ["election_id", "scenario_id"]},
+      "numeric_rules": {
+        "estimate": {"atol": 1e-10, "rtol": 1e-9, "preserve_sign": true},
+        "*": {"atol": 1e-10, "rtol": 1e-9}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_nls_covariate_coefficients.parquet": {
+      "keys": ["election_id", "scenario_id", "spec_id", "social_group", "vote_category", "term"],
+      "ignore_columns": [],
+      "numeric_rules": {
+        "estimate_logit": {"atol": 1e-9, "rtol": 1e-8, "preserve_sign": true},
+        "*": {"atol": 1e-9, "rtol": 1e-8}
+      }
+    },
+    "02_TABLES_PRINCIPALES/longitudinal_nls_covariates.parquet": {
+      "keys": ["election_id", "scenario_id", "spec_id", "estimand"],
+      "ignore_columns": ["elapsed_seconds", "source_manifest"],
+      "numeric_rules": {
+        "estimate": {"atol": 1e-9, "rtol": 1e-8, "preserve_sign": true},
+        "*": {"atol": 1e-9, "rtol": 1e-8}
+      }
+    },
+    "04_PANEL_ET_HARMONISATION/panel_2000.csv": {
+      "keys": ["unit_id"],
+      "ignore_columns": [],
+      "numeric_rules": {
+        "*": {"atol": 1e-12, "rtol": 1e-12}
+      }
+    },
+    "04_PANEL_ET_HARMONISATION/coverage_by_election.csv": {
+      "keys": ["election_id"],
+      "ignore_columns": []
+    },
+    "05_DIAGNOSTICS/diagnostics_KRT_resume.csv": {
+      "keys": ["election_id", "scenario_id"],
+      "ignore_columns": [],
+      "run_provenance": {"family": "krt", "pair_keys": ["election_id", "scenario_id"]}
+    },
+    "05_DIAGNOSTICS/diagnostics_NLS_covariables_resume.csv": {
+      "keys": ["election_id", "scenario_id", "spec_id"],
+      "ignore_columns": ["elapsed_seconds", "finished_at_utc", "source_manifest"],
+      "numeric_rules": {
+        "*": {"atol": 1e-9, "rtol": 1e-8}
+      }
+    },
+    "05_DIAGNOSTICS/diagnostics_NLS_resume.csv": {
+      "keys": ["election_id", "scenario_id"],
+      "ignore_columns": []
+    },
+    "05_DIAGNOSTICS/identification_resume.csv": {
+      "keys": ["election_id", "scenario_id"],
+      "ignore_columns": []
+    },
+    "05_DIAGNOSTICS/matrice_couverture_modeles.csv": {
+      "keys": ["election_id"],
+      "ignore_columns": []
+    },
+    "05_DIAGNOSTICS/diagnostics_R_EI_resume.csv": {
+      "keys": ["election_id", "scenario_id"],
+      "ignore_columns": ["elapsed_seconds", "source_manifest"],
+      "numeric_rules": {
+        "*": {"atol": 1e-9, "rtol": 1e-8}
+      }
+    },
+    "06_DOCUMENTATION/COUVERTURE_BETA_PAR_COUPLE.csv": {
+      "keys": ["method", "election_id", "scenario_id"],
+      "ignore_columns": []
+    }
+  }
+}

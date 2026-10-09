@@ -1,118 +1,83 @@
-# Longitudinal Ecological Inference — Fixed Panel of 2,000 Municipalities
+# Inférence écologique longitudinale — réplication 1962–2022
 
-This research repository estimates ecological-inference models across 26
-French elections using a fixed longitudinal panel of 2,000 municipalities. It
-contains work in progress: intermediate results are not a validated release.
+Ce dépôt contient les sources versionnées de la réplication longitudinale menée sur un panel fixe de 2 000 communes françaises. La branche `main` correspond à la version portable **2.6**, gelée le 8 octobre 2026 et publiée dans Dropbox sous `Part2/00_CURRENT`.
 
-## Current analysis contract
+## Version de référence
 
-- panel: `panel/longitudinal_2000_v1.parquet`;
-- identifier: `longitudinal_2000_v1__strict_nested_3000__seed_20260803`;
-- SHA-256: `bde70c71660fce29610d7931461d8db6181dba874514a1866b63cf16a81cec4a`;
-- NLS: 292 prepared and estimated specifications, including 270 in the public
-  v1.0.2 scope and 22 RxC specifications retained as an audited extension;
-- Python KRT: 240 expected 2×2 specifications for H0A–H7, with H6/H7 eligible
-  for 16 elections each;
-- R KRT: exact NIMBLE replication planned after the initial Python runs and
-  targeted retries are complete;
-- NetCDF: temporary post-processing artifacts excluded from delivery archives.
+La [release GitHub v2.6](https://github.com/pierreloudelfante/longitudinal-ecological-inference/releases/tag/v2.6) fournit les deux fichiers utilisés par la livraison Dropbox :
 
-The latest machine-readable coverage status is written to:
+| Fichier | Taille | SHA-256 | Contenu |
+| --- | ---: | --- | --- |
+| `longitudinal_2000_reproduction_complete_PORTABLE_CERTIFICATION.zip` | 31 008 043 octets | `37948ed0862d63c206481bb61aa68234717644b4512ef2629fdf5ccc9caf65fc` | Kit portable, 1 268 chemins uniques |
+| `longitudinal_2000_results.zip` | 143 246 075 octets | `a5c0978e822e2276c7607764cfa74dd6ece8f135f2af1d290a8a880202cd5b79` | Archive de référence, 610 fichiers |
 
-```text
-outputs/longitudinal_2000_v1/production/current_estimation_coverage.json
-```
+Le premier ZIP publié sur GitHub est identique octet par octet au paquet final de Dropbox. Le second est l'archive de résultats de référence utilisée pour la comparaison finale.
 
-Partial KRT selections and tables are written to:
+## Ce que fait le projet
 
-```text
-outputs/longitudinal_2000_v1/production/all_2x2_candidate/
-```
+La chaîne part de 31 archives brutes authentifiées par taille et SHA-256, reconstruit le panel et les matrices de modèles, puis exécute :
 
-## Pipeline overview
+- 240 estimations KRT Python ;
+- 240 réplications King EI sous R ;
+- 292 spécifications NLS sans covariables ;
+- 960 spécifications NLS avec covariables ;
+- 480 densités communales.
 
-```text
-source archives
-  -> political and social data auditing and harmonization
-  -> fixed longitudinal panel and model-ready matrices
-  -> Python/R NLS
-  -> Python KRT initial run
-  -> MCMC diagnostics | ecological identification | KRT–NLS warning
-  -> one targeted retry for severe/failed MCMC
-  -> canonical selection
-  -> exact R/NIMBLE KRT replication
-  -> Python/R comparison
-  -> verified Parquet files, figures, report, and archives
-```
+Le pipeline comporte 17 étapes et produit huit tables principales, 580 figures, les diagnostics, le rapport et une archive recalculée de 610 fichiers.
 
-The following diagnostics remain separate:
+## GitHub et Dropbox
 
-1. `mcmc_status` measures numerical sampling quality;
-2. `identification_status` describes the width of the ecological constraints;
-3. `method_sensitivity_status` flags a KRT–NLS discrepancy and never changes
-   priors or `king_lambda` opportunistically.
+GitHub et Dropbox ont des rôles complémentaires :
 
-## Authoritative configuration
+- **GitHub `main`** conserve le code, les configurations, les tests, les contrats, les manifestes et les sources documentaires ;
+- **GitHub Releases** conserve les deux archives figées correspondant à la livraison ;
+- **Dropbox `Part2/00_CURRENT`** reste l'espace de remise au professeur et contient aussi le miroir partiel des données brutes ;
+- les 31 archives brutes ne sont pas enregistrées dans Git : `TELECHARGER_DONNEES_BRUTES.ps1` les récupère depuis les URL officielles et vérifie leur intégrité.
 
-Each KRT production run is defined by a file in `config/releases/`. The release
-scope specifies the panel, scenarios, pilots, versioned KRT parameterization,
-`king_lambda`, MCMC settings, and random seeds. `config/run_settings.json`
-remains necessary for data preparation and compatibility with older scripts,
-but it does not replace the release-level KRT contract.
+Le dossier `.cache/R` du kit portable n'est pas suivi fichier par fichier dans `main` : il contient un environnement R binaire Windows. Il reste inclus dans l'archive portable de la release et est décrit par `reproducibility/r-runtime-library-manifest.json`.
 
-Examples:
+## Démarrage
 
-```text
-config/releases/v1.1_pymc_fallback.json   H2/H3
-config/releases/v1.2_pymc_h6_h7.json      H6/H7
-config/releases/v1.3_pymc_h0b_h0c.json    H0B/H0C
-config/releases/v1.4_pymc_h4_h5.json      H4/H5
-```
+Prérequis : Windows x86-64, Python 3.12.10, R 4.6.0, Edge ou Chrome, 16 Go de RAM, au moins 5 Gio de mémoire disponible et 50 Gio de disque libre.
 
-Production runs use four chains, 1,000 warmup iterations, 1,000 retained draws,
-`target_accept=0.99`, `max_treedepth=14`, and a deterministic seed for each
-specification. An eligible retry uses 2,000 warmup iterations, 2,000 retained
-draws, and its dedicated base seed.
-
-## Important inputs and outputs
-
-| Item | Location | Grain |
-|---|---|---|
-| Panel | `panel/longitudinal_2000_v1.parquet` | municipality |
-| Model-ready matrices | `outputs/model_ready/` | municipality × election × scenario |
-| Runs | `outputs/runs/<run_id>/` | one model fit |
-| Coverage | `outputs/longitudinal_2000_v1/production/current_estimation_coverage.csv` | scenario |
-| Partial municipality-level KRT | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_commune_240_candidate.parquet` | municipality × run |
-| Partial aggregate KRT | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/longitudinal_krt_aggregate_240_candidate.parquet` | run × estimand |
-| Partial selection | `outputs/longitudinal_2000_v1/production/all_2x2_candidate/krt_240_candidate_selection.csv` | election × scenario |
-| Complete candidate NLS | `outputs/longitudinal_2000_v1/production/rxc_nls_panel_extension_v11/longitudinal_nls_292_candidate.parquet` | specification × estimand |
-| Exact R replication | `outputs/longitudinal_2000_v1/r_replication/` | specification × estimand |
-
-## Main commands
-
-From the repository root, with the ecological-inference Python environment
-activated:
+Depuis une extraction neuve du ZIP portable :
 
 ```powershell
-python -m code_longitudinal.v11_pipeline krt `
-  --release-config config\releases\v1.1_pymc_fallback.json `
-  --cores 1
+powershell -ExecutionPolicy Bypass -File .\TELECHARGER_DONNEES_BRUTES.ps1
 
-python -m code_longitudinal.consolidate_current_krt_all_2x2
-python -m code_longitudinal.build_current_estimation_coverage
-python -m pytest -q tests
+powershell -ExecutionPolicy Bypass -File .\REPRODUIRE_TOUT.ps1 -PreflightSeulement `
+  -ExigerRessourcesRecommandees -MinimumFreeDiskGB 50 -MinimumAvailableMemoryGB 5
+
+powershell -ExecutionPolicy Bypass -File .\REPRODUIRE_TOUT.ps1 `
+  -ExigerRessourcesRecommandees -MinimumFreeDiskGB 50 -MinimumAvailableMemoryGB 5
 ```
 
-Restart scripts inspect success manifests before each fit. A successful run with
-the same contract is not recomputed.
+Le préflight doit afficher :
 
-## Reproducibility levels
+```text
+PREFLIGHT REUSSI - AUCUNE ESTIMATION N'A ETE LANCEE
+```
 
-- **Level 1 — audit:** inspect delivered Parquet files, CSV files, figures, and
-  manifests; no source archive is required.
-- **Level 2 — consolidation:** use the technical bundle, completed runs, and the
-  documented environment.
-- **Level 3 — full reproduction:** obtain the raw source archives separately,
-  restore the local `panel/` and output inputs, and use the documented Python/R
-  environments. Raw data and generated results are intentionally not stored in
-  this repository.
+Lire [COMMENCER_ICI.md](COMMENCER_ICI.md) avant le rejeu complet.
+
+## Tests et preuves
+
+Dans une extraction du ZIP portable, la suite d'audit autonome se lance ainsi :
+
+```powershell
+python -m unittest discover -s reproducibility/tests_v2 -v
+```
+
+Les tests historiques sous `tests/` qui lisent directement des panels ou sorties déjà calculés nécessitent ces artefacts locaux ; ils ne constituent pas la suite autonome du paquet.
+
+Les principales pièces d'audit sont :
+
+- [provenance du paquet](PROVENANCE_SOURCE.md) ;
+- [métadonnées v2.6](reproducibility/contract_v2/V26_PACKAGE_METADATA.json) ;
+- [contrat des 31 sources](reproducibility/contract_v2/raw_sources_31.json) ;
+- [liste des 610 résultats attendus](reproducibility/contract_v2/expected_results_610.json) ;
+- [politique de certification](reproducibility/contract_v2/certification_policy_v1.json).
+
+## Limite à conserver explicitement
+
+`full_610_run_certified=false` : les tests, le préflight et les sondes scientifiques donnent un niveau de confiance élevé, mais la dernière correction d'infrastructure n'a pas encore été suivie d'un rejeu indépendant complet des 610 fichiers. La preuve définitive sera le JSON de certification produit à la fin d'une exécution intégrale.

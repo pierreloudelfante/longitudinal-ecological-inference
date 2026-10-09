@@ -1,0 +1,10 @@
+{
+  "krt_pairs": 240,
+  "r_pairs": 240,
+  "nls_admissible_pairs": 270,
+  "nls_deferred_pairs": 22,
+  "nls_delivered_pairs": 292,
+  "nls_covariate_pairs": 960,
+  "primary_communes": 2000,
+  "density_pairs": 480
+}

@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+from reproducibility.replication_scope import get_scope
 
 from .compare_python_r_ei_all_2x2 import (
     _canonical_h0a_h1,
@@ -57,6 +58,25 @@ def _all_valid_runs_by_id() -> dict[str, tuple[Path, dict[str, Any]]]:
         if manifest is not None:
             result[str(manifest["run_id"])] = (manifest_path.parent, manifest)
     return result
+
+
+def _latest_initial_python_runs() -> dict[tuple[str, str], tuple[Path, dict[str, Any]]]:
+    """Select successful initial/canonical fits while retaining reruns as audit artifacts."""
+    selected: dict[tuple[str, str], tuple[str, Path, dict[str, Any]]] = {}
+    for manifest_path in RUNS_DIR.glob("*/manifest.json"):
+        manifest = _valid_python_manifest(manifest_path)
+        if manifest is None:
+            continue
+        parameters = manifest.get("parameters", {})
+        if str(parameters.get("run_role", "canonical")) == "targeted_rerun":
+            continue
+        key = (str(parameters.get("election_id", "")), str(parameters.get("scenario_id", "")))
+        if not all(key):
+            continue
+        finished = str(manifest.get("finished_at_utc", ""))
+        if key not in selected or finished > selected[key][0]:
+            selected[key] = (finished, manifest_path.parent, manifest)
+    return {key: (run_dir, manifest) for key, (_, run_dir, manifest) in selected.items()}
 
 
 def _model_ready_path(manifest: dict[str, Any]) -> Path:
@@ -162,11 +182,14 @@ def _extension_aggregate(run_dir: Path, manifest: dict[str, Any], selection_stat
     return aggregate
 
 
-def consolidate() -> dict[str, object]:
+def consolidate(selection_policy: str = "initial_only") -> dict[str, object]:
+    if selection_policy not in {"initial_only", "preregistered"}:
+        raise ValueError(f"unknown selection policy: {selection_policy}")
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+    scope = get_scope()
     canonical_aggregate, canonical_commune = _canonical_h0a_h1()
-    canonical_aggregate = canonical_aggregate.copy()
-    canonical_commune = canonical_commune.copy()
+    canonical_aggregate = scope.filter_frame(canonical_aggregate).copy()
+    canonical_commune = scope.filter_frame(canonical_commune).copy()
     canonical_aggregate["source_panel_id"] = canonical_aggregate["panel_id"]
     canonical_commune["source_panel_id"] = canonical_commune["panel_id"]
     canonical_aggregate["panel_id"] = CANONICAL_PANEL_ID
@@ -188,18 +211,22 @@ def consolidate() -> dict[str, object]:
             }
         )
 
-    latest = _latest_python_runs()
-    selected = _preregistered_selected_run_ids()
+    latest = _latest_initial_python_runs() if selection_policy == "initial_only" else _latest_python_runs()
+    selected = {} if selection_policy == "initial_only" else _preregistered_selected_run_ids()
     by_id = _all_valid_runs_by_id()
     canonical_pairs = {(str(row.election_id), str(row.scenario_id)) for row in canonical_aggregate[["election_id", "scenario_id"]].drop_duplicates().itertuples(index=False)}
-    extension_pairs = sorted(set(latest) - canonical_pairs)
+    extension_pairs = sorted((set(latest) & scope.pairs) - canonical_pairs)
     for key in extension_pairs:
         if key in selected and selected[key][0] in by_id:
             run_id, selection_status = selected[key]
             run_dir, manifest = by_id[run_id]
         else:
             run_dir, manifest = latest[key]
-            selection_status = "latest_completed_fit_provisional"
+            selection_status = (
+                "initial_fit_user_selected"
+                if selection_policy == "initial_only"
+                else "latest_completed_fit_provisional"
+            )
         commune = _extension_commune(run_dir, manifest, selection_status)
         aggregate = _extension_aggregate(run_dir, manifest, selection_status)
         commune_parts.append(commune)
@@ -238,18 +265,25 @@ def consolidate() -> dict[str, object]:
     commune.to_parquet(COMMUNE_PATH, index=False)
     aggregate.to_parquet(AGGREGATE_PATH, index=False)
     selection_frame.to_csv(SELECTION_PATH, index=False, encoding="utf-8-sig")
-    expected_pairs = sum(EXPECTED_BY_SCENARIO.values())
+    expected_pairs = scope.pair_count
+    expected_by_scenario = {
+        scenario: sum(pair[1] == scenario for pair in scope.pairs)
+        for scenario in sorted({pair[1] for pair in scope.pairs})
+    }
     scenario_counts = selection_frame.groupby("scenario_id")["election_id"].nunique().to_dict()
     missing_by_scenario = {
         scenario_id: expected - int(scenario_counts.get(scenario_id, 0))
-        for scenario_id, expected in EXPECTED_BY_SCENARIO.items()
+        for scenario_id, expected in expected_by_scenario.items()
     }
     provisional = int(selection_frame["selection_status"].eq("latest_completed_fit_provisional").sum())
     mcmc_fail = int(selection_frame["mcmc_status"].eq("fail").sum())
-    complete_coverage = pair_count == expected_pairs
+    observed_pairs = set(selection_frame[["election_id", "scenario_id"]].itertuples(index=False, name=None))
+    complete_coverage = observed_pairs == scope.pairs
     result = {
         "schema_version": "longitudinal_krt_all_2x2_candidate_v1",
         "created_at_utc": _utc_now(),
+        "selection_policy": selection_policy,
+        "targeted_reruns_retained_as_audit_artifacts": selection_policy == "initial_only",
         "panel_sha256": EXPECTED_PANEL_SHA256,
         "expected_pairs": expected_pairs,
         "selected_pairs": pair_count,
@@ -278,8 +312,13 @@ def consolidate() -> dict[str, object]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Consolidate every currently available 2x2 KRT estimate.")
-    parser.parse_args()
-    print(json.dumps(consolidate(), ensure_ascii=False, indent=2))
+    parser.add_argument(
+        "--selection-policy",
+        choices=("initial_only", "preregistered"),
+        default="initial_only",
+    )
+    args = parser.parse_args()
+    print(json.dumps(consolidate(args.selection_policy), ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

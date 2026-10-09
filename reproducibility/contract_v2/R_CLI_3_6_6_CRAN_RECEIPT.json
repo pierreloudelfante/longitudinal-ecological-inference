@@ -1,0 +1,20 @@
+{
+  "schema_version": "longitudinal_r_cli_runtime_receipt_v1",
+  "package": "cli",
+  "version": "3.6.6",
+  "source_url": "https://cloud.r-project.org/bin/windows/contrib/4.6/cli_3.6.6.zip",
+  "source_archive_bytes": 1408824,
+  "source_archive_sha256": "c4233e6a6ff42a0382b37a03546caf606a62a6b2a43493f78a07b80905dadfd8",
+  "dll_path": ".cache/R/library/cli/libs/x64/cli.dll",
+  "dll_sha256": "afc9e10865dae993dad71311e1219b4bdc24973a1732bcd7e8179aa3f632efac",
+  "runtime_tree_files": 64,
+  "runtime_tree_bytes": 2001345,
+  "runtime_tree_sha256": "1cd0972ab52b54b870deaa121b5fcf8a78eae547db693b1df346a87e935aba59",
+  "reason": "The prior cli 3.6.6 Windows build was blocked after a fresh extraction by Smart App Control. The official CRAN build of the same package version is used; no estimator, seed, model setting, input, result schema, or certification tolerance changed.",
+  "scientific_probe": {
+    "matrix": "pre_2022_r1/H0A, 2000 communes",
+    "seed": 20260802,
+    "commune_output_identical_sha256": "a396b7cf31d0eed9fb6b8a72d6f7c659cd47d78f8e07ccba3c63b03af0ff9fef",
+    "aggregate_output_identical_sha256": "f117b6ba7ab69a1953e57394ae8d64a07a995022008ecead7b9b9150b36c79e7f"
+  }
+}

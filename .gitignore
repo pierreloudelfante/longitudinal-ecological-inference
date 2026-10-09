@@ -8,7 +8,7 @@ credentials*.json
 secrets*.json
 token*.json
 
-# Python/R environments and caches
+# Python and R environments/caches
 __pycache__/
 *.py[cod]
 .venv/
@@ -29,6 +29,20 @@ env/
 .numba/
 .pytensor/
 
+# Replication runtime state and generated outputs
+.runtime/
+work/
+output/
+outputs/
+deliverables/
+figures/
+JOURNAUX_REPRODUCTION/
+panel/
+
+# Raw archives are acquired and authenticated by the downloader
+DONNEES_BRUTES/*
+!DONNEES_BRUTES/LISEZ_MOI.txt
+
 # Temporary workspaces
 .codex_tmp/
 .test_tmp/
@@ -37,36 +51,11 @@ pytest-cache-files-*/
 pytest-codex-*/
 tmp/
 temp/
-work/
 legacy/
 review_for_professor_*/
 work_professor_structure_*/
 
-# Data, model artifacts, and generated results
-panel/
-output/
-outputs/
-deliverables/
-figures/
-*.csv
-*.tsv
-*.parquet
-*.feather
-*.arrow
-*.dta
-*.rds
-*.rdata
-*.pkl
-*.pickle
-*.joblib
-*.npy
-*.npz
-*.nc
-*.h5
-*.hdf5
-*.sqlite*
-
-# Archives and binary deliverables
+# Archives and local build products
 *.zip
 *.7z
 *.rar
@@ -74,10 +63,9 @@ figures/
 *.tar.gz
 *.tgz
 *.gz
-*.pdf
-*.html
-*.exe
-*.dll
+*.log
+*.tmp
+*.bak
 *.nbc
 *.nbi
 
@@ -86,6 +74,3 @@ figures/
 Thumbs.db
 .idea/
 .vscode/
-*.log
-*.tmp
-*.bak
